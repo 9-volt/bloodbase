@@ -30,6 +30,7 @@ make install
 
 su vagrant -c "ruby-install ruby 2.0.0"
 echo 2.0.0 > /home/vagrant/.ruby-version
+echo 'gem: --no-ri --no-rdoc' > /home/vagrant/.gemrc
 
 cd
 source /etc/profile.d/chruby.sh
