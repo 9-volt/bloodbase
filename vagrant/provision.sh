@@ -32,6 +32,9 @@ su vagrant -c "ruby-install ruby 2.0.0"
 echo 2.0.0 > /home/vagrant/.ruby-version
 echo 'gem: --no-ri --no-rdoc' > /home/vagrant/.gemrc
 
+echo 'Bundling...'
+su - vagrant -c 'cd /vagrant; chruby ruby 2.0.0; gem install bundler; bundle;'
+
 cd
 source /etc/profile.d/chruby.sh
 
