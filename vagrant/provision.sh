@@ -8,7 +8,7 @@ echo "Updating apt-get..."
 apt-get update
 
 echo "Installing the software..."
-apt-get install -y build-essential git curl
+apt-get install -y build-essential git curl libsqlite3-dev
 
 echo 'chruby not yet installed, installing now...'
 wget -O chruby-0.3.2.tar.gz https://github.com/postmodern/chruby/archive/v0.3.2.tar.gz
