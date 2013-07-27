@@ -8,8 +8,8 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require_tree .
+ *= require_self
 */
 
 body { padding-top: 60px; }
@@ -20,5 +20,9 @@ body { padding-top: 60px; }
   background-image: -webkit-linear-gradient(top,#f0584c,#f0584c);
   background-image: -o-linear-gradient(top,#f0584c,#f0584c);
   background-image: linear-gradient(to bottom,#f0584c,#f0584c);
+}
+
+body {
+  font-family: 'Oxygen', sans-serif;
 }
 
