@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130727165917) do
+ActiveRecord::Schema.define(version: 20130727180408) do
 
   create_table "blood_requests", force: true do |t|
     t.string   "person_name"
-    t.string   "contacts"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20130727165917) do
     t.string   "hospital"
     t.string   "section"
     t.integer  "persons_required"
+    t.string   "issuer_name"
   end
 
   create_table "donations", force: true do |t|

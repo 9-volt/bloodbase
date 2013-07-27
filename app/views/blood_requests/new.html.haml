@@ -2,7 +2,7 @@
   %fieldset
     %legend Cauta sange
     .control-group
-      %label.control-label Numele persoanei
+      %label.control-label Numele pacientului
       .controls
         = f.text_field :person_name, :class => 'input-xlarge'
         %p.help-block Numele complet al persoanei care are nevoie de sânge
@@ -37,11 +37,16 @@
           Numărul de minim persoane care trebuie să doneze
 
     .control-group
-      %label.control-label Datele de contact
+      %label.control-label Numele persoanei de contact
       .controls
-        = f.text_field :contacts, :class => 'input-xlarge'
+        = f.text_field :email, :class => 'input-xlarge'
+
+    .control-group
+      %label.control-label Email
+      .controls
+        = f.text_field :email, :class => 'input-xlarge'
         %p.help-block
-          Cum puteţi să fiţi contactaţi în caz că un donator este găsit
+          Email-ul persoanei de contact
 
     .control-group
       %label.control-label Fotografia persoanei
@@ -50,4 +55,3 @@
 
   .form-actions
     = f.submit 'Creeaza cererea', :class => 'btn btn-primary'
-    %button(type="reset" class="btn") Anuleaza

@@ -1,17 +1,10 @@
 :css
   .cprogress {
-    height: 256px;
-    position: relative;
+    height: 220px;
     text-align: center;
   }
 
-  .action {
-    bottom: 0;
-    right: 0;
-    position: absolute;
-  }
-
-  .action button {
+  button.action {
     width: 100%;
   }
 
@@ -32,20 +25,27 @@
 
   .progress {
     margin: 0;
+    background: grey;
   }
 
-%h1= @blood_request.person_name
+  .info {
+    padding: 5px;
+    margin-left: 170px;
+  }
+
+  .share {
+    margin-bottom: 20px;
+  }
 
 .row(style="margin-top: 30px")
-  .span5.well.photo
+  .span6.well.photo
     %img{:src =>  @blood_request.photo.url}
-  .span5.cprogress
-    %h4 #{@blood_request.hospital}, Secţia #{@blood_request.section}
-    %br
+  .span5.well.cprogress
+    %h5 Progresul cazului din #{@blood_request.created_at.strftime('%d %b %y')}
 
     .progress.progress-danger.active
       .bar{:style => "width: #{@blood_request.percent_complete}%"}
-    %h3 #{@blood_request.donors.count} / #{@blood_request.persons_required} donatori găsiţi
+    %h3 #{@blood_request.donors.count} din #{@blood_request.persons_required} donatori găsiţi
 
     .share
       .addthis_toolbox.addthis_default_style.addthis_32x32_style
@@ -55,14 +55,24 @@
         %a.addthis_button_twitter
         %a.addthis_button_google_plusone_share
 
-    .span5.action
-      %button.btn.btn-primary.btn-large Donează Sânge
+    %button.btn.btn-primary.btn-large.action Donează Sânge
 
-.row(style="margin-top: 30px")
-  .span12
-    %h4 Date de contact
-    %p= @blood_request.contacts
-    %hr
-    %p= @blood_request.description
+.row
+  .span11.well
+    %form.form-horizontal
+      %fieldset
+        .control-group
+          %label.control-label Numele pacientului:
+          .info= @blood_request.person_name
+        .control-group
+          %label.control-label Spitalul:
+          .info= @blood_request.hospital
+        .control-group
+          %label.control-label Secţia:
+          .info= @blood_request.section
+        .control-group
+          %label.control-label Descrierea cazului:
+          .info= @blood_request.description
+
 
 %script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-508e563741b6132f")
