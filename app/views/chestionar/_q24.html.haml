@@ -17,6 +17,14 @@
       %br/
       Dacă nu sunteți sigur în faptul dacă putețî face transfuzie de sânge puteți suna la birou de informație 022-739381 și dați toate răspunsurile care vă interesează.
 
-- if params[:redirect]
-  :javascript
-    window.location.replace("#{params[:redirect]}");
+:javascript
+  function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+  var redirect = getParameterByName('redirect');
+  if (redirect !== undefined && redirect.length > 0) {
+    window.location.replace(redirect);
+  }
