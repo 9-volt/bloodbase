@@ -19,19 +19,7 @@
 #
 
 class BloodRequest < ActiveRecord::Base
-  if Rails.env.production?
-    has_attached_file :photo, :storage => :fog,
-      :path => "images/:class/:id/:attachment/:style/img_:fingerprint",
-      :fog_credentials => {
-        :provider           => 'Rackspace',
-        :rackspace_username => 'minivan',
-        :rackspace_api_key  => '377dc45c04eb687c7646b9ed4efd2812'
-      },
-      :fog_directory => 'donezsange.eu',
-      :fog_public => true
-  else
-    has_attached_file :photo
-  end
+  has_attached_file :photo
 
   has_many :donations
   has_many :donors, :through => :donations, :source => :user
