@@ -27,6 +27,6 @@ class BloodRequest < ActiveRecord::Base
   end
 
   def link
-    "/#{shortlink.code}"
+    "/case/#{shortlink.code}"
   end
 end
