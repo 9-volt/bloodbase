@@ -27,6 +27,10 @@ class BloodRequest < ActiveRecord::Base
 
   validates_presence_of :person_name, :description, :email
 
+  def photo_url
+    photo.url(photo.default_style, {:escape => false})
+  end
+
   def percent_complete
     a = donations.count
     b = persons_required

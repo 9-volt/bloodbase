@@ -48,7 +48,7 @@
 
 .row(style="margin-top: 30px")
   .span6.well.photo
-    %img{:src =>  @blood_request.photo.url({:escape => false})}
+    %img{:src =>  @blood_request.photo_url}
   .span5.well.cprogress
     %h5 Progresul cazului din #{@blood_request.created_at.strftime('%d %b %y')}
 
