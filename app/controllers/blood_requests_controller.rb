@@ -5,7 +5,7 @@ class BloodRequestsController < ApplicationController
   end
 
   def create
-    @blood_request = BloodRequest.new req_params
+    @blood_request = BloodRequest.new br_params
 
     if @blood_request.save
       @blood_request.shortlink.save
@@ -19,7 +19,7 @@ class BloodRequestsController < ApplicationController
 
   private
 
-    def req_params
+    def br_params
       params.require(:blood_request).permit!
     end
 end
