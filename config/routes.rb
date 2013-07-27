@@ -1,4 +1,5 @@
-Bloodbase::Application.routes.draw do
-  get '/pages/:action', controller: "pages", as: "pages"
-  root to: 'pages', action: 'index'
+Sange::Application.routes.draw do
+  root :to => "home#index"
+  devise_for :users
+  resources :users
 end
