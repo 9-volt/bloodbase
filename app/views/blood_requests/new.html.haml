@@ -5,22 +5,43 @@
       %label.control-label Numele persoanei
       .controls
         = f.text_field :person_name, :class => 'input-xlarge'
-        %p.help-block Numele complet al persoanei care are nevoie de sange
+        %p.help-block Numele complet al persoanei care are nevoie de sânge
+
+    .control-group
+      %label.control-label Spitalul
+      .controls
+        = f.text_field :hospital, :class => 'input-xlarge'
+        %p.help-block
+          Numele spitaului în care persoana este spitalizată
+
+    .control-group
+      %label.control-label Secţia
+      .controls
+        = f.text_field :section, :class => 'input-xlarge'
+        %p.help-block
+          Secţia în care persoana este spitalizată
 
     .control-group
       %label.control-label Descrierea cazului
       .controls
         = f.text_area :description, :class => 'input-xlarge'
         %p.help-block
-          Care este conditia in care se afla persoana si de ce ea are nevoie
-          de donatii
+          Care este condiţia in care se află persoana şi de ce ea are nevoie
+          de donaţii
+
+    .control-group
+      %label.control-label Nr. de donatori
+      .controls
+        = f.number_field :persons_required, :class => 'input-small'
+        %p.help-block
+          Numărul de minim persoane care trebuie să doneze
 
     .control-group
       %label.control-label Datele de contact
       .controls
         = f.text_field :contacts, :class => 'input-xlarge'
         %p.help-block
-          Cum puteti sa fiti contactati in caz ca un donator este gasit
+          Cum puteţi să fiţi contactaţi în caz că un donator este găsit
 
     .control-group
       %label.control-label Fotografia persoanei

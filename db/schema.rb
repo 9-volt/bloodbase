@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130727135301) do
+ActiveRecord::Schema.define(version: 20130727165917) do
 
   create_table "blood_requests", force: true do |t|
     t.string   "person_name"
@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 20130727135301) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.text     "description"
+    t.string   "hospital"
+    t.string   "section"
+    t.integer  "persons_required"
   end
 
   create_table "donations", force: true do |t|

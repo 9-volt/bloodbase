@@ -1,6 +1,7 @@
 class BloodRequestsController < ApplicationController
   def new
     @blood_request = BloodRequest.new
+    @blood_request.persons_required = 5
   end
 
   def create
@@ -20,6 +21,7 @@ class BloodRequestsController < ApplicationController
 
     def req_params
       params.require(:blood_request)
-            .permit(:person_name, :description, :contacts, :photo)
+            .permit(:person_name, :description, :contacts, :photo,
+                    :persons_required, :hospital, :section)
     end
 end

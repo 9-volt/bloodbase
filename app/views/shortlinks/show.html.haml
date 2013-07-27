@@ -20,19 +20,32 @@
     padding: 0;
   }
 
+  .photo img {
+    height: 256px;
+    width: auto;
+    border-radius: 6px;
+  }
+
   .addthis_toolbox {
-    margin-top: 30px;
     margin-left: 100px;
+  }
+
+  .progress {
+    margin: 0;
   }
 
 %h1= @blood_request.person_name
 
 .row(style="margin-top: 30px")
   .span5.well.photo
-    %img{:src =>  @blood_request.photo.url, :style => 'max-height: 256px; max-width: 256px'}
+    %img{:src =>  @blood_request.photo.url}
   .span5.cprogress
-    %h4 Progresul din #{@blood_request.created_at.strftime("%d %B %Y")}
-    %h3 #{@blood_request.donors.count} donatori găsiţi
+    %h4 #{@blood_request.hospital}, Secţia #{@blood_request.section}
+    %br
+
+    .progress.progress-danger.active
+      .bar{:style => "width: #{@blood_request.percent_complete}%"}
+    %h3 #{@blood_request.donors.count} / #{@blood_request.persons_required} donatori găsiţi
 
     .share
       .addthis_toolbox.addthis_default_style.addthis_32x32_style
