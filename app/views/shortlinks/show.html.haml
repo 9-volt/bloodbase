@@ -1,17 +1,17 @@
 .row(style="margin-top: 30px")
   .span4
-    = image_tag @blood_request.photo.url :width => '256px'
+    %img{:src =>  @blood_request.photo.url, :width => '256px'}
   .span8
-    = @blood_request.person_name
+    %h2= @blood_request.person_name
+    %p= @blood_request.description
+    %h4 Date de contact
+    %p= @blood_request.contacts
+
+    %h5 Distribuie mai departe
+    %p
+      Share links
 
 .row(style="margin-top: 30px")
-  .span12
-    = @blood_request.description
+  .span12(style="text-align: center")
+    %button.btn.btn-primary.btn-large DONATE NOW! LIMITED OFFER!
 
-.row(style="margin-top: 30px")
-  .span12
-    %button.btn DONATE NOW! LIMITED OFFER!
-
-.row(style="margin-top: 30px")
-  .span12
-    Share links
