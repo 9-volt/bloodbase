@@ -2,13 +2,17 @@
   .cprogress {
     height: 256px;
     position: relative;
+    text-align: center;
   }
 
   .action {
-    text-align: center;
     bottom: 0;
     right: 0;
     position: absolute;
+  }
+
+  .action button {
+    width: 100%;
   }
 
   .photo {
@@ -16,28 +20,40 @@
     padding: 0;
   }
 
-  img {
-    border-radius: 6px;
+  .addthis_toolbox {
+    margin-top: 30px;
+    margin-left: 50px;
   }
+
+%h1= @blood_request.person_name
 
 .row(style="margin-top: 30px")
   .span5.well.photo
     %img{:src =>  @blood_request.photo.url, :style => 'max-height: 256px; max-width: 256px'}
   .span5.cprogress
-    %h4 Progresul din #{l(@blood_request.created_at)}
+    %h4 Progresul din #{@blood_request.created_at.strftime("%d %B %Y")}
     %h3 #{@blood_request.donors.count} donatori găsiţi
-    %br
-    %br
+
+    .share
+      .addthis_toolbox.addthis_default_style.addthis_32x32_style
+        %a.addthis_button_facebook
+        %a.addthis_button_odnoklassniki_ru
+        %a.addthis_button_twitter
+        %a.addthis_button_google_plusone_share
+        %a.addthis_button_pinterest_share
+        %a.addthis_button_compact
+        %a.addthis_counter.addthis_bubble_style
+
     .span5.action
       %button.btn.btn-primary.btn-large Donează Sânge
 
 .row(style="margin-top: 30px")
-  %h2= @blood_request.person_name
-  %p= @blood_request.description
-  %h4 Date de contact
-  %p= @blood_request.contacts
+  .span12
+    %h4 Date de contact
+    %p= @blood_request.contacts
+    %hr
+    %p= @blood_request.description
 
-  %h5 Distribuie mai departe
-  %p
-    Share links
-
+:javascript
+  var addthis_config = {"data_track_addressbar":true}
+%script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-508e563741b6132f")
