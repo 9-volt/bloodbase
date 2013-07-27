@@ -11,9 +11,10 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+ShortHasher = Hashids.new('doneazasange', 6)
+
 module Donez
   class Application < Rails::Application
-
     config.assets.initialize_on_precompile=false
     # don't generate RSpec tests for views and helpers
     config.generators do |g|

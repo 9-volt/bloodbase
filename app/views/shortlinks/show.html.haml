@@ -1,0 +1,78 @@
+:css
+  .cprogress {
+    height: 220px;
+    text-align: center;
+  }
+
+  button.action {
+    width: 100%;
+  }
+
+  .photo {
+    text-align: center;
+    padding: 0;
+  }
+
+  .photo img {
+    height: 256px;
+    width: auto;
+    border-radius: 6px;
+  }
+
+  .addthis_toolbox {
+    margin-left: 100px;
+  }
+
+  .progress {
+    margin: 0;
+    background: grey;
+  }
+
+  .info {
+    padding: 5px;
+    margin-left: 170px;
+  }
+
+  .share {
+    margin-bottom: 20px;
+  }
+
+.row(style="margin-top: 30px")
+  .span6.well.photo
+    %img{:src =>  @blood_request.photo.url}
+  .span5.well.cprogress
+    %h5 Progresul cazului din #{@blood_request.created_at.strftime('%d %b %y')}
+
+    .progress.progress-danger.active
+      .bar{:style => "width: #{@blood_request.percent_complete}%"}
+    %h3 #{@blood_request.donors.count} din #{@blood_request.persons_required} donatori găsiţi
+
+    .share
+      .addthis_toolbox.addthis_default_style.addthis_32x32_style
+        %a.addthis_button_facebook
+        %a.addthis_button_odnoklassniki_ru
+        %a.addthis_button_vk
+        %a.addthis_button_twitter
+        %a.addthis_button_google_plusone_share
+
+    %button.btn.btn-primary.btn-large.action Donează Sânge
+
+.row
+  .span11.well
+    %form.form-horizontal
+      %fieldset
+        .control-group
+          %label.control-label Numele pacientului:
+          .info= @blood_request.person_name
+        .control-group
+          %label.control-label Spitalul:
+          .info= @blood_request.hospital
+        .control-group
+          %label.control-label Secţia:
+          .info= @blood_request.section
+        .control-group
+          %label.control-label Descrierea cazului:
+          .info= @blood_request.description
+
+
+%script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-508e563741b6132f")

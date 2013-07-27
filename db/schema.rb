@@ -11,22 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130727095122) do
+ActiveRecord::Schema.define(version: 20130727180408) do
 
   create_table "blood_requests", force: true do |t|
     t.string   "person_name"
-    t.string   "contacts"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.text     "description"
+    t.string   "hospital"
+    t.string   "section"
+    t.integer  "persons_required"
+    t.string   "issuer_name"
   end
 
   create_table "donations", force: true do |t|
     t.integer  "blood_request_id"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shortlinks", force: true do |t|
+    t.integer  "blood_request_id"
+    t.string   "code"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -4,4 +4,7 @@ class HomeController < ApplicationController
 
   def faq
   end
+
+  def centre
+  end
 end

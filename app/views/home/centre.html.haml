@@ -1,0 +1,83 @@
+%h1 Puncte de colectare a sangelui
+
+#map-canvas(style='width: 100%; height: 500px')
+
+= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3&sensor=true'
+
+:javascript
+  var CENTRES = {
+    'Chișinău, str. Academiei 11': [47.0013657, 28.816248200000018],
+    'Bălți, str. Decebal 113': [47.7714571, 27.899646200000007],
+    'Anenii Noi, str. Uzinelor 30': [46.9865267, 28.927828999999974],
+    'Orhei, str. Vasile Lupu 127': [47.387934, 28.823844099999974],
+    'Hîncești, str. M. Hîncu 238': [46.8282325, 28.58866809999995],
+    'Strada Testimenţianu 1, Ștefan Vodă, Stefan Voda, Moldova': [46.5121275, 29.663107399999944],
+    'Căușeni, str. Gagarin 54': [46.82030229999999, 29.66564740000001],
+    'Calarași, Moldova': [47.261791, 28.324640000000045],
+    'Ungheni, str. Națională 79': [47.2088469, 27.802774799999952],
+    'Nisporeni, str. Toma Ciorbă 5': [47.0874422, 28.174304600000028],
+    'Cimișlia, str. Alexandru cel Bun 135': [46.5260955, 28.766198199999963],
+    'Cantemir, Moldova': [46.2477443, 28.392455400000017],
+    'Ceadîr Lunga, str. Miciurin 2': [46.05912000000001, 28.830020999999988],
+    'Taraclia, str. Cebanov 1': [45.9128123, 28.67407920000005],
+    'Comrat, str. Odesa 2': [46.3021622, 28.637666699999954],
+    'Soroca, str. Testemițanu 1': [48.1666667, 28.299999999999955],
+    'Drochia, Moldova': [48.031247, 27.828722999999968],
+    'Edineț, Moldova': [48.1678991, 27.293614299999945]
+  }
+
+  var geocoder = new google.maps.Geocoder();
+  var geo = {}
+
+  function blue_marker (map, position) {
+    var marker = new google.maps.Marker({
+        map: map,
+        icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+        position: position
+    });
+  }
+
+  function geocode (map, address, coords) {
+    if (coords === undefined) coords = []
+
+    if (coords.length === 0) {
+      geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          var position = results[0].geometry.location
+          blue_marker(map, position)
+          console.log(address, position)
+        } else {
+          console.log(address, 'Geocode was not successful for the following reason: ' + status);
+        }
+      })
+    } else {
+      blue_marker(map, new google.maps.LatLng(coords[0], coords[1]))
+    }
+  }
+
+  function initialize() {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+
+      var mapOptions = {
+        center: pos,
+        zoom: 12,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      var map = new google.maps.Map(document.getElementById("map-canvas"),
+        mapOptions);
+
+      var marker = new google.maps.Marker({
+        position: pos,
+        map: map,
+        title: 'Locatia currenta'
+      });
+
+      for (var k in CENTRES) {
+        geocode(map, k, CENTRES[k])
+      }
+    })
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+
