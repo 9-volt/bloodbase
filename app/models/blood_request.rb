@@ -17,5 +17,7 @@
 class BloodRequest < ActiveRecord::Base
   has_attached_file :photo
   has_many :donations
-  has_many :donors, :through => :donations, :source => :user
+  has_many :donoors, :through => :donations, :source => :user
+
+  validates_presence_of :person_name, :description, :contacts
 end
