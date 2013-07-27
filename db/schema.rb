@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130727193226) do
+ActiveRecord::Schema.define(version: 20130727201003) do
 
   create_table "blood_requests", force: true do |t|
     t.string   "person_name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20130727193226) do
     t.string   "email"
     t.string   "id_number"
     t.datetime "donate_at"
+    t.string   "code"
   end
 
   create_table "shortlinks", force: true do |t|
