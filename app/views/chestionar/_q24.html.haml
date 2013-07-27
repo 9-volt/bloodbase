@@ -17,3 +17,6 @@
       %br/
       Dacă nu sunteți sigur în faptul dacă putețî face transfuzie de sânge puteți suna la birou de informație 022-739381 și dați toate răspunsurile care vă interesează.
 
+- if params[:redirect]
+  :javascript
+    window.location.replace("#{params[:redirect]}");
