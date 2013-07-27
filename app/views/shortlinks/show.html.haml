@@ -1,1 +1,9 @@
-= @blood_request.person_name
+.row(style="margin-top: 30px")
+  .span4
+    = image_tag @blood_request.photo.url :width => '256px'
+  .span8
+    = @blood_request.person_name
+
+.row(style="margin-top: 30px")
+  .span12
+    = @blood_request.description
