@@ -20,8 +20,6 @@ class BloodRequestsController < ApplicationController
   private
 
     def req_params
-      params.require(:blood_request)
-            .permit(:person_name, :description, :email, :photo,
-                    :persons_required, :hospital, :section, :issuer_name)
+      params.require(:blood_request).permit!
     end
 end

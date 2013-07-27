@@ -17,7 +17,7 @@ gem 'hashids'
 
 group :development do
   gem 'better_errors'
-  gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]
+  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'html2haml'
   gem 'quiet_assets'
   gem 'annotate', ">=2.5.0"
@@ -35,6 +35,4 @@ end
 
 group :production do
   gem 'pg'
-  gem 'cloudfiles'
-  gem 'paperclip-cloudfiles'
 end
