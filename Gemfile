@@ -22,14 +22,19 @@ group :development do
   gem 'html2haml'
   gem 'quiet_assets'
 end
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'sqlite3'
 end
+
 group :test do
   gem 'database_cleaner'
   gem 'email_spec'
 end
+
 group :production do
   gem 'pg'
+  gem 'cloudfiles'
+  gem 'paperclip-cloudfiles'
 end

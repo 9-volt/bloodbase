@@ -19,7 +19,14 @@
 #
 
 class BloodRequest < ActiveRecord::Base
-  has_attached_file :photo
+  if Rails.env.production?
+    has_attached_file :photo, :storage => :cloud_files,
+                      :cloudfiles_credentials =>  "#{RAILS_ROOT}/config/rackspace.yml",
+                      :path => ":attachment/:id/:timestamp_:style.:extension"
+  else
+    has_attached_file :photo
+  end
+
   has_many :donations
   has_many :donors, :through => :donations, :source => :user
   has_one :shortlink
