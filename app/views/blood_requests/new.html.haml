@@ -1,1 +1,32 @@
-%h1 New donation request
+= form_for(@blood_request, :html => {:class => 'form-horizontal'}) do |f|
+  %fieldset
+    %legend Cauta sange
+    .control-group
+      %label.control-label Numele persoanei
+      .controls
+        = f.text_field :person_name, :class => 'input-xlarge'
+        %p.help-block Numele complet al persoanei care are nevoie de sange
+
+    .control-group
+      %label.control-label Descrierea cazului
+      .controls
+        = f.text_area :description, :class => 'input-xlarge'
+        %p.help-block
+          Care este conditia in care se afla persoana si de ce ea are nevoie
+          de donatii
+
+    .control-group
+      %label.control-label Datele de contact
+      .controls
+        = f.text_field :contacts, :class => 'input-xlarge'
+        %p.help-block
+          Cum puteti sa fiti contactati in caz ca un donator este gasit
+
+    .control-group
+      %label.control-label Fotografia persoanei
+      .controls
+        = f.file_field :photo, :class => 'input-xlarge'
+
+  .form-actions
+    = f.submit 'Creeaza cererea', :class => 'btn btn-primary'
+    %button(type="reset" class="btn") Anuleaza
