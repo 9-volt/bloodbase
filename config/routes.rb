@@ -2,7 +2,10 @@ Donez::Application.routes.draw do
   root :to => "home#index"
 
   devise_for :users
-  resources :users, :blood_requests, :donations
+  resources :users, :donations
+  resources :blood_requests do
+    resources :case_donations
+  end
 
   get '/help' => "blood_requests#new"
   get '/ajutor' => 'blood_requests#new'
