@@ -23,7 +23,7 @@ class BloodRequest < ActiveRecord::Base
   has_many :donors, :through => :donations, :source => :user
   has_one :shortlink
 
-  validates_presence_of :person_name, :description, :contacts
+  validates_presence_of :person_name, :description, :email
 
   def percent_complete
     a = donors.count
