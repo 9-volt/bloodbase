@@ -9,7 +9,7 @@ Donez::Application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-  config.paperclip_defaults = {
+  Paperclip.options.merge({
     :storage => :fog,
     :path => "images/:class/:id/:attachment/:style/img_:fingerprint",
     :fog_credentials => {
@@ -19,7 +19,7 @@ Donez::Application.configure do
     },
     :fog_directory => 'donezsange.eu',
     :fog_public => true
-  }
+  })
 
 
   # Full error reports are disabled and caching is turned on.
