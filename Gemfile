@@ -13,7 +13,6 @@ gem 'figaro'
 gem 'haml-rails'
 gem 'thin'
 gem "paperclip", "~> 3.0"
-gem 'annotate', ">=2.5.0"
 gem 'hashids'
 
 group :development do
@@ -21,6 +20,7 @@ group :development do
   gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]
   gem 'html2haml'
   gem 'quiet_assets'
+  gem 'annotate', ">=2.5.0"
 end
 
 group :development, :test do
