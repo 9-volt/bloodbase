@@ -37,6 +37,10 @@
     margin-bottom: 20px;
   }
 
+  .progress-danger .bar {
+    background-color: #f0584c;
+  }
+
 = content_for :head do
   %meta{:property => "og:image", :content => @blood_request.photo.url}
   %meta{:property => "og:title", :content => "Donează sânge pentru #{@blood_request.person_name}"}

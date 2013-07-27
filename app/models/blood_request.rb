@@ -27,7 +27,7 @@ class BloodRequest < ActiveRecord::Base
   validates_presence_of :person_name, :description, :email
 
   def percent_complete
-    a = donors.count
+    a = donations.count
     b = persons_required
 
     return 100 if a > b
