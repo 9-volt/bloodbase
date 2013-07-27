@@ -4,7 +4,7 @@
 #
 #  id                 :integer          not null, primary key
 #  person_name        :string(255)
-#  contacts           :string(255)
+#  email              :string(255)
 #  created_at         :datetime
 #  updated_at         :datetime
 #  photo_file_name    :string(255)
@@ -15,6 +15,7 @@
 #  hospital           :string(255)
 #  section            :string(255)
 #  persons_required   :integer
+#  issuer_name        :string(255)
 #
 
 class BloodRequest < ActiveRecord::Base
