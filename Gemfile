@@ -26,3 +26,6 @@ group :test do
   gem 'database_cleaner'
   gem 'email_spec'
 end
+group :production do
+  gem 'pg'
+end
