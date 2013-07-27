@@ -2,6 +2,7 @@
 %ul.nav
   %li= link_to 'Puncte de colectare', home_path(:centre)
   %li= link_to 'Întrebări frecvente', home_path(:faq)
+  %li= link_to 'Ancheta', questionnaire_path
 %ul.nav.pull-right
   - if user_signed_in?
     %li

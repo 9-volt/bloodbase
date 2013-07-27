@@ -9,6 +9,10 @@ Donez::Application.routes.draw do
   get '/donate' => 'donations#new'
   get '/doneaza' => 'donations#new'
 
+  get '/questionnaire' => 'questionnaire#index', :as => 'questionnaire'
+  get '/questionnaire/next_item' => 'questionnaire#next_item', :as => 'next_item'
+
   get '/:action' => 'home', :as => 'home'
   get '/case/:code' => 'shortlinks#show', :as => 'shortlink'
+
 end

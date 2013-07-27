@@ -1,0 +1,9 @@
+%table{:width => "100%"}
+  %tr{:align => "center"}
+    %td{:colspan => "2"}
+      %h4 Ați fost în contact cu bolnavi de hepatită sau icter în ultimele 6 luni?
+  %tr{:align => "center"}
+    %td{:width => "50%"}
+      = link_to 'Da', '#', :class => "sync btn", :next_id => 26
+    %td{:width => "50%"}
+      = link_to 'Nu', '#', :class => "sync btn", :next_id => 9

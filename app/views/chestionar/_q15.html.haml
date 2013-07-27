@@ -1,0 +1,9 @@
+%table{:width => "100%"}
+  %tr{:align => "center"}
+    %td{:colspan => "2"}
+      %h4 Ai avut o boală gravă în trecut, sau vi se administrează tratament în prezent?
+  %tr{:align => "center"}
+    %td{:width => "50%"}
+      = link_to 'Da', '#', :class => "sync btn", :next_id => 25
+    %td{:width => "50%"}
+      = link_to 'Nu', '#', :class => "sync btn", :next_id => 16

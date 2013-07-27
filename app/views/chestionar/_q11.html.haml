@@ -1,0 +1,13 @@
+%table{:width => "100%"}
+  %tr{:align => "center"}
+    %td{:colspan => "2"}
+      %span{:style => "color: #ee2d24;"}
+        Vă rugăm să nu donați sânge, dacă considerați că e necasar să treceți testul la HIV sau hepatită, sau dacă ați avut sex în ultimul an cu cineva care credeți că ar putea fi infectat cu HIV sau hepatita B-pozitiv. Serviciul de sânge se bazează pe ajutorul și cooperarea dumneavoastră. Vă rugăm să răspundeți extrem de precis următoarea întrebare.
+      %br
+      Sunteți HIV-infectat sau presupuneți că sunteți HIV-infectat?
+      %br
+  %tr{:align => "center"}
+    %td{:width => "50%"}
+      = link_to 'Da', '#', :class => "sync btn", :next_id => 27
+    %td{:width => "50%"}
+      = link_to 'Nu', '#', :class => "sync btn", :next_id => 12

@@ -1,0 +1,9 @@
+%table{:width => "100%"}
+  %tr{:align => "center"}
+    %td{:colspan => "2"}
+      %h4 Aveți vîrsta de 70 de ani (sau mai mult) și ați făcut transfuzie de sînge în decurs la ultimii 2 ani?
+  %tr{:align => "center"}
+    %td{:width => "50%"}
+      = link_to 'Da', '#', :class => "sync btn", :next_id => 4
+    %td{:width => "50%"}
+      = link_to 'Nu', '#', :class => "sync btn", :next_id => 25

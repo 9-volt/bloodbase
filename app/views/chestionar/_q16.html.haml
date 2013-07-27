@@ -1,0 +1,12 @@
+%table{:width => "100%"}
+  %tr{:align => "center"}
+    %td{:colspan => "2"}
+      %h4 Ați vizitat stomatologul pentru intervenții stomatologice complexe în cavitatea bucală?
+      %h5 Dacă vi s-a instalat un simplu sigiliu atunci puteți face transfuzie de sânge după 24 de ore.
+      %br
+      %h5 Dacă vi s-a îndepărtat un dinte puteți face transfuzie de sânge după 24 de ore.
+  %tr{:align => "center"}
+    %td{:width => "50%"}
+      = link_to 'Da', '#', :class => "sync btn", :next_id => 25
+    %td{:width => "50%"}
+      = link_to 'Nu', '#', :class => "sync btn", :next_id => 17
