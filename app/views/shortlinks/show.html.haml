@@ -1,17 +1,43 @@
-.row(style="margin-top: 30px")
-  .span4
-    %img{:src =>  @blood_request.photo.url, :width => '256px'}
-  .span8
-    %h2= @blood_request.person_name
-    %p= @blood_request.description
-    %h4 Date de contact
-    %p= @blood_request.contacts
+:css
+  .cprogress {
+    height: 256px;
+    position: relative;
+  }
 
-    %h5 Distribuie mai departe
-    %p
-      Share links
+  .action {
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  .photo {
+    text-align: center;
+    padding: 0;
+  }
+
+  img {
+    border-radius: 6px;
+  }
 
 .row(style="margin-top: 30px")
-  .span12(style="text-align: center")
-    %button.btn.btn-primary.btn-large DONATE NOW! LIMITED OFFER!
+  .span5.well.photo
+    %img{:src =>  @blood_request.photo.url, :style => 'max-height: 256px; max-width: 256px'}
+  .span5.cprogress
+    %h4 Progresul din #{l(@blood_request.created_at)}
+    %h3 #{@blood_request.donors.count} donatori găsiţi
+    %br
+    %br
+    .span5.action
+      %button.btn.btn-primary.btn-large Donează Sânge
+
+.row(style="margin-top: 30px")
+  %h2= @blood_request.person_name
+  %p= @blood_request.description
+  %h4 Date de contact
+  %p= @blood_request.contacts
+
+  %h5 Distribuie mai departe
+  %p
+    Share links
 
