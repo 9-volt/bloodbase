@@ -1,4 +1,3 @@
-production:
-  container: donezsange.eu
-  username: minivan
-  api_key: 377dc45c04eb687c7646b9ed4efd2812
+container: donezsange.eu
+username: minivan
+api_key: 377dc45c04eb687c7646b9ed4efd2812
