@@ -50,7 +50,7 @@
 
     .progress.progress-danger.active
       .bar{:style => "width: #{@blood_request.percent_complete}%"}
-    %h3 #{@blood_request.donors.count} din #{@blood_request.persons_required} donatori găsiţi
+    %h3 #{@blood_request.donations.count} din #{@blood_request.persons_required} donatori găsiţi
 
     .share
       .addthis_toolbox.addthis_default_style.addthis_32x32_style
@@ -60,7 +60,7 @@
         %a.addthis_button_twitter
         %a.addthis_button_google_plusone_share
 
-    %button.btn.btn-primary.btn-large.action Donează Sânge
+    %a.btn.btn-primary.btn-large.action{:href => new_blood_request_case_donation_path(@blood_request)} Donează Sânge
 
 .row
   .span11.well
