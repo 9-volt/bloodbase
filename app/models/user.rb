@@ -4,4 +4,7 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :donations
+  has_many :donated_requests, :through => :donations, :source => :blood_request
 end
