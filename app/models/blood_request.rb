@@ -21,7 +21,7 @@
 class BloodRequest < ActiveRecord::Base
   if Rails.env.production?
     has_attached_file :photo, :storage => :cloud_files,
-                      :cloudfiles_credentials =>  "#{RAILS_ROOT}/config/rackspace.yml",
+                      :cloudfiles_credentials =>  "#{Rails.root}/config/rackspace.yml",
                       :path => ":attachment/:id/:timestamp_:style.:extension"
   else
     has_attached_file :photo
