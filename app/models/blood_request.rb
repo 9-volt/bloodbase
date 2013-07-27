@@ -17,7 +17,16 @@
 class BloodRequest < ActiveRecord::Base
   has_attached_file :photo
   has_many :donations
-  has_many :donoors, :through => :donations, :source => :user
+  has_many :donors, :through => :donations, :source => :user
+  has_one :shortlink
 
   validates_presence_of :person_name, :description, :contacts
+
+  def shortlink
+    super || build_shortlink
+  end
+
+  def link
+    "/#{shortlink.code}"
+  end
 end

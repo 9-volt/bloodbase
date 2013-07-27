@@ -14,6 +14,7 @@ gem 'haml-rails'
 gem 'thin'
 gem "paperclip", "~> 3.0"
 gem 'annotate', ">=2.5.0"
+gem 'hashids'
 
 group :development do
   gem 'better_errors'

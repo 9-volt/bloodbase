@@ -7,7 +7,8 @@ class BloodRequestsController < ApplicationController
     @blood_request = BloodRequest.new req_params
 
     if @blood_request.save
-      redirect_to blood_request_path(@blood_request)
+      @blood_request.shortlink.save
+      redirect_to @blood_request.link
     else
       flash.now[:error] = @blood_request.errors.full_messages.join('<br />')
                                                .html_safe
