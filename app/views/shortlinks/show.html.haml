@@ -22,7 +22,7 @@
 
   .addthis_toolbox {
     margin-top: 30px;
-    margin-left: 50px;
+    margin-left: 100px;
   }
 
 %h1= @blood_request.person_name
@@ -38,11 +38,9 @@
       .addthis_toolbox.addthis_default_style.addthis_32x32_style
         %a.addthis_button_facebook
         %a.addthis_button_odnoklassniki_ru
+        %a.addthis_button_vk
         %a.addthis_button_twitter
         %a.addthis_button_google_plusone_share
-        %a.addthis_button_pinterest_share
-        %a.addthis_button_compact
-        %a.addthis_counter.addthis_bubble_style
 
     .span5.action
       %button.btn.btn-primary.btn-large Donează Sânge
@@ -54,6 +52,4 @@
     %hr
     %p= @blood_request.description
 
-:javascript
-  var addthis_config = {"data_track_addressbar":true}
 %script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-508e563741b6132f")
