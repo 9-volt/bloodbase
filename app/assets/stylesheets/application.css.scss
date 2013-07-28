@@ -21,9 +21,19 @@
   background-image: linear-gradient(to bottom,#f0584c,#f0584c);
 }
 
-body {
-  padding-top: 78px;
+html, body{
+  height: 100%;
   font-family: 'Oxygen', sans-serif;
+}
+
+#main{
+  min-height: 100%;
+}
+
+#main>.container{
+  padding-top: 78px;
+  padding-bottom: 105px;
+
 }
 
 section.carousel {
@@ -31,7 +41,8 @@ section.carousel {
 }
 
 #footer {
-  margin-top: 30px;
+  height: 105px;
+  margin: -105px 0 0;
 }
 
 #question td {
