@@ -1,9 +1,10 @@
 = link_to image_tag('logo.png'), root_path, :class => 'brand'
 %ul.nav
-  %li= link_to 'Vezi pacienti', "#"
+  %li= link_to 'Vezi pacienti', cases_path
   %li= link_to "Doneaza", "#{questionnaire_path}?redirect=#{new_donation_path}"
   %li= link_to "Adauga o cerere noua", help_path
   %li= link_to 'Pot dona?', questionnaire_path
+
   %li.dropdown
     %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
       Informatii Utile
