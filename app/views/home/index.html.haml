@@ -29,7 +29,7 @@
           .text Mai e nevoie de #{br.persons_required - br.donations.count} din #{br.persons_required}
           .progress
             .bar.bar-danger{:style => "width: #{br.percent_complete}%;"}
-        .description= br.description
+        .description= br.summary
         .calltoaction
           %a.btn.btn-danger{:href => "#{questionnaire_path}?redirect=#{new_blood_request_case_donation_path(br)}"} Donează Sânge
 
