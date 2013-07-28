@@ -1,0 +1,4 @@
+%section.profiles
+  .row
+    - @blood_requests.each do |br|
+      = render 'case_box', :br => br

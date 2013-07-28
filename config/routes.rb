@@ -11,6 +11,7 @@ Donez::Application.routes.draw do
   get '/ajutor' => 'blood_requests#new'
   get '/donate' => 'donations#new'
   get '/doneaza' => 'donations#new'
+  get '/cases' => 'blood_requests#index'
 
   get '/questionnaire' => 'questionnaire#index', :as => 'questionnaire'
   get '/questionnaire/next_item' => 'questionnaire#next_item', :as => 'next_item'
