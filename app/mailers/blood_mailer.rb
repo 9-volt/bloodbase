@@ -7,6 +7,6 @@ class BloodMailer < ActionMailer::Base
     @host_uri = host_uri
 
     subject = 'O persoana s-a inregistrat sa doneze pentru cazul dumneavoastra'
-    mail :to => 'andrei.lisnic@gmail.com', :subject => subject
+    mail :to => blood_request.email, :subject => subject
   end
 end
