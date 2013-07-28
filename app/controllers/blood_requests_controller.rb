@@ -4,6 +4,10 @@ class BloodRequestsController < ApplicationController
     @blood_request.persons_required = 5
   end
 
+  def index
+    @blood_requests = BloodRequest.all
+  end
+
   def create
     @blood_request = BloodRequest.new br_params
 

@@ -31,6 +31,12 @@ class BloodRequest < ActiveRecord::Base
     photo.url(photo.default_style, {:escape => false})
   end
 
+  def summary
+    return description if description.size <= 70
+    words = description[0..65].split[0..-2].join(' ')
+    "#{words}..."
+  end
+
   def percent_complete
     a = donations.count
     b = persons_required

@@ -10,15 +10,15 @@
       Bine ai venit pe donezsange.eu -
       %br>/
       locul unde salvăm vieți împreună.
-    %h2 Aici poti afla usor cum devii donator, te poti programa rapid pentru o donare si cel mai important poti cere ajutor.
+    %h2 Aici poți afla ușor cum devii donator, te poți programa rapid pentru o donare și cel mai important poți cere ajutor.
     .buttons
-      %a.btn.btn-danger{:href => "#", :href => "#{questionnaire_path}?redirect=#{new_donation_path}"} Doneaza
+      %a.btn.btn-danger{:href => "#", :href => "#{questionnaire_path}?redirect=#{new_donation_path}"} Donează
       %a.btn.btn-danger{:href => "#", :href => help_path} Caut donatori
 
 %section.profiles
   .row
     .span12
-      %h3 Persoane ce au nevoie de sange
+      %h3 Persoane ce au nevoie de sânge
   .row
     - @blood_requests.each do |br|
       .span4.br
@@ -29,14 +29,13 @@
           .text Mai e nevoie de #{br.persons_required - br.donations.count} din #{br.persons_required}
           .progress
             .bar.bar-danger{:style => "width: #{br.percent_complete}%;"}
-        .description= br.description
+        .description= br.summary
         .calltoaction
           %a.btn.btn-danger{:href => "#{questionnaire_path}?redirect=#{new_blood_request_case_donation_path(br)}"} Donează Sânge
 
 
   .row
-    .span12.text-right
-      %a{:href => "#"} Vezi toate cererile
+    .span12.text-right= link_to 'Vezi toate cererile', cases_path
 
 %section.infoblock
   .row
@@ -50,7 +49,7 @@
     .span4
       .image
         = image_tag "contacteaza-ne.png"
-      %h2 Contacteaza-ne
+      %h2 Contactează-ne
     .span4
       .image
         = image_tag "despre-proiect.png"
