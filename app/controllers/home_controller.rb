@@ -1,5 +1,11 @@
 class HomeController < ApplicationController
   def index
+    if cookies[:welcome]
+      @show_welcome = false
+    else
+      cookies[:welcome] = true
+      @show_welcome = true
+    end
     @blood_requests = BloodRequest.last(3).reverse
   end
 
