@@ -154,6 +154,22 @@ section.carousel {
       width: auto;
     }
   }
+  .infoblock{
+    .row-fluid{
+      .span4{
+        width: 31%;
+        margin: 0 1%;
+        float: left;
+        .image{
+          img{
+            max-width: 155px;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
   footer{
     padding: 0 20px;
   }
@@ -180,6 +196,18 @@ section.carousel {
     }
     h2{
       width: auto;
+    }
+  }
+  .infoblock{
+    .row-fluid{
+      .span4{
+        h2{
+          font-size: 14px;
+          margin-top: 5px;
+          line-height: 20px;
+          white-space: nowrap;
+        }
+      }
     }
   }
 }
