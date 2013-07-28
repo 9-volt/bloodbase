@@ -22,15 +22,24 @@
 }
 
 body {
-  padding-top: 58px;
+  padding-top: 78px;
   font-family: 'Oxygen', sans-serif;
 }
 
 section.carousel {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 #footer {
   margin-top: 30px;
+}
+
+#question td {
+  &:first-child a.btn{
+    background: #2C3E50;
+  }
+  &:nth-child(2) a.btn {
+    background: #f0584c;
+  }
 }
 
