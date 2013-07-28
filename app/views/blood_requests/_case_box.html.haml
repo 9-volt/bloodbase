@@ -1,3 +1,9 @@
+:css
+  .description {
+    height: 60px;
+    overflow: hidden;
+  }
+
 .span4.br
   .image
     = link_to br.link do
@@ -6,6 +12,6 @@
     .text Mai e nevoie de #{br.persons_required - br.donations.count} din #{br.persons_required}
     .progress
       .bar.bar-danger{:style => "width: #{br.percent_complete}%;"}
-  .description= br.summary
+  .description= br.description
   .calltoaction
     %a.btn.btn-danger{:href => "#{questionnaire_path}?redirect=#{new_blood_request_case_donation_path(br)}"} Donează Sânge
