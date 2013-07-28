@@ -19,7 +19,7 @@
   .row
     .span12
       %h3 Persoane ce au nevoie de sânge
-  .row
+  .row-fluid
     - @blood_requests.each do |br|
       = render '/blood_requests/case_box', :br => br
 

@@ -204,6 +204,18 @@ section.profiles{
   }
 }
 
+@media (min-width: 480px) and (max-width: 767px) {
+  .profiles{
+    .row-fluid{
+      .span4{
+        width: 48%;
+        margin: 0 1%;
+        float: left;
+      }
+    }
+  }
+}
+
 @media (max-width: 480px) {
   .carousel .info{
     h1{
