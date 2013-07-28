@@ -1,0 +1,30 @@
+.modal.fade#myModal
+  .modal-dialog
+    .modal-content
+      .modal-body
+        %h3{:style => 'text-align:center'}
+          donezsange.eu e un proiect ce a fost lansat în cadrul SICamp Moldova 2013.
+        %p
+          Ne propunem să simplificăm la maxim procedura de donare a sângelui şi să popularizăm această practică integrând cererile cu reţelele sociale.
+        %p
+          La moment sistemul se află în regim de test. În cazul în care sunteţi interesaţi de o realizare bună a proiectului sau doriţi să deveniţi partener, contactaţi-ne la
+          = link_to "contact@donezsange.eu", 'mailto:contact@donezsange.eu'
+        %br
+        %p{:style => 'text-align:center'}
+          = "Intre timp ne puteti ajuta complectand"
+          = link_to 'acest', 'http://goo.gl/AWKhD4'
+          = "chestionar online."
+        %hr
+        %div{:style => 'text-align:center'}
+          .fb-like{"data-font" => "arial", "data-href" => "https://www.facebook.com/donezsange.eu", "data-send" => "true", "data-show-faces" => "true", "data-width" => "450"}
+      .modal-footer{:style => 'text-align:center'}
+        %button.btn.btn-default.btn-danger{"data-dismiss" => "modal", :type => "button"} Închide
+#fb-root
+:javascript
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=160031560848346";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));

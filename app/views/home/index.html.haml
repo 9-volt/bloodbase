@@ -43,3 +43,8 @@
       .image
         %a(href="#")= image_tag "despre-proiect.png"
       %h2 Despre proiect
+
+- if @show_welcome
+  = render 'modal'
+  :javascript
+    $('#myModal').modal()
