@@ -26,9 +26,9 @@
           = link_to blood_request_path(br) do
             = attachment_image_tag br
         .purpose
-          .text Mai e nevoie de #{br.persons_required - br.donors.count} din #{br.persons_required}
+          .text Mai e nevoie de #{br.persons_required - br.donations.count} din #{br.persons_required}
           .progress
-            .bar.bar-danger{:style => "width: 60%;"}
+            .bar.bar-danger{:style => "width: #{br.percent_complete}%;"}
         .description= br.description
         .calltoaction
           %a.btn.btn-danger{:href => "#{questionnaire_path}?redirect=#{new_blood_request_case_donation_path(br)}"} Donează Sânge
