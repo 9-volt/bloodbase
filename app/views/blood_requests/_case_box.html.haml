@@ -14,4 +14,4 @@
       .bar.bar-danger{:style => "width: #{br.percent_complete}%;"}
   .description= br.description
   .calltoaction
-    %a.btn.btn-danger{:href => "#{questionnaire_path}?redirect=#{new_blood_request_case_donation_path(br)}"} Donează Sânge
+    %a.btn.btn-danger{:href => br.link} Donează Sânge
