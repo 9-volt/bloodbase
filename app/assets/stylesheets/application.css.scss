@@ -54,3 +54,33 @@ section.carousel {
   }
 }
 
+#feedback { 
+  height: 104px; 
+  width: 104px; 
+  position: fixed; 
+  top: 40%; 
+  z-index: 999;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg); 
+  -o-transform: rotate(-90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+#feedback a { 
+  display: block; 
+  background: #f0584c;
+  height: 15px; 
+  width: 70px; 
+  padding: 8px 16px;
+  color: #fff; 
+  font-family: Arial, sans-serif; 
+  font-size: 17px; 
+  font-weight: bold; 
+  text-decoration: none; 
+}
+
+#feedback a:hover { 
+  background: #06c; 
+}
+
