@@ -30,7 +30,7 @@ html, body{
 
 #main{
   min-height: 100%;
-  min-width: 320px;
+  min-width: 280px;
 }
 
 #main>.container{
@@ -53,6 +53,17 @@ section.carousel {
       right: 0;
       display: block;
       max-width: 99999px;
+    }
+  }
+}
+
+section.profiles{
+  .image{
+    overflow: hidden;
+    text-align: center;
+    img{
+      height: 190px;
+      width: auto;
     }
   }
 }
