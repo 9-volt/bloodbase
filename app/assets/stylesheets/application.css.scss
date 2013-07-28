@@ -71,6 +71,25 @@ section.carousel {
   }
 }
 
+@media (min-width: 980px) {
+  section.carousel {
+    .image{
+      overflow: none;
+      height: auto;
+      position: relative;
+      img{
+        height: auto;
+        width: 100%;
+        position: relative;
+        top: 0;
+        right: 0;
+        display: block;
+        max-width: 99999px;
+      }
+    }
+  }
+}
+
 @media (max-width: 979px) {
   #main>.container{
     padding-top: 0;
