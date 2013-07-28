@@ -1,3 +1,8 @@
+:css
+  .span4.br {
+    margin-bottom: 20px;
+  }
+
 %section.carousel
   .image
     %img(src="/assets/carousel.png")
@@ -10,47 +15,30 @@
     .buttons
       %a.btn.btn-danger{:href => "#", :href => "#{questionnaire_path}?redirect=#{new_donation_path}"} Doneaza
       %a.btn.btn-danger{:href => "#", :href => help_path} Caut donatori
+
 %section.profiles
   .row
     .span12
       %h3 Persoane ce au nevoie de sange
   .row
-    .span4
-      .image
-        %a{:href => "#"}
-          %img{:alt => "", :src => "/assets/placeholder.png"}/
-      .purpose
-        .text Mai e nevoie de 5 din 17
-        .progress
-          .bar.bar-danger{:style => "width: 60%;"}
-      .description Sophara is an energetic 14-year-old boy who loves to play sports with friends, but sometimes he feels shy because he was born with an extra thumb on his right hand. Sophara says.
-      .calltoaction
-        .btn.btn-danger Do it now
-    .span4
-      .image
-        %a{:href => "#"}
-          %img{:alt => "", :src => "/assets/placeholder.png"}/
-      .purpose
-        .text Mai e nevoie de 5 din 17
-        .progress
-          .bar.bar-danger{:style => "width: 60%;"}
-      .description Sophara is an energetic 14-year-old boy who loves to play sports with friends, but sometimes he feels shy because he was born with an extra thumb on his right hand. Sophara says.
-      .calltoaction
-        .btn.btn-danger Do it now
-    .span4
-      .image
-        %a{:href => "#"}
-          %img{:alt => "", :src => "/assets/placeholder.png"}/
-      .purpose
-        .text Mai e nevoie de 5 din 17
-        .progress
-          .bar.bar-danger{:style => "width: 60%;"}
-      .description Sophara is an energetic 14-year-old boy who loves to play sports with friends, but sometimes he feels shy because he was born with an extra thumb on his right hand. Sophara says.
-      .calltoaction
-        .btn.btn-danger Do it now
+    - @blood_requests.each do |br|
+      .span4.br
+        .image
+          = link_to blood_request_path(br) do
+            = attachment_image_tag br
+        .purpose
+          .text Mai e nevoie de #{br.persons_required - br.donors.count} din #{br.persons_required}
+          .progress
+            .bar.bar-danger{:style => "width: 60%;"}
+        .description= br.description
+        .calltoaction
+          %a.btn.btn-danger{:href => "#{questionnaire_path}?redirect=#{new_blood_request_case_donation_path(br)}"} Donează Sânge
+
+
   .row
     .span12.text-right
       %a{:href => "#"} Vezi toate cererile
+
 %section.infoblock
   .row
     .span12
@@ -58,13 +46,13 @@
   .row
     .span4
       .image
-        %img{:alt => "", :src => "/assets/blog.png"}/
+        = image_tag "blog.png"
       %h2 Blog
     .span4
       .image
-        %img{:alt => "", :src => "/assets/contacteaza-ne.png"}/
+        = image_tag "contacteaza-ne.png"
       %h2 Contacteaza-ne
     .span4
       .image
-        %img{:alt => "", :src => "/assets/despre-proiect.png"}/
+        = image_tag "despre-proiect.png"
       %h2 Despre proiect
