@@ -23,7 +23,7 @@
     - @blood_requests.each do |br|
       .span4.br
         .image
-          = link_to blood_request_path(br) do
+          = link_to br.link do
             = attachment_image_tag br
         .purpose
           .text Mai e nevoie de #{br.persons_required - br.donations.count} din #{br.persons_required}
