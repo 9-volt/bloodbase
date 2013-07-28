@@ -8,6 +8,7 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require 'bootstrap.min'
  *= require_tree .
  *= require_self
 */
@@ -24,25 +25,41 @@
 html, body{
   height: 100%;
   font-family: 'Oxygen', sans-serif;
+  min-width: 320px;
 }
 
 #main{
   min-height: 100%;
+  min-width: 320px;
 }
 
 #main>.container{
   padding-top: 78px;
-  padding-bottom: 105px;
-
+  padding-bottom: 125px;
+  min-width: 320px;
 }
 
 section.carousel {
   margin-top: 0px;
+  .image{
+    overflow: hidden;
+    height: 221px;
+    position: relative;
+    img{
+      height: 221px;
+      width: 836px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      max-width: 99999px;
+    }
+  }
 }
 
 #footer {
-  height: 105px;
-  margin: -105px 0 0;
+  min-height: 125px;
+  margin: -125px 0 0;
 }
 
 #question td {
@@ -54,3 +71,77 @@ section.carousel {
   }
 }
 
+@media (max-width: 979px) {
+  #main>.container{
+    padding-top: 0;
+  }
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 724px;
+  }
+  .navbar .container{
+    padding: 0 20px;
+  }
+  #main>.container{
+    padding-bottom: 145px;
+  }
+  #footer {
+    min-height: 145px;
+    margin: -145px 0 0;
+  }
+}
+@media (max-width: 767px) {
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: auto;
+  }
+  .carousel .info{
+    h2{
+      width: auto;
+    }
+  }
+  footer{
+    padding: 0 20px;
+  }
+  #main>.container{
+    padding-bottom: 160px;
+  }
+  #footer {
+    min-height: 160px;
+    margin: -160px 0 0;
+
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel .info{
+    h1{
+      font-size: 22px;
+    }
+    h2{
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel .info{
+    h1{
+      font-size: 18px;
+    }
+    h2{
+      width: auto;
+      padding-top: 0;
+    }
+  }
+}
