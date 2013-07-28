@@ -7,6 +7,6 @@
         Să deveniă un donator poate doar un om sănătos. Puteți verifica sănătatea dumneavoastră cu ajutorul chesionarului nostru insteractiv.
       %p
         Astfel o să aflați dacă puteți deveni donator de sînge. Cu toate acestea, decizia finală privind admiterea unei persoane pentru a dona sânge o face terapeutul.
-      = link_to 'Începe sondajul', '#', :class => "sync btn btn-primary btn-large", :id => "sondaj", :next_id => 1
 
-.well#question{:style => "display:none"}
+
+.well#question= render 'chestionar/q1'

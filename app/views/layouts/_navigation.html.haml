@@ -3,11 +3,11 @@
   %li= link_to 'Vezi pacienti', "#"
   %li= link_to "Doneaza", "#{questionnaire_path}?redirect=#{new_donation_path}"
   %li= link_to "Adauga o cerere noua", help_path
-  %li= link_to 'Întrebări frecvente', home_path(:faq)
+  %li= link_to 'Pot dona?', questionnaire_path
   %li.dropdown
     %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
       Informatii Utile
       %b.caret
     %ul.dropdown-menu
+      %li= link_to 'Întrebări frecvente', home_path(:faq)
       %li= link_to 'Puncte de colectare', home_path(:centre)
-      %li= link_to 'Pot dona?', questionnaire_path
