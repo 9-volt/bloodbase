@@ -8,6 +8,8 @@ class CaseDonationsController < DonationsController
   def create
     @donation = @blood_request.donations.new donation_params
     if @donation.save
+      BloodMailer.case_submit_email(@blood_request, @donation, request.base_url)
+                 .deliver
       redirect_to donation_path(@donation)
     else
       flash.now[:error] = @donation.errors.full_messages.join('<br />')
