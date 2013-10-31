@@ -11,8 +11,9 @@ gem 'devise'
 gem 'figaro'
 gem 'haml-rails'
 gem 'thin'
-gem "paperclip", "~> 3.0"
+gem 'paperclip', '~> 3.0'
 gem 'hashids'
+gem 'unicorn'
 
 group :development do
   gem 'better_errors'
