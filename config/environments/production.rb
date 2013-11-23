@@ -9,17 +9,6 @@ Donez::Application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-  Paperclip::Attachment.default_options.merge!({
-    :storage => :fog,
-    :fog_credentials => {
-      :provider           => 'Rackspace',
-      :rackspace_username => 'minivan',
-      :rackspace_api_key  => '377dc45c04eb687c7646b9ed4efd2812',
-      :rackspace_auth_url => 'lon.auth.api.rackspacecloud.com'
-    },
-    :fog_directory => 'donezsange.eu',
-    :fog_public => true
-  })
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
