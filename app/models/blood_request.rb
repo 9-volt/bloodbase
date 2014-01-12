@@ -1,23 +1,3 @@
-# == Schema Information
-#
-# Table name: blood_requests
-#
-#  id                 :integer          not null, primary key
-#  person_name        :string(255)
-#  email              :string(255)
-#  created_at         :datetime
-#  updated_at         :datetime
-#  photo_file_name    :string(255)
-#  photo_content_type :string(255)
-#  photo_file_size    :integer
-#  photo_updated_at   :datetime
-#  description        :text
-#  hospital           :string(255)
-#  section            :string(255)
-#  persons_required   :integer
-#  issuer_name        :string(255)
-#
-
 class BloodRequest < ActiveRecord::Base
   has_attached_file :photo
 
@@ -25,7 +5,7 @@ class BloodRequest < ActiveRecord::Base
   has_many :donors, :through => :donations, :source => :user
   has_one :shortlink
 
-  validates_presence_of :person_name, :description, :email
+  validates_presence_of :person_name, :description, :email, :persons_required
 
   def photo_url
     photo.url(photo.default_style, {:escape => false})
