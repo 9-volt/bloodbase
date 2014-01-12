@@ -31,6 +31,8 @@ end
 group :test do
   gem 'database_cleaner'
   gem 'email_spec'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
 end
 
 group :production do
