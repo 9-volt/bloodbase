@@ -3,10 +3,10 @@ class BloodMailer < ActionMailer::Base
 
   def case_submit_email (blood_request, donation, host_uri)
     @blood_request = blood_request
-    @donation = donation
-    @host_uri = host_uri
+    @donation      = donation
+    @host_uri      = host_uri
 
-    subject = 'O persoana s-a inregistrat sa doneze pentru cazul dumneavoastra'
-    mail :to => blood_request.email, :subject => subject
+    mail :to      => blood_request.email,
+         :subject => 'O persoana s-a inregistrat sa doneze pentru cazul dumneavoastra'
   end
 end

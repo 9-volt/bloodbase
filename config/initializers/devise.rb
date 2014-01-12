@@ -10,6 +10,6 @@ Devise.setup do |config|
   config.reconfirmable         = true
   config.password_length       = 6..128
   config.reset_password_within = 6.hours
-  config.sign_out_via          = :delete
+  config.sign_out_via          = :get
   config.secret_key            = '42d35f7eb1e57e4438044903baef61d54ff9a992819230d2739fc2f1b4f40a2f11ec8108bdf0c6cfda9eb41132ae479e2c416394a739e0df9cf9bdafecc8d0cb'
 end

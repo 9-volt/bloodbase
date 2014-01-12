@@ -3,5 +3,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :donations
-  has_many :donated_requests, :through => :donations, :source => :blood_request
+  has_many :donated_requests, :through => :donations,
+                              :source  => :blood_request
 end
