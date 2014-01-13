@@ -1,11 +1,13 @@
 class BloodRequest < ActiveRecord::Base
   has_attached_file :photo
 
-  has_many :donations
+  has_one  :shortlink, :dependent => :destroy
+  has_many :donations, :dependent => :destroy
   has_many :donors, :through => :donations, :source => :user
-  has_one :shortlink
 
   validates_presence_of :person_name, :description, :email, :persons_required
+
+  default_scope { where(visible: true) }
 
   def photo_url
     photo.url(photo.default_style, {:escape => false})
