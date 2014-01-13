@@ -21,4 +21,13 @@ class Admin::BloodRequestsController < Admin::BaseController
 
     redirect_to admin_blood_request_path(@blood_request)
   end
+
+  def destroy
+    pp 'hui'
+    @blood_request = BloodRequest.unscoped.find_by(:id => params[:id])
+    @blood_request.destroy!
+
+    flash.now[:notice] = 'Cerere a fost distrusă'
+    redirect_to admin_blood_requests_path
+  end
 end

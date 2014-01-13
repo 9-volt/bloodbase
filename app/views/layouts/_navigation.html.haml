@@ -21,7 +21,6 @@
       - if current_user.staff
         %li= link_to 'Admin', '/admin'
       - else
-        %li= link_to 'Iesire', 'users/sign_out'
+        %li= link_to 'Ieșire', 'users/sign_out'
     - else
-      %li= link_to 'Logeaza', 'users/sign_in'
-
+      %li= link_to 'Intră', 'users/sign_in'

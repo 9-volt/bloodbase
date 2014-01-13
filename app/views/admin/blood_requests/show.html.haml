@@ -65,9 +65,9 @@
         %a.addthis_button_google_plusone_share
 
     - if @blood_request.visible
-      = button_to 'Dezaproba cerere', {:controller => 'admin/blood_requests', :action => 'disapprove'}, {:class => 'btn btn-primary btn-large action', :method => 'post'}
+      = button_to "Dezaproba cerere", disapprove_admin_blood_request_path(@blood_request.id), :class => "btn btn-primary btn-large action"
     - else
-      = button_to 'Accepta cerere', {:controller => 'admin/blood_requests', :action => 'approve'}, {:class => 'btn btn-primary btn-large action', :method => 'post'}
+      = button_to "Accepta cerere", approve_admin_blood_request_path(@blood_request.id), :class => "btn btn-primary btn-large action"
 .row
   .span11.well
     %form.form-horizontal
@@ -84,6 +84,9 @@
         .control-group
           %label.control-label Descrierea cazului:
           .info= @blood_request.description
-
+        .control-group
+          %label.control-label Acțiuni:
+          .info
+            = link_to "Distruge", admin_blood_request_path(@blood_request), :method => :delete, :class => "btn btn-primary btn-large action",  :confirm => "Distrugem?"
 
 %script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-508e563741b6132f")
