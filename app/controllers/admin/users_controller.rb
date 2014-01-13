@@ -1,5 +1,4 @@
-class UsersController < ApplicationController
-  before_filter :authenticate_user!
+class Admin::UsersController < Admin::BaseController
 
   def index
     @users = User.all

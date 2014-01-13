@@ -8,6 +8,8 @@ class BloodRequest < ActiveRecord::Base
   validates_presence_of :person_name, :description, :email, :persons_required
 
   default_scope { where(visible: true) }
+  scope :approved,   -> { where(visible: true) }
+  scope :unapproved, -> { where(visible: false) }
 
   def photo_url
     photo.url(photo.default_style, {:escape => false})
@@ -33,5 +35,13 @@ class BloodRequest < ActiveRecord::Base
 
   def link
     "/case/#{shortlink.code}"
+  end
+
+  def approve!
+    update_attributes!(:visible => true)
+  end
+
+  def disapprove!
+    update_attributes!(:visible => false)
   end
 end

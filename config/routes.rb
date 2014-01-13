@@ -1,9 +1,22 @@
 Donez::Application.routes.draw do
   root :to => "home#index"
 
+  namespace :admin do
+    root :to => 'dashboards#index'
+
+    resource  :dashboard, :only => [:show]
+    resources :users
+    resources :blood_requests do
+      member do
+        post :approve
+        post :disapprove
+      end
+    end
+  end
+
   devise_for :users
 
-  resources :users, :donations
+  resources :donations
   resources :blood_requests do
     resources :case_donations
   end

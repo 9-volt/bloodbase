@@ -4,9 +4,9 @@ class Shortlink < ActiveRecord::Base
 
   before_create :generate_code
 
-  private
+private
 
-    def generate_code
-      self.code = ShortHasher.encrypt(blood_request.id)
-    end
+  def generate_code
+    self.code = ShortHasher.encrypt(blood_request.id)
+  end
 end

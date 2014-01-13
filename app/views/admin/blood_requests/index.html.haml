@@ -1,0 +1,14 @@
+%h3 Cereri neacceptate
+%ul.brs
+  %section.profiles
+    .row
+      - @blood_requests.unapproved.each do |br|
+        = render 'case_box', :br => br
+%br
+%h3 Cereri acceptate
+%ul.brs
+  %section.profiles
+    .row
+      - @blood_requests.approved.each do |br|
+        = render 'case_box', :br => br
+

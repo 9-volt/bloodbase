@@ -17,3 +17,11 @@
       %ul.dropdown-menu
         %li= link_to 'Întrebări frecvente', home_path(:faq)
         %li= link_to 'Puncte de colectare', home_path(:centre)
+    - if current_user
+      - if current_user.staff
+        %li= link_to 'Admin', '/admin'
+      - else
+        %li= link_to 'Iesire', 'users/sign_out'
+    - else
+      %li= link_to 'Logeaza', 'users/sign_in'
+
