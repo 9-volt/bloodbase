@@ -18,27 +18,8 @@
       .container
         = render 'layouts/messages'
         = yield
-    %footer#footer
-      .container
-        %p.pull-right
-          %a{:href => "#top"} Înapoi în sus
-        .links
-          %a{:href => "#"} Blog
-          |
-          %a{:href => "#"} Facebook
-          |
-          %a{:href => "#"} Contacteaza-ne
-          |
-          %a{:href => "#"} Despre Proiect
-          |
-          %a{:href => "#"} FAQ
-          |
-          %a{:href => "#"} Termeni și condiții
-        %p
-          Un site realizat în cadrul proiectului Sicamp Moldova 2013.
-          %br>/
-          În caz că doriți să susțineți proiectul sau să deveniți potențial partener contactați-ne la
-          %a{:href => "#"} contact@donezsange.eu
+
+    = render 'layouts/footer'
 
     #feedback
       %a(href="#") feedback
@@ -48,6 +29,7 @@
 
 :javascript
   UserVoice = window.UserVoice || [];
+
   function showClassicWidget() {
     UserVoice.push(['showLightbox', 'classic_widget', {
       mode: 'feedback',
@@ -56,4 +38,5 @@
       forum_id: 216561
     }]);
   }
+
   $('#feedback a').click(function () { showClassicWidget(); })

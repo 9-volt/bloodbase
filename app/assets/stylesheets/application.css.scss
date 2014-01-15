@@ -250,3 +250,21 @@ section.profiles{
     }
   }
 }
+
+.footer {
+  background-color: #efefef;
+  text-align: center;
+  padding: 25px;
+}
+
+.footer .links {
+  display: block;
+  clear: both;
+}
+
+.footer .links li {
+  list-style: none;
+  display: inline-block;
+  clear: none;
+  margin: 0 15px;
+}
