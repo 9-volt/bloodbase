@@ -10,3 +10,5 @@
 /tmp
 public/assets
 public/system
+*.sublime-workspace
+*.sublime-project
