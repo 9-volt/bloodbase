@@ -1,26 +1,38 @@
-%button.btn.btn-navbar.collapsed{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
-  %span.icon-bar
-  %span.icon-bar
-  %span.icon-bar
-= link_to image_tag('logo.png'), root_path, :class => 'brand'
-.nav-collapse
-  %ul.nav
-    %li= link_to 'Vezi pacienti', cases_path
-    %li= link_to "Doneaza", "#{questionnaire_path}?redirect=#{new_donation_path}"
-    %li= link_to "Adauga o cerere noua", help_path
-    %li= link_to 'Pot dona?', questionnaire_path
-
-    %li.dropdown
-      %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-        Informaţii Utile
-        %b.caret
-      %ul.dropdown-menu
-        %li= link_to 'Întrebări frecvente', home_path(:faq)
-        %li= link_to 'Puncte de colectare', home_path(:centre)
-    - if current_user
-      - if current_user.staff
-        %li= link_to 'Admin', '/admin'
-      - else
-        %li= link_to 'Ieșire', 'users/sign_out'
-    - else
-      %li= link_to 'Intră', 'users/sign_in'
+.container-fluid
+  %a.brand{href: "/News/Home"}
+    %i.icon-section.icon-sanostiri
+    Donează Sânge
+  %ul.nav.nav-collapse.icons-section
+    %li
+      %a{href: "/News/Home"}
+        %i.icon-section.icon-sanostiri.icon-inverse
+        %span.hidden-desktop Sănătate Info
+    %li
+      %a{href: "/TV/Home"}
+        %i.icon-section.icon-sanatatetv.icon-inverse
+        %span.hidden-desktop Sănătate TV
+    %li
+      %a{href: "/SanoClub"}
+        %i.icon-section.icon-sanoclub.icon-inverse
+        %span.hidden-desktop SanoClub
+    %li
+      %i.icon-section.icon-isan.icon-inverse
+      %span.hidden-desktop iSaN
+    %li
+      %i.icon-section.icon-imed.icon-inverse
+      %span.hidden-desktop iMeD
+    %li
+      %i.icon-section.icon-imec.icon-inverse
+      %span.hidden-desktop iMeC
+    %li
+      %a{href: "http://tuberculoza.info/"}
+        %i.icon-section.icon-infotb.icon-inverse
+        %span.hidden-desktop Info TB
+    %li
+      %a{href: "/Spitale/Home"}
+        %i.icon-section.icon-spitalemd.icon-inverse
+        %span.hidden-desktop Spitale.MD
+    %li
+      %a{href: "http://pas.md/"}
+        %i.icon-section.icon-pas.icon-inverse
+        %span.hidden-desktop Centrul PAS

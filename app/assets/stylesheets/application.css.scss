@@ -13,14 +13,6 @@
  *= require_self
 */
 
-.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
-  background-color: #f0584c;
-  background-image: -moz-linear-gradient(top,#f0584c,#f0584c);
-  background-image: -webkit-gradient(linear,0 0,0 100%,from(#f0584c),to(#f0584c));
-  background-image: -webkit-linear-gradient(top,#f0584c,#f0584c);
-  background-image: -o-linear-gradient(top,#f0584c,#f0584c);
-  background-image: linear-gradient(to bottom,#f0584c,#f0584c);
-}
 
 html, body{
   height: 100%;
@@ -33,7 +25,7 @@ html, body{
   min-width: 280px;
 }
 
-#main>.container{
+#main > .container{
   padding-top: 78px;
   padding-bottom: 125px;
   min-width: 320px;
@@ -271,4 +263,20 @@ section.profiles{
 
 #main .container {
   padding-bottom: 0;
+}
+
+.menu {
+  background-color: black;
+}
+
+.navbar-inverse .navbar-inner {
+  background-color: #313133;
+  background-image: -moz-linear-gradient(top,#3b3c3f,#212121);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#3b3c3f),to(#212121));
+  background-image: -webkit-linear-gradient(top,#3b3c3f,#212121);
+  background-image: -o-linear-gradient(top,#3b3c3f,#212121);
+  background-image: linear-gradient(to bottom,#3b3c3f,#212121);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b3c3f',endColorstr='#ff212121',GradientType=0);
+  border-color: #252525;
 }
