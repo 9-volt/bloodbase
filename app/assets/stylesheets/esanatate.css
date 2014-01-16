@@ -1,1 +1,636 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,latin-ext,cyrillic,cyrillic-ext);.clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0}.clearfix:after{clear:both}.hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.input-block-level{display:block;width:100%;min-height:29px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0}.clearfix:after{clear:both}.hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.input-block-level{display:block;width:100%;min-height:29px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}[class^="icon-"],[class*=" icon-"]{display:inline-block;width:14px;height:14px;*margin-right:.3em;line-height:14px;vertical-align:text-top;background-image:url("/assets/sprites.png");background-position:14px 14px;background-repeat:no-repeat;margin-top:2px}.icon-white,.nav-pills>.active>a>[class^="icon-"],.nav-pills>.active>a>[class*=" icon-"],.nav-list>.active>a>[class^="icon-"],.nav-list>.active>a>[class*=" icon-"],.navbar-inverse .nav>.active>a>[class^="icon-"],.navbar-inverse .nav>.active>a>[class*=" icon-"],.dropdown-menu>li>a:hover>[class^="icon-"],.dropdown-menu>li>a:focus>[class^="icon-"],.dropdown-menu>li>a:hover>[class*=" icon-"],.dropdown-menu>li>a:focus>[class*=" icon-"],.dropdown-menu>.active>a>[class^="icon-"],.dropdown-menu>.active>a>[class*=" icon-"],.dropdown-submenu:hover>a>[class^="icon-"],.dropdown-submenu:focus>a>[class^="icon-"],.dropdown-submenu:hover>a>[class*=" icon-"],.dropdown-submenu:focus>a>[class*=" icon-"]{background-image:url("/assets/sprites-white.png")}.icon-user{background-position:0 0}.icon-upload{background-position:-28px 0}.icon-unlock{background-position:-56px 0}.icon-undo{background-position:-84px 0}.icon-switch{background-position:-112px 0}.icon-star{background-position:-140px 0}.icon-signup{background-position:-168px 0}.icon-search{background-position:-196px 0}.icon-save{background-position:-224px 0}.icon-remove{background-position:-252px 0}.icon-redo{background-position:-280px 0}.icon-profile{background-position:-308px 0}.icon-plus{background-position:-336px 0}.icon-play{background-position:-364px 0}.icon-pencil{background-position:-392px 0}.icon-pause{background-position:-420px 0}.icon-newspaper{background-position:0 -28px}.icon-minus{background-position:-28px -28px}.icon-lock{background-position:-56px -28px}.icon-list{background-position:-84px -28px}.icon-key{background-position:-112px -28px}.icon-image{background-position:-140px -28px}.icon-home{background-position:-168px -28px}.icon-heart{background-position:-196px -28px}.icon-headphones{background-position:-224px -28px}.icon-globe{background-position:-252px -28px}.icon-film{background-position:-280px -28px}.icon-exit{background-position:-308px -28px}.icon-enter{background-position:-336px -28px}.icon-email{background-position:-364px -28px}.icon-download{background-position:-392px -28px}.icon-comments{background-position:-420px -28px;width:16px}.icon-cog{background-position:0 -56px}.icon-check{background-position:-28px -56px}.icon-camera{background-position:-56px -56px}.icon-attachment{background-position:-84px -56px}.icon-arrow-left{background-position:-112px -56px}body{padding-top:90px}form iframe{border:0}.btn [class^="icon-"],.btn [class*=" icon-"]{margin-right:5px}.modal,.ui-dialog{padding:0}.modal form,.ui-dialog form{margin:0}.modal .modal-header,.ui-dialog .modal-header,.modal .ui-dialog-titlebar,.ui-dialog .ui-dialog-titlebar{border:0;padding:10px 20px}.modal .modal-header h1,.ui-dialog .modal-header h1,.modal .ui-dialog-titlebar h1,.ui-dialog .ui-dialog-titlebar h1,.modal .modal-header h2,.ui-dialog .modal-header h2,.modal .ui-dialog-titlebar h2,.ui-dialog .ui-dialog-titlebar h2,.modal .modal-header h3,.ui-dialog .modal-header h3,.modal .ui-dialog-titlebar h3,.ui-dialog .ui-dialog-titlebar h3,.modal .modal-header h4,.ui-dialog .modal-header h4,.modal .ui-dialog-titlebar h4,.ui-dialog .ui-dialog-titlebar h4,.modal .modal-header h5,.ui-dialog .modal-header h5,.modal .ui-dialog-titlebar h5,.ui-dialog .ui-dialog-titlebar h5,.modal .modal-header h6,.ui-dialog .modal-header h6,.modal .ui-dialog-titlebar h6,.ui-dialog .ui-dialog-titlebar h6,.modal .modal-header .ui-dialog-title,.ui-dialog .modal-header .ui-dialog-title,.modal .ui-dialog-titlebar .ui-dialog-title,.ui-dialog .ui-dialog-titlebar .ui-dialog-title{font-size:24px;font-weight:bold;line-height:30px;margin:0}.modal .modal-header .close,.ui-dialog .modal-header .close,.modal .ui-dialog-titlebar .close,.ui-dialog .ui-dialog-titlebar .close{line-height:20px;margin-top:0}.modal .modal-header .ui-dialog-titlebar-close,.ui-dialog .modal-header .ui-dialog-titlebar-close,.modal .ui-dialog-titlebar .ui-dialog-titlebar-close,.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close{background-image:url("/assets/dialog-close-bg.png");background-position:center center;background-repeat:no-repeat;top:23px;right:20px;margin:0}.modal .modal-body,.ui-dialog .modal-body{border:0;padding:10px}.modal .modal-footer,.ui-dialog .modal-footer{background-color:transparent;border:0;padding:10px}.modal .btn-link,.ui-dialog .btn-link{-webkit-text-shadow:none;text-shadow:none}.pagination{text-align:center}.pagination ul>li>a{color:#000}.icon-section{background-image:url(/assets/icons-section.png);background-attachment:scroll;background-position:0 0;background-repeat:no-repeat;background-color:transparent;-moz-background-size:auto 40px;-o-background-size:auto 40px;-webkit-background-size:auto 40px;background-size:auto 40px;border-radius:10px;text-align:left;line-height:40px;float:left;display:inline-block;width:40px;height:40px;padding:0;margin:0;margin-right:15px}.icon-section.icon-inverse{background-image:url(/assets/icons-section-inverse.png)}.icon-section.icon-inverse:hover:not(.icon-forum):not(.icon-isan):not(.icon-sanoteca):not(.icon-imed):not(.icon-imec):not(.icon-sondaje){background-image:url(/assets/icons-section.png)}.icon-section.icon-sanostiri{background-position:0 0}.icon-section.icon-forum{background-position:-40px 0}.icon-section.icon-sanatatetv{background-position:-80px 0}.icon-section.icon-infotb{background-position:-120px 0}.icon-section.icon-sanoclub{background-position:-160px 0}.icon-section.icon-isan{background-position:-200px 0}.icon-section.icon-sanoteca{background-position:-240px 0}.icon-section.icon-imed{background-position:-280px 0}.icon-section.icon-spitalemd{background-position:-320px 0}.icon-section.icon-imec{background-position:-360px 0}.icon-section.icon-sondaje{background-position:-400px 0}.icon-section.icon-pas{background-position:-440px 0}.creeping-line{background-color:#ffe646;color:#212121;display:none;clear:both;width:100%;height:20px;margin:0}.creeping-line .wrapper{position:relative;line-height:20px;width:100%;height:20px;overflow:hidden}.creeping-line .wrapper .news-list{position:absolute;top:0;left:0;right:0;margin:0}.creeping-line .wrapper .news-list li{list-style:none;line-height:20px;height:20px;padding:0;color:#222}.creeping-line .wrapper .news-list li a{color:#222}.creeping-line .wrapper .br-label,.creeping-line .wrapper .al-label{background-color:#ffe646;font-weight:bold;color:#000;display:none;position:absolute;top:0;left:0;bottom:0;height:20px;margin-right:10px}.creeping-line.alert{border:0;border-radius:0;background-color:#ff003b;-webkit-text-shadow:none;text-shadow:none;color:#fff;padding:0}.creeping-line.alert .al-label{background-color:#ff003b;color:#fff}.creeping-line.alert .news-list li{color:#fff}.creeping-line.alert .news-list li a{color:#fff}.share-page{margin:10px 0}.menu .navbar-inner{border:0}.menu .navbar-inner .brand{font-size:24px;font-weight:600;color:#fff;line-height:40px;display:inline-block;clear:none;height:40px;margin:15px 15px 15px 0;padding:0}.menu .navbar-inner .navbar-buttons{float:right}.menu .icons-section li{color:#999;padding-top:15px}.menu .icons-section li a{padding:0;margin:0}.menu .icons-section li .icon-section{-moz-background-size:auto 40px;-o-background-size:auto 40px;-webkit-background-size:auto 40px;background-size:auto 40px;border-radius:5px;width:40px;height:40px}.social-icons{display:inline-block;clear:none;padding:0;margin:0}.social-icons li{list-style:none;float:left;display:inline-block;clear:none;margin-right:10px}.social-icons li a{background-image:url(/assets/social-icons.png);background-position:0 0;background-repeat:no-repeat;border-radius:2px;display:block;clear:both;width:24px;height:24px}.social-icons li a.fb{background-position:0 0}.social-icons li a.gp{background-position:-1000px 0}.social-icons li a.ok{background-position:-1000px 0}.social-icons li a.tw{background-position:-24px 0}.social-icons li a.li{background-position:-48px 0}.social-icons li a.yt{background-position:-72px 0}.social-icons li a.rs{background-position:-96px 0}.social-icons li:last-child{margin-right:0}@media(min-width:1200px){.container-fluid{max-width:1200px!important;padding:0!important;margin:0 auto!important}}@media(min-width:768px)and (max-width:979px){.menu .user .toggler,.menu .language .toggler{padding:7px 10px!important;background-position:0!important;float:right;margin:20px 5px 0;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.25);background-color:#242526;background-image:-moz-linear-gradient(top,#2f2f32,#141414);background-image:-webkit-gradient(linear,0 0,0 100%,from(#2f2f32),to(#141414));background-image:-webkit-linear-gradient(top,#2f2f32,#141414);background-image:-o-linear-gradient(top,#2f2f32,#141414);background-image:linear-gradient(to bottom,#2f2f32,#141414);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f2f32',endColorstr='#ff141414',GradientType=0);border-color:#141414 #141414 #000;border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);*background-color:#141414;filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.075);-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.075);box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.075)}.menu .user .toggler:hover,.menu .language .toggler:hover,.menu .user .toggler:focus,.menu .language .toggler:focus,.menu .user .toggler:active,.menu .language .toggler:active,.menu .user .toggler.active,.menu .language .toggler.active,.menu .user .toggler.disabled,.menu .language .toggler.disabled,.menu .user .toggler[disabled],.menu .language .toggler[disabled]{color:#fff;background-color:#141414;*background-color:#080808}.menu .user .toggler:active,.menu .language .toggler:active,.menu .user .toggler.active,.menu .language .toggler.active{background-color:#000 \9}.menu .user .toggler:hover,.menu .language .toggler:hover,.menu .user .toggler:focus,.menu .language .toggler:focus,.menu .user .toggler:active,.menu .language .toggler:active,.menu .user .toggler.active,.menu .language .toggler.active,.menu .user .toggler.disabled,.menu .language .toggler.disabled,.menu .user .toggler[disabled],.menu .language .toggler[disabled]{color:#fff;background-color:#141414;*background-color:#080808}.menu .user .toggler:active,.menu .language .toggler:active,.menu .user .toggler.active,.menu .language .toggler.active{background-color:#000 \9}.menu .user .toggler:hover,.menu .language .toggler:hover,.menu .user .toggler:focus,.menu .language .toggler:focus{background-position:0 -15px!important;text-decoration:none;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.25);background-color:#242526;background-image:-moz-linear-gradient(top,#2f2f32,#141414);background-image:-webkit-gradient(linear,0 0,0 100%,from(#2f2f32),to(#141414));background-image:-webkit-linear-gradient(top,#2f2f32,#141414);background-image:-o-linear-gradient(top,#2f2f32,#141414);background-image:linear-gradient(to bottom,#2f2f32,#141414);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f2f32',endColorstr='#ff141414',GradientType=0);border-color:#141414 #141414 #000;border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);*background-color:#141414;filter:progid:DXImageTransform.Microsoft.gradient(enabled=false)}.menu .user .toggler:hover:hover,.menu .language .toggler:hover:hover,.menu .user .toggler:focus:hover,.menu .language .toggler:focus:hover,.menu .user .toggler:hover:focus,.menu .language .toggler:hover:focus,.menu .user .toggler:focus:focus,.menu .language .toggler:focus:focus,.menu .user .toggler:hover:active,.menu .language .toggler:hover:active,.menu .user .toggler:focus:active,.menu .language .toggler:focus:active,.menu .user .toggler:hover.active,.menu .language .toggler:hover.active,.menu .user .toggler:focus.active,.menu .language .toggler:focus.active,.menu .user .toggler:hover.disabled,.menu .language .toggler:hover.disabled,.menu .user .toggler:focus.disabled,.menu .language .toggler:focus.disabled,.menu .user .toggler:hover[disabled],.menu .language .toggler:hover[disabled],.menu .user .toggler:focus[disabled],.menu .language .toggler:focus[disabled]{color:#fff;background-color:#141414;*background-color:#080808}.menu .user .toggler:hover:active,.menu .language .toggler:hover:active,.menu .user .toggler:focus:active,.menu .language .toggler:focus:active,.menu .user .toggler:hover.active,.menu .language .toggler:hover.active,.menu .user .toggler:focus.active,.menu .language .toggler:focus.active{background-color:#000 \9}.menu .user .toggler:hover:hover,.menu .language .toggler:hover:hover,.menu .user .toggler:focus:hover,.menu .language .toggler:focus:hover,.menu .user .toggler:hover:focus,.menu .language .toggler:hover:focus,.menu .user .toggler:focus:focus,.menu .language .toggler:focus:focus,.menu .user .toggler:hover:active,.menu .language .toggler:hover:active,.menu .user .toggler:focus:active,.menu .language .toggler:focus:active,.menu .user .toggler:hover.active,.menu .language .toggler:hover.active,.menu .user .toggler:focus.active,.menu .language .toggler:focus.active,.menu .user .toggler:hover.disabled,.menu .language .toggler:hover.disabled,.menu .user .toggler:focus.disabled,.menu .language .toggler:focus.disabled,.menu .user .toggler:hover[disabled],.menu .language .toggler:hover[disabled],.menu .user .toggler:focus[disabled],.menu .language .toggler:focus[disabled]{color:#fff;background-color:#141414;*background-color:#080808}.menu .user .toggler:hover:active,.menu .language .toggler:hover:active,.menu .user .toggler:focus:active,.menu .language .toggler:focus:active,.menu .user .toggler:hover.active,.menu .language .toggler:hover.active,.menu .user .toggler:focus.active,.menu .language .toggler:focus.active{background-color:#000 \9}.menu .icons-section{width:100%;margin-bottom:20px}.menu .icons-section li{display:block;clear:both}.menu .icons-section li a{display:block;clear:both}.menu .icons-section li span{float:left;display:inline-block;line-height:40px}}@media(max-width:767px){.menu .user .toggler,.menu .language .toggler{padding:7px 10px!important;background-position:0!important;float:right;margin:20px 5px 0;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.25);background-color:#242526;background-image:-moz-linear-gradient(top,#2f2f32,#141414);background-image:-webkit-gradient(linear,0 0,0 100%,from(#2f2f32),to(#141414));background-image:-webkit-linear-gradient(top,#2f2f32,#141414);background-image:-o-linear-gradient(top,#2f2f32,#141414);background-image:linear-gradient(to bottom,#2f2f32,#141414);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f2f32',endColorstr='#ff141414',GradientType=0);border-color:#141414 #141414 #000;border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);*background-color:#141414;filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.075);-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.075);box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.075)}.menu .user .toggler:hover,.menu .language .toggler:hover,.menu .user .toggler:focus,.menu .language .toggler:focus,.menu .user .toggler:active,.menu .language .toggler:active,.menu .user .toggler.active,.menu .language .toggler.active,.menu .user .toggler.disabled,.menu .language .toggler.disabled,.menu .user .toggler[disabled],.menu .language .toggler[disabled]{color:#fff;background-color:#141414;*background-color:#080808}.menu .user .toggler:active,.menu .language .toggler:active,.menu .user .toggler.active,.menu .language .toggler.active{background-color:#000 \9}.menu .user .toggler:hover,.menu .language .toggler:hover,.menu .user .toggler:focus,.menu .language .toggler:focus,.menu .user .toggler:active,.menu .language .toggler:active,.menu .user .toggler.active,.menu .language .toggler.active,.menu .user .toggler.disabled,.menu .language .toggler.disabled,.menu .user .toggler[disabled],.menu .language .toggler[disabled]{color:#fff;background-color:#141414;*background-color:#080808}.menu .user .toggler:active,.menu .language .toggler:active,.menu .user .toggler.active,.menu .language .toggler.active{background-color:#000 \9}.menu .user .toggler:hover,.menu .language .toggler:hover,.menu .user .toggler:focus,.menu .language .toggler:focus{background-position:0 -15px!important;text-decoration:none;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.25);background-color:#242526;background-image:-moz-linear-gradient(top,#2f2f32,#141414);background-image:-webkit-gradient(linear,0 0,0 100%,from(#2f2f32),to(#141414));background-image:-webkit-linear-gradient(top,#2f2f32,#141414);background-image:-o-linear-gradient(top,#2f2f32,#141414);background-image:linear-gradient(to bottom,#2f2f32,#141414);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f2f32',endColorstr='#ff141414',GradientType=0);border-color:#141414 #141414 #000;border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);*background-color:#141414;filter:progid:DXImageTransform.Microsoft.gradient(enabled=false)}.menu .user .toggler:hover:hover,.menu .language .toggler:hover:hover,.menu .user .toggler:focus:hover,.menu .language .toggler:focus:hover,.menu .user .toggler:hover:focus,.menu .language .toggler:hover:focus,.menu .user .toggler:focus:focus,.menu .language .toggler:focus:focus,.menu .user .toggler:hover:active,.menu .language .toggler:hover:active,.menu .user .toggler:focus:active,.menu .language .toggler:focus:active,.menu .user .toggler:hover.active,.menu .language .toggler:hover.active,.menu .user .toggler:focus.active,.menu .language .toggler:focus.active,.menu .user .toggler:hover.disabled,.menu .language .toggler:hover.disabled,.menu .user .toggler:focus.disabled,.menu .language .toggler:focus.disabled,.menu .user .toggler:hover[disabled],.menu .language .toggler:hover[disabled],.menu .user .toggler:focus[disabled],.menu .language .toggler:focus[disabled]{color:#fff;background-color:#141414;*background-color:#080808}.menu .user .toggler:hover:active,.menu .language .toggler:hover:active,.menu .user .toggler:focus:active,.menu .language .toggler:focus:active,.menu .user .toggler:hover.active,.menu .language .toggler:hover.active,.menu .user .toggler:focus.active,.menu .language .toggler:focus.active{background-color:#000 \9}.menu .user .toggler:hover:hover,.menu .language .toggler:hover:hover,.menu .user .toggler:focus:hover,.menu .language .toggler:focus:hover,.menu .user .toggler:hover:focus,.menu .language .toggler:hover:focus,.menu .user .toggler:focus:focus,.menu .language .toggler:focus:focus,.menu .user .toggler:hover:active,.menu .language .toggler:hover:active,.menu .user .toggler:focus:active,.menu .language .toggler:focus:active,.menu .user .toggler:hover.active,.menu .language .toggler:hover.active,.menu .user .toggler:focus.active,.menu .language .toggler:focus.active,.menu .user .toggler:hover.disabled,.menu .language .toggler:hover.disabled,.menu .user .toggler:focus.disabled,.menu .language .toggler:focus.disabled,.menu .user .toggler:hover[disabled],.menu .language .toggler:hover[disabled],.menu .user .toggler:focus[disabled],.menu .language .toggler:focus[disabled]{color:#fff;background-color:#141414;*background-color:#080808}.menu .user .toggler:hover:active,.menu .language .toggler:hover:active,.menu .user .toggler:focus:active,.menu .language .toggler:focus:active,.menu .user .toggler:hover.active,.menu .language .toggler:hover.active,.menu .user .toggler:focus.active,.menu .language .toggler:focus.active{background-color:#000 \9}.menu .icons-section{width:100%;margin-bottom:20px}.menu .icons-section li{display:block;clear:both}.menu .icons-section li a{display:block;clear:both}.menu .icons-section li span{float:left;display:inline-block;line-height:40px}}
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300, 400, 600, 700&subset=latin, latin-ext, cyrillic, cyrillic-ext);
+    .clearfix {
+    *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+.hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+.input-block-level {
+    display: block;
+    width: 100%;
+    min-height: 29px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+.hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+.input-block-level {
+    display: block;
+    width: 100%;
+    min-height: 29px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+[class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    *margin-right: .3em;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("/assets/sprites.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+    margin-top: 2px;
+}
+.icon-white, .nav-pills>.active>a>[class^="icon-"], .nav-pills>.active>a>[class*=" icon-"], .nav-list>.active>a>[class^="icon-"], .nav-list>.active>a>[class*=" icon-"], .navbar-inverse .nav>.active>a>[class^="icon-"], .navbar-inverse .nav>.active>a>[class*=" icon-"], .dropdown-menu>li>a:hover>[class^="icon-"], .dropdown-menu>li>a:focus>[class^="icon-"], .dropdown-menu>li>a:hover>[class*=" icon-"], .dropdown-menu>li>a:focus>[class*=" icon-"], .dropdown-menu>.active>a>[class^="icon-"], .dropdown-menu>.active>a>[class*=" icon-"], .dropdown-submenu:hover>a>[class^="icon-"], .dropdown-submenu:focus>a>[class^="icon-"], .dropdown-submenu:hover>a>[class*=" icon-"], .dropdown-submenu:focus>a>[class*=" icon-"] {
+    background-image: url("/assets/sprites-white.png");
+}
+.icon-user {
+    background-position: 0 0;
+}
+.icon-upload {
+    background-position: -28px 0;
+}
+.icon-unlock {
+    background-position: -56px 0;
+}
+.icon-undo {
+    background-position: -84px 0;
+}
+.icon-switch {
+    background-position: -112px 0;
+}
+.icon-star {
+    background-position: -140px 0;
+}
+.icon-signup {
+    background-position: -168px 0;
+}
+.icon-search {
+    background-position: -196px 0;
+}
+.icon-save {
+    background-position: -224px 0;
+}
+.icon-remove {
+    background-position: -252px 0;
+}
+.icon-redo {
+    background-position: -280px 0;
+}
+.icon-profile {
+    background-position: -308px 0;
+}
+.icon-plus {
+    background-position: -336px 0;
+}
+.icon-play {
+    background-position: -364px 0;
+}
+.icon-pencil {
+    background-position: -392px 0;
+}
+.icon-pause {
+    background-position: -420px 0;
+}
+.icon-newspaper {
+    background-position: 0 -28px;
+}
+.icon-minus {
+    background-position: -28px -28px;
+}
+.icon-lock {
+    background-position: -56px -28px;
+}
+.icon-list {
+    background-position: -84px -28px;
+}
+.icon-key {
+    background-position: -112px -28px;
+}
+.icon-image {
+    background-position: -140px -28px;
+}
+.icon-home {
+    background-position: -168px -28px;
+}
+.icon-heart {
+    background-position: -196px -28px;
+}
+.icon-headphones {
+    background-position: -224px -28px;
+}
+.icon-globe {
+    background-position: -252px -28px;
+}
+.icon-film {
+    background-position: -280px -28px;
+}
+.icon-exit {
+    background-position: -308px -28px;
+}
+.icon-enter {
+    background-position: -336px -28px;
+}
+.icon-email {
+    background-position: -364px -28px;
+}
+.icon-download {
+    background-position: -392px -28px;
+}
+.icon-comments {
+    background-position: -420px -28px;
+    width: 16px;
+}
+.icon-cog {
+    background-position: 0 -56px;
+}
+.icon-check {
+    background-position: -28px -56px;
+}
+.icon-camera {
+    background-position: -56px -56px;
+}
+.icon-attachment {
+    background-position: -84px -56px;
+}
+.icon-arrow-left {
+    background-position: -112px -56px;
+}
+body {
+    padding-top: 90px;
+}
+form iframe {
+    border: 0;
+}
+.btn [class^="icon-"], .btn [class*=" icon-"] {
+    margin-right: 5px;
+}
+.modal, .ui-dialog {
+    padding: 0;
+}
+.modal form, .ui-dialog form {
+    margin: 0;
+}
+.modal .modal-header, .ui-dialog .modal-header, .modal .ui-dialog-titlebar, .ui-dialog .ui-dialog-titlebar {
+    border: 0;
+    padding: 10px 20px;
+}
+.modal .modal-header h1, .ui-dialog .modal-header h1, .modal .ui-dialog-titlebar h1, .ui-dialog .ui-dialog-titlebar h1, .modal .modal-header h2, .ui-dialog .modal-header h2, .modal .ui-dialog-titlebar h2, .ui-dialog .ui-dialog-titlebar h2, .modal .modal-header h3, .ui-dialog .modal-header h3, .modal .ui-dialog-titlebar h3, .ui-dialog .ui-dialog-titlebar h3, .modal .modal-header h4, .ui-dialog .modal-header h4, .modal .ui-dialog-titlebar h4, .ui-dialog .ui-dialog-titlebar h4, .modal .modal-header h5, .ui-dialog .modal-header h5, .modal .ui-dialog-titlebar h5, .ui-dialog .ui-dialog-titlebar h5, .modal .modal-header h6, .ui-dialog .modal-header h6, .modal .ui-dialog-titlebar h6, .ui-dialog .ui-dialog-titlebar h6, .modal .modal-header .ui-dialog-title, .ui-dialog .modal-header .ui-dialog-title, .modal .ui-dialog-titlebar .ui-dialog-title, .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+    margin: 0;
+}
+.modal .modal-header .close, .ui-dialog .modal-header .close, .modal .ui-dialog-titlebar .close, .ui-dialog .ui-dialog-titlebar .close {
+    line-height: 20px;
+    margin-top: 0;
+}
+.modal .modal-header .ui-dialog-titlebar-close, .ui-dialog .modal-header .ui-dialog-titlebar-close, .modal .ui-dialog-titlebar .ui-dialog-titlebar-close, .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+    background-image: url("/assets/dialog-close-bg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    top: 23px;
+    right: 20px;
+    margin: 0;
+}
+.modal .modal-body, .ui-dialog .modal-body {
+    border: 0;
+    padding: 10px;
+}
+.modal .modal-footer, .ui-dialog .modal-footer {
+    background-color: transparent;
+    border: 0;
+    padding: 10px;
+}
+.modal .btn-link, .ui-dialog .btn-link {
+    -webkit-text-shadow: none;
+    text-shadow: none;
+}
+.pagination {
+    text-align: center;
+}
+.pagination ul>li>a {
+    color: #000;
+}
+.icon-section {
+    background-image: url(/assets/icons-section.png);
+    background-attachment: scroll;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    -moz-background-size: auto 40px;
+    -o-background-size: auto 40px;
+    -webkit-background-size: auto 40px;
+    background-size: auto 40px;
+    border-radius: 10px;
+    text-align: left;
+    line-height: 40px;
+    float: left;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    margin-right: 15px;
+}
+.icon-section.icon-inverse {
+    background-image: url(/assets/icons-section-inverse.png);
+}
+.icon-section.icon-inverse:hover:not(.icon-forum):not(.icon-isan):not(.icon-sanoteca):not(.icon-imed):not(.icon-imec):not(.icon-sondaje) {
+    background-image: url(/assets/icons-section.png);
+}
+.icon-section.icon-sanostiri {
+    background-position: 0 0;
+}
+.icon-section.icon-forum {
+    background-position: -40px 0;
+}
+.icon-section.icon-sanatatetv {
+    background-position: -80px 0;
+}
+.icon-section.icon-infotb {
+    background-position: -120px 0;
+}
+.icon-section.icon-sanoclub {
+    background-position: -160px 0;
+}
+.icon-section.icon-isan {
+    background-position: -200px 0;
+}
+.icon-section.icon-sanoteca {
+    background-position: -240px 0;
+}
+.icon-section.icon-imed {
+    background-position: -280px 0;
+}
+.icon-section.icon-spitalemd {
+    background-position: -320px 0;
+}
+.icon-section.icon-imec {
+    background-position: -360px 0;
+}
+.icon-section.icon-sondaje {
+    background-position: -400px 0;
+}
+.icon-section.icon-pas {
+    background-position: -440px 0;
+}
+.creeping-line {
+    background-color: #ffe646;
+    color: #212121;
+    display: none;
+    clear: both;
+    width: 100%;
+    height: 20px;
+    margin: 0;
+}
+.creeping-line .wrapper {
+    position: relative;
+    line-height: 20px;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+}
+.creeping-line .wrapper .news-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+.creeping-line .wrapper .news-list li {
+    list-style: none;
+    line-height: 20px;
+    height: 20px;
+    padding: 0;
+    color: #222;
+}
+.creeping-line .wrapper .news-list li a {
+    color: #222;
+}
+.creeping-line .wrapper .br-label, .creeping-line .wrapper .al-label {
+    background-color: #ffe646;
+    font-weight: bold;
+    color: #000;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    margin-right: 10px;
+}
+.creeping-line.alert {
+    border: 0;
+    border-radius: 0;
+    background-color: #ff003b;
+    -webkit-text-shadow: none;
+    text-shadow: none;
+    color: #fff;
+    padding: 0;
+}
+.creeping-line.alert .al-label {
+    background-color: #ff003b;
+    color: #fff;
+}
+.creeping-line.alert .news-list li {
+    color: #fff;
+}
+.creeping-line.alert .news-list li a {
+    color: #fff;
+}
+.share-page {
+    margin: 10px 0;
+}
+.menu .navbar-inner {
+    border: 0;
+}
+.menu .navbar-inner .brand {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 40px;
+    display: inline-block;
+    clear: none;
+    height: 40px;
+    margin: 15px 15px 15px 0;
+    padding: 0;
+}
+.menu .navbar-inner .navbar-buttons {
+    float: right;
+}
+.menu .icons-section li {
+    color: #999;
+    padding-top: 15px;
+}
+.menu .icons-section li a {
+    padding: 0;
+    margin: 0;
+}
+.menu .icons-section li .icon-section {
+    -moz-background-size: auto 40px;
+    -o-background-size: auto 40px;
+    -webkit-background-size: auto 40px;
+    background-size: auto 40px;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+}
+.social-icons {
+    display: inline-block;
+    clear: none;
+    padding: 0;
+    margin: 0;
+}
+.social-icons li {
+    list-style: none;
+    float: left;
+    display: inline-block;
+    clear: none;
+    margin-right: 10px;
+}
+.social-icons li a {
+    background-image: url(/assets/social-icons.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    display: block;
+    clear: both;
+    width: 24px;
+    height: 24px;
+}
+.social-icons li a.fb {
+    background-position: 0 0;
+}
+.social-icons li a.gp {
+    background-position: -1000px 0;
+}
+.social-icons li a.ok {
+    background-position: -1000px 0;
+}
+.social-icons li a.tw {
+    background-position: -24px 0;
+}
+.social-icons li a.li {
+    background-position: -48px 0;
+}
+.social-icons li a.yt {
+    background-position: -72px 0;
+}
+.social-icons li a.rs {
+    background-position: -96px 0;
+}
+.social-icons li:last-child {
+    margin-right: 0;
+}
+@media(min-width:1200px) {
+    .container-fluid {
+    max-width: 1200px!important;
+    padding: 0!important;
+    margin: 0 auto!important;
+}
+}@media(min-width:768px)and (max-width:979px) {
+    .menu .user .toggler, .menu .language .toggler {
+    padding: 7px 10px!important;
+    background-position: 0!important;
+    float: right;
+    margin: 20px 5px 0;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    background-color: #242526;
+    background-image: -moz-linear-gradient(top, #2f2f32, #141414);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2f2f32), to(#141414));
+    background-image: -webkit-linear-gradient(top, #2f2f32, #141414);
+    background-image: -o-linear-gradient(top, #2f2f32, #141414);
+    background-image: linear-gradient(to bottom, #2f2f32, #141414);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f2f32', endColorstr='#ff141414', GradientType=0);
+    border-color: #141414 #141414 #000;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+    *background-color: #141414;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .075);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .075);
+}
+.menu .user .toggler:hover, .menu .language .toggler:hover, .menu .user .toggler:focus, .menu .language .toggler:focus, .menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active, .menu .user .toggler.disabled, .menu .language .toggler.disabled, .menu .user .toggler[disabled], .menu .language .toggler[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+}
+.menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active {
+    background-color: #000 \9;
+}
+.menu .user .toggler:hover, .menu .language .toggler:hover, .menu .user .toggler:focus, .menu .language .toggler:focus, .menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active, .menu .user .toggler.disabled, .menu .language .toggler.disabled, .menu .user .toggler[disabled], .menu .language .toggler[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+}
+.menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active {
+    background-color: #000 \9;
+}
+.menu .user .toggler:hover, .menu .language .toggler:hover, .menu .user .toggler:focus, .menu .language .toggler:focus {
+    background-position: 0 -15px!important;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    background-color: #242526;
+    background-image: -moz-linear-gradient(top, #2f2f32, #141414);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2f2f32), to(#141414));
+    background-image: -webkit-linear-gradient(top, #2f2f32, #141414);
+    background-image: -o-linear-gradient(top, #2f2f32, #141414);
+    background-image: linear-gradient(to bottom, #2f2f32, #141414);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f2f32', endColorstr='#ff141414', GradientType=0);
+    border-color: #141414 #141414 #000;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+    *background-color: #141414;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.menu .user .toggler:hover:hover, .menu .language .toggler:hover:hover, .menu .user .toggler:focus:hover, .menu .language .toggler:focus:hover, .menu .user .toggler:hover:focus, .menu .language .toggler:hover:focus, .menu .user .toggler:focus:focus, .menu .language .toggler:focus:focus, .menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active, .menu .user .toggler:hover.disabled, .menu .language .toggler:hover.disabled, .menu .user .toggler:focus.disabled, .menu .language .toggler:focus.disabled, .menu .user .toggler:hover[disabled], .menu .language .toggler:hover[disabled], .menu .user .toggler:focus[disabled], .menu .language .toggler:focus[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+}
+.menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active {
+    background-color: #000 \9;
+}
+.menu .user .toggler:hover:hover, .menu .language .toggler:hover:hover, .menu .user .toggler:focus:hover, .menu .language .toggler:focus:hover, .menu .user .toggler:hover:focus, .menu .language .toggler:hover:focus, .menu .user .toggler:focus:focus, .menu .language .toggler:focus:focus, .menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active, .menu .user .toggler:hover.disabled, .menu .language .toggler:hover.disabled, .menu .user .toggler:focus.disabled, .menu .language .toggler:focus.disabled, .menu .user .toggler:hover[disabled], .menu .language .toggler:hover[disabled], .menu .user .toggler:focus[disabled], .menu .language .toggler:focus[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+}
+.menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active {
+    background-color: #000 \9;
+}
+.menu .icons-section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.menu .icons-section li {
+    display: block;
+    clear: both;
+}
+.menu .icons-section li a {
+    display: block;
+    clear: both;
+}
+.menu .icons-section li span {
+    float: left;
+    display: inline-block;
+    line-height: 40px;
+}
+}@media(max-width:767px) {
+    .menu .user .toggler, .menu .language .toggler {
+    padding: 7px 10px!important;
+    background-position: 0!important;
+    float: right;
+    margin: 20px 5px 0;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    background-color: #242526;
+    background-image: -moz-linear-gradient(top, #2f2f32, #141414);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2f2f32), to(#141414));
+    background-image: -webkit-linear-gradient(top, #2f2f32, #141414);
+    background-image: -o-linear-gradient(top, #2f2f32, #141414);
+    background-image: linear-gradient(to bottom, #2f2f32, #141414);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f2f32', endColorstr='#ff141414', GradientType=0);
+    border-color: #141414 #141414 #000;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+    *background-color: #141414;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .075);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .075);
+}
+.menu .user .toggler:hover, .menu .language .toggler:hover, .menu .user .toggler:focus, .menu .language .toggler:focus, .menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active, .menu .user .toggler.disabled, .menu .language .toggler.disabled, .menu .user .toggler[disabled], .menu .language .toggler[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+}
+.menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active {
+    background-color: #000 \9;
+}
+.menu .user .toggler:hover, .menu .language .toggler:hover, .menu .user .toggler:focus, .menu .language .toggler:focus, .menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active, .menu .user .toggler.disabled, .menu .language .toggler.disabled, .menu .user .toggler[disabled], .menu .language .toggler[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+}
+.menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active {
+    background-color: #000 \9;
+}
+.menu .user .toggler:hover, .menu .language .toggler:hover, .menu .user .toggler:focus, .menu .language .toggler:focus {
+    background-position: 0 -15px!important;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    background-color: #242526;
+    background-image: -moz-linear-gradient(top, #2f2f32, #141414);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2f2f32), to(#141414));
+    background-image: -webkit-linear-gradient(top, #2f2f32, #141414);
+    background-image: -o-linear-gradient(top, #2f2f32, #141414);
+    background-image: linear-gradient(to bottom, #2f2f32, #141414);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f2f32', endColorstr='#ff141414', GradientType=0);
+    border-color: #141414 #141414 #000;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+    *background-color: #141414;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.menu .user .toggler:hover:hover, .menu .language .toggler:hover:hover, .menu .user .toggler:focus:hover, .menu .language .toggler:focus:hover, .menu .user .toggler:hover:focus, .menu .language .toggler:hover:focus, .menu .user .toggler:focus:focus, .menu .language .toggler:focus:focus, .menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active, .menu .user .toggler:hover.disabled, .menu .language .toggler:hover.disabled, .menu .user .toggler:focus.disabled, .menu .language .toggler:focus.disabled, .menu .user .toggler:hover[disabled], .menu .language .toggler:hover[disabled], .menu .user .toggler:focus[disabled], .menu .language .toggler:focus[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+}
+.menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active {
+    background-color: #000 \9;
+}
+.menu .user .toggler:hover:hover, .menu .language .toggler:hover:hover, .menu .user .toggler:focus:hover, .menu .language .toggler:focus:hover, .menu .user .toggler:hover:focus, .menu .language .toggler:hover:focus, .menu .user .toggler:focus:focus, .menu .language .toggler:focus:focus, .menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active, .menu .user .toggler:hover.disabled, .menu .language .toggler:hover.disabled, .menu .user .toggler:focus.disabled, .menu .language .toggler:focus.disabled, .menu .user .toggler:hover[disabled], .menu .language .toggler:hover[disabled], .menu .user .toggler:focus[disabled], .menu .language .toggler:focus[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+}
+.menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active {
+    background-color: #000 \9;
+}
+.menu .icons-section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.menu .icons-section li {
+    display: block;
+    clear: both;
+}
+.menu .icons-section li a {
+    display: block;
+    clear: both;
+}
+.menu .icons-section li span {
+    float: left;
+    display: inline-block;
+    line-height: 40px;
+}
+}
