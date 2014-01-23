@@ -46,7 +46,7 @@
   %meta{:property => "og:title", :content => "Donează sânge pentru #{@blood_request.person_name}"}
   %meta{:property => "og:description", :content => @blood_request.description}
 
-.row(style="margin-top: 30px")
+.row
   .span6.well.photo
     = attachment_image_tag @blood_request
   .span5.well.cprogress
@@ -64,7 +64,7 @@
         %a.addthis_button_twitter
         %a.addthis_button_google_plusone_share
 
-    %a.btn.btn-primary.btn-large.action{:href => "#{questionnaire_path}?redirect=#{new_blood_request_case_donation_path(@blood_request)}"} Donează Sânge
+    %a.btn.btn-primary.btn-large.action{:href => "#{new_blood_request_case_donation_path(@blood_request)}"} Donează Sânge
 
 .row
   .span11.well
