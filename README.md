@@ -11,10 +11,11 @@ ________________________
 5. start server `bundle exec unicorn_rails -E production`
 6. detach from tmux `ctrl-b` followed by `c`
 
-TODO:
+
+TODO
 ________________________
-Capistrano deploy script
-Seeds
+1. Capistrano deploy script
+2. Seeds
 
 
 License
