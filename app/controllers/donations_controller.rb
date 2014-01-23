@@ -22,7 +22,7 @@ class DonationsController < ApplicationController
 
     def donation_params
       params.require(:donation)
-            .permit(:type2, :full_name, :gender, :birthdate, :blood_group, :blood_rh,
+            .permit( :full_name, :gender, :birthdate, :blood_group, :blood_rh,
                     :phone, :email, :id_number, :donate_at)
     end
 end

@@ -3,9 +3,23 @@
     width: 80px;
   }
 
-= form_for @donation, :html => {:class => 'form-horizontal'} do |f|
+= form_for @donation, :html => {:class => 'form-horizontal formular'} do |f|
   %fieldset
-    %legend Doneaza sange
+    %legend
+      Doneaza sange
+      .subtext Completați următoarea formă de mai jos și veți fi contactat în cel mai acurt timp pentru a confirma data și ora de prezentare la donarea de sînge/plasma.
+
+    .control-group
+      .control-label Donator
+      .controls
+        %label.radio.inline{ :for => "donation_full_name_ruda" }
+          = f.radio_button :full_name, 'ruda', :class => 'inline'
+          Ruda
+        %label.radio.inline{ :for => "donation_full_name_voluntar" }
+          = f.radio_button :full_name, 'voluntar', :class => 'inline'
+          Voluntar
+
+
     .control-group
       %label.control-label Numele, Prenumele, Patrimonicul
       .controls
@@ -47,5 +61,4 @@
                             :order => [:day, :month, :year, :hour, :minute]
 
   .form-actions
-    = f.submit 'Eu vin să donez!', :class => 'btn btn-primary'
-
+    = f.submit 'Confirm înregistrarea', :class => 'btn btn-primary'
