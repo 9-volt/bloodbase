@@ -13,10 +13,11 @@
  *= require_self
 */
 
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,latin-ext,cyrillic,cyrillic-ext");
 
 html, body{
   height: 100%;
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   min-width: 320px;
 }
 
@@ -26,7 +27,7 @@ html, body{
 }
 
 #main > .container{
-  padding-top: 78px;
+  padding-top: 148px;
   padding-bottom: 125px;
   min-width: 320px;
 }
@@ -47,9 +48,23 @@ section.carousel {
       max-width: 99999px;
     }
   }
+  .info{
+    h2{
+      letter-spacing: 0.02em;
+      padding-top: 2px;
+    }
+    .buttons{
+      a:last-child{
+        margin-left: 5px;
+      }
+    }
+  }
 }
 
 section.profiles{
+  .tall{
+    line-height: 2.7em;
+  }
   .image{
     overflow: hidden;
     text-align: center;
@@ -64,49 +79,54 @@ section.profiles{
   }
 }
 
-#footer {
-  min-height: 125px;
-  margin: -125px 0 0;
-}
-
-#question td {
-  &:first-child a.btn{
-    background: #2C3E50;
+section.partners{
+  margin-bottom: 40px;
+  h3{
+    font-size: 18px;
+    font-weight: normal;
   }
-  &:nth-child(2) a.btn {
-    background: #f0584c;
+  .box{
+    float: left;
+    width: 33%;
+    margin: -1px 0 0;
+    border-top: 1px solid #dedcd3;
+    border-bottom: 1px solid #dedcd3;
+    text-align: center;
+    .box-inner{
+      height: 150px;
+      margin: 15px 0;
+      border-right: 1px solid #dedcd3;
+      vertical-align: middle;
+      position: relative;
+      img{
+        max-height: 130px;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+      }
+    }
   }
 }
 
-#feedback {
-  height: 104px;
-  width: 104px;
-  position: fixed;
-  top: 40%;
-  left: 0;
-  z-index: 999;
-  transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-}
+.footer {
+  background-color: #dfdbcc;
+  text-align: center;
+  padding: 25px;
 
-#feedback a {
-  display: block;
-  background: #f0584c;
-  height: 15px;
-  width: 70px;
-  padding: 8px 16px;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 17px;
-  font-weight: bold;
-  text-decoration: none;
-}
+  .links {
+    display: block;
+    clear: both;
 
-#feedback a:hover {
-  background: #06c;
+    li {
+      list-style: none;
+      display: inline-block;
+      clear: none;
+      margin: 0 15px;
+    }
+  }
 }
 
 @media (min-width: 980px) {
@@ -161,22 +181,6 @@ section.profiles{
       width: auto;
     }
   }
-  .infoblock{
-    .row-fluid{
-      .span4{
-        width: 31%;
-        margin: 0 1%;
-        float: left;
-        .image{
-          img{
-            max-width: 155px;
-            width: 100%;
-            height: auto;
-          }
-        }
-      }
-    }
-  }
   footer{
     padding: 0 20px;
   }
@@ -217,18 +221,6 @@ section.profiles{
       width: auto;
     }
   }
-  .infoblock{
-    .row-fluid{
-      .span4{
-        h2{
-          font-size: 14px;
-          margin-top: 5px;
-          line-height: 20px;
-          white-space: nowrap;
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 400px) {
@@ -241,24 +233,6 @@ section.profiles{
       padding-top: 0;
     }
   }
-}
-
-.footer {
-  background-color: #efefef;
-  text-align: center;
-  padding: 25px;
-}
-
-.footer .links {
-  display: block;
-  clear: both;
-}
-
-.footer .links li {
-  list-style: none;
-  display: inline-block;
-  clear: none;
-  margin: 0 15px;
 }
 
 #main .container {
@@ -279,8 +253,4 @@ section.profiles{
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b3c3f',endColorstr='#ff212121',GradientType=0);
   border-color: #252525;
-}
-
-.icon-section.icon-doneazasange {
-  background: url("logo_red.png")
 }
