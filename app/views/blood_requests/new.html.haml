@@ -41,7 +41,12 @@
     .control-group
       %label.control-label Numele persoanei de contact
       .controls
-        = f.text_field :email, :class => 'input-xlarge'
+        = f.text_field :issuer_name, :class => 'input-xlarge'
+
+    .control-group
+      %label.control-label Telefon de contact
+      .controls
+        = f.text_field :contact_number, :class => 'input-xlarge'
 
     .control-group
       %label.control-label Email
