@@ -82,6 +82,12 @@
         .control-group
           %label.control-label Descrierea cazului:
           .info= @blood_request.description
+        .control-group
+          %label.control-label Numele persoanei de contact:
+          .info= @blood_request.issuer_name
+        .control-group
+          %label.control-label Telefon de contact:
+          .info= @blood_request.contact_number
 
 
 %script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-508e563741b6132f")
