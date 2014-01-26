@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
+gem 'sqlite3'
 gem 'rails', '4.0.0'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -14,8 +15,11 @@ gem 'thin'
 gem 'paperclip', '~> 3.0'
 gem 'hashids'
 gem 'unicorn'
+gem 'capistrano',  '~> 3.1'
 
 group :development do
+  gem 'capistrano-rvm', require: false
+  gem 'capistrano-rails', require: false
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'html2haml'
@@ -25,7 +29,6 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'sqlite3'
 end
 
 group :test do

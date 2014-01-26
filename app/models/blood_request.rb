@@ -30,7 +30,7 @@ class BloodRequest < ActiveRecord::Base
   end
 
   def shortlink
-    super || build_shortlink
+    super || create_shortlink
   end
 
   def link
