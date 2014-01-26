@@ -1,11 +1,11 @@
 lock "3.1.0"
 
-set :application,   "bloodbase"
+set :application,   "doneaza"
 
 set :scm,           :git
 set :repo_url,      "git@github.com:9-volt/bloodbase.git"
 set :branch,        "master"
-set :deploy_to,     "/data/www/#{fetch(:application)}"
+set :deploy_to,     "/home/donator/#{fetch(:application)}"
 set :keep_releases, 5
 
 set :log_level,     :info
