@@ -14,6 +14,7 @@ gem 'thin'
 gem 'paperclip', '~> 3.0'
 gem 'hashids'
 gem 'unicorn'
+gem 'capistrano',  '~> 3.1'
 
 group :development do
   gem 'capistrano-rails', require: false
