@@ -108,6 +108,356 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .row {
+    margin-left: -30px;
+    *zoom: 1;
+  }
+  .row:before,
+  .row:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  .row:after {
+    clear: both;
+  }
+  [class*="span"] {
+    float: left;
+    min-height: 1px;
+    margin-left: 30px;
+  }
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 1194px;
+  }
+  .span12 {
+    width: 1194px;
+  }
+  .span11 {
+    width: 1092px;
+  }
+  .span10 {
+    width: 990px;
+  }
+  .span9 {
+    width: 888px;
+  }
+  .span8 {
+    width: 786px;
+  }
+  .span7 {
+    width: 684px;
+  }
+  .span6 {
+    width: 582px;
+  }
+  .span5 {
+    width: 480px;
+  }
+  .span4 {
+    width: 378px;
+  }
+  .span3 {
+    width: 276px;
+  }
+  .span2 {
+    width: 174px;
+  }
+  .span1 {
+    width: 72px;
+  }
+  .offset12 {
+    margin-left: 1254px;
+  }
+  .offset11 {
+    margin-left: 1152px;
+  }
+  .offset10 {
+    margin-left: 1050px;
+  }
+  .offset9 {
+    margin-left: 948px;
+  }
+  .offset8 {
+    margin-left: 846px;
+  }
+  .offset7 {
+    margin-left: 744px;
+  }
+  .offset6 {
+    margin-left: 642px;
+  }
+  .offset5 {
+    margin-left: 540px;
+  }
+  .offset4 {
+    margin-left: 438px;
+  }
+  .offset3 {
+    margin-left: 336px;
+  }
+  .offset2 {
+    margin-left: 234px;
+  }
+  .offset1 {
+    margin-left: 132px;
+  }
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  .row-fluid:before,
+  .row-fluid:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  .row-fluid:after {
+    clear: both;
+  }
+  .row-fluid [class*="span"] {
+    display: block;
+    float: left;
+    width: 100%;
+    min-height: 30px;
+    margin-left: 2.512562814070352%;
+    *margin-left: 2.4528256575590017%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  .row-fluid .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 2.512562814070352%;
+  }
+  .row-fluid .span12 {
+    width: 100%;
+    *width: 99.94026284348865%;
+  }
+  .row-fluid .span11 {
+    width: 91.4572864321608%;
+    *width: 91.39754927564945%;
+  }
+  .row-fluid .span10 {
+    width: 82.9145728643216%;
+    *width: 82.85483570781025%;
+  }
+  .row-fluid .span9 {
+    width: 74.37185929648241%;
+    *width: 74.31212213997107%;
+  }
+  .row-fluid .span8 {
+    width: 65.82914572864321%;
+    *width: 65.76940857213187%;
+  }
+  .row-fluid .span7 {
+    width: 57.28643216080402%;
+    *width: 57.226695004292665%;
+  }
+  .row-fluid .span6 {
+    width: 48.743718592964825%;
+    *width: 48.68398143645347%;
+  }
+  .row-fluid .span5 {
+    width: 40.201005025125625%;
+    *width: 40.14126786861427%;
+  }
+  .row-fluid .span4 {
+    width: 31.65829145728643%;
+    *width: 31.59855430077508%;
+  }
+  .row-fluid .span3 {
+    width: 23.115577889447234%;
+    *width: 23.055840732935884%;
+  }
+  .row-fluid .span2 {
+    width: 14.572864321608039%;
+    *width: 14.513127165096689%;
+  }
+  .row-fluid .span1 {
+    width: 6.030150753768844%;
+    *width: 5.970413597257494%;
+  }
+  .row-fluid .offset12 {
+    margin-left: 105.0251256281407%;
+    *margin-left: 104.905651315118%;
+  }
+  .row-fluid .offset12:first-child {
+    margin-left: 102.51256281407035%;
+    *margin-left: 102.39308850104766%;
+  }
+  .row-fluid .offset11 {
+    margin-left: 96.4824120603015%;
+    *margin-left: 96.3629377472788%;
+  }
+  .row-fluid .offset11:first-child {
+    margin-left: 93.96984924623115%;
+    *margin-left: 93.85037493320846%;
+  }
+  .row-fluid .offset10 {
+    margin-left: 87.9396984924623%;
+    *margin-left: 87.8202241794396%;
+  }
+  .row-fluid .offset10:first-child {
+    margin-left: 85.42713567839195%;
+    *margin-left: 85.30766136536926%;
+  }
+  .row-fluid .offset9 {
+    margin-left: 79.39698492462311%;
+    *margin-left: 79.27751061160042%;
+  }
+  .row-fluid .offset9:first-child {
+    margin-left: 76.88442211055276%;
+    *margin-left: 76.76494779753007%;
+  }
+  .row-fluid .offset8 {
+    margin-left: 70.85427135678391%;
+    *margin-left: 70.73479704376122%;
+  }
+  .row-fluid .offset8:first-child {
+    margin-left: 68.34170854271356%;
+    *margin-left: 68.22223422969087%;
+  }
+  .row-fluid .offset7 {
+    margin-left: 62.311557788944725%;
+    *margin-left: 62.19208347592202%;
+  }
+  .row-fluid .offset7:first-child {
+    margin-left: 59.79899497487437%;
+    *margin-left: 59.67952066185166%;
+  }
+  .row-fluid .offset6 {
+    margin-left: 53.76884422110553%;
+    *margin-left: 53.649369908082825%;
+  }
+  .row-fluid .offset6:first-child {
+    margin-left: 51.256281407035175%;
+    *margin-left: 51.13680709401247%;
+  }
+  .row-fluid .offset5 {
+    margin-left: 45.22613065326633%;
+    *margin-left: 45.106656340243624%;
+  }
+  .row-fluid .offset5:first-child {
+    margin-left: 42.713567839195974%;
+    *margin-left: 42.59409352617327%;
+  }
+  .row-fluid .offset4 {
+    margin-left: 36.68341708542714%;
+    *margin-left: 36.56394277240443%;
+  }
+  .row-fluid .offset4:first-child {
+    margin-left: 34.17085427135678%;
+    *margin-left: 34.05137995833408%;
+  }
+  .row-fluid .offset3 {
+    margin-left: 28.140703517587937%;
+    *margin-left: 28.021229204565238%;
+  }
+  .row-fluid .offset3:first-child {
+    margin-left: 25.628140703517587%;
+    *margin-left: 25.508666390494888%;
+  }
+  .row-fluid .offset2 {
+    margin-left: 19.597989949748744%;
+    *margin-left: 19.478515636726044%;
+  }
+  .row-fluid .offset2:first-child {
+    margin-left: 17.08542713567839%;
+    *margin-left: 16.96595282265569%;
+  }
+  .row-fluid .offset1 {
+    margin-left: 11.055276381909547%;
+    *margin-left: 10.935802068886847%;
+  }
+  .row-fluid .offset1:first-child {
+    margin-left: 8.542713567839195%;
+    *margin-left: 8.423239254816496%;
+  }
+  input,
+  textarea,
+  .uneditable-input {
+    margin-left: 0;
+  }
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 30px;
+  }
+  input.span12,
+  textarea.span12,
+  .uneditable-input.span12 {
+    width: 1180px;
+  }
+  input.span11,
+  textarea.span11,
+  .uneditable-input.span11 {
+    width: 1078px;
+  }
+  input.span10,
+  textarea.span10,
+  .uneditable-input.span10 {
+    width: 976px;
+  }
+  input.span9,
+  textarea.span9,
+  .uneditable-input.span9 {
+    width: 874px;
+  }
+  input.span8,
+  textarea.span8,
+  .uneditable-input.span8 {
+    width: 772px;
+  }
+  input.span7,
+  textarea.span7,
+  .uneditable-input.span7 {
+    width: 670px;
+  }
+  input.span6,
+  textarea.span6,
+  .uneditable-input.span6 {
+    width: 568px;
+  }
+  input.span5,
+  textarea.span5,
+  .uneditable-input.span5 {
+    width: 466px;
+  }
+  input.span4,
+  textarea.span4,
+  .uneditable-input.span4 {
+    width: 364px;
+  }
+  input.span3,
+  textarea.span3,
+  .uneditable-input.span3 {
+    width: 262px;
+  }
+  input.span2,
+  textarea.span2,
+  .uneditable-input.span2 {
+    width: 160px;
+  }
+  input.span1,
+  textarea.span1,
+  .uneditable-input.span1 {
+    width: 58px;
+  }
+  .thumbnails {
+    margin-left: -30px;
+  }
+  .thumbnails > li {
+    margin-left: 30px;
+  }
+  .row-fluid .thumbnails {
+    margin-left: 0;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 979px) {
   .row {
     margin-left: -20px;
@@ -751,7 +1101,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;

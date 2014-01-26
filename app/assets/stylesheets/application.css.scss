@@ -172,6 +172,14 @@ section.partners{
   }
 }
 
+@media (min-width: 1200px) {
+  section.carousel {
+    .image{
+      height: 224px;
+    }
+  }
+}
+
 @media (max-width: 979px) {
   #main>.container{
     padding-top: 0;
