@@ -17,6 +17,7 @@ gem 'unicorn'
 gem 'capistrano',  '~> 3.1'
 
 group :development do
+  gem 'capistrano-rvm', require: false
   gem 'capistrano-rails', require: false
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
