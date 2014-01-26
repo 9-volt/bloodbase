@@ -19,10 +19,6 @@
     border-radius: 6px;
   }
 
-  .addthis_toolbox {
-    margin-left: 80px;
-  }
-
   .progress {
     margin: 0;
     background: grey;
@@ -31,10 +27,6 @@
   .info {
     padding: 5px;
     margin-left: 170px;
-  }
-
-  .share {
-    margin-bottom: 20px;
   }
 
   .progress-danger .bar {
@@ -57,12 +49,7 @@
     %h3 #{@blood_request.donations.count} din #{@blood_request.persons_required} donatori găsiţi
 
     .share
-      .addthis_toolbox.addthis_default_style.addthis_32x32_style
-        %a.addthis_button_facebook
-        %a.addthis_button_odnoklassniki_ru
-        %a.addthis_button_vk
-        %a.addthis_button_twitter
-        %a.addthis_button_google_plusone_share
+      .pluso{:data => {:options => "medium,square,line,horizontal,nocounter,sepcounter=1,theme=14", :services => "vkontakte,odnoklassniki,facebook,twitter,google"}}
 
     - if @blood_request.visible
       = button_to "Dezaproba cerere", disapprove_admin_blood_request_path(@blood_request.id), :class => "btn btn-primary btn-large action"
@@ -88,5 +75,3 @@
           %label.control-label Acțiuni:
           .info
             = link_to "Distruge", admin_blood_request_path(@blood_request), :method => :delete, :class => "btn btn-primary btn-large action",  :confirm => "Distrugem?"
-
-%script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-508e563741b6132f")
