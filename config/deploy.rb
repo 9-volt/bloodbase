@@ -14,7 +14,6 @@ set :format,        :pretty
 set :pty,           true
 set :use_sudo,      false
 set :user,          "donator"
-# set :password,      ask("Server password:", nil)
 set :ssh_options, {
   user:          fetch(:user),
   forward_agent: true,
