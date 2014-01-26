@@ -16,6 +16,7 @@ gem 'hashids'
 gem 'unicorn'
 
 group :development do
+  gem 'capistrano-rails', require: false
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'html2haml'
