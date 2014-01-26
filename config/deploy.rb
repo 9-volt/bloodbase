@@ -6,7 +6,7 @@ set :scm,           :git
 set :repo_url,      "git@github.com:9-volt/bloodbase.git"
 set :branch,        "master"
 set :deploy_to,     "/home/donator/#{fetch(:application)}"
-set :keep_releases, 5
+set :keep_releases, 2
 
 set :log_level,     :info
 set :format,        :pretty
