@@ -9,6 +9,7 @@
         = javascript_include_tag "application"
         = csrf_meta_tags
         = yield(:head)
+    %script{:src => "http://vkontakte.ru/js/api/share.js?9", :charset => "windows-1251"}
   %body{:class => "#{controller_name} #{action_name}"}
     #main{:role => "main"}
       = render 'layouts/navigation'

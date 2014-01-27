@@ -8,7 +8,8 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require 'bootstrap.min'
+ *= require 'bootstrap'
+ *= require 'bootstrap-responsive'
  *= require_tree .
  *= require_self
 */
@@ -21,6 +22,10 @@ html, body{
   min-width: 320px;
 }
 
+.well{
+  background: #efefef;
+}
+
 #main{
   min-height: 100%;
   min-width: 280px;
@@ -30,6 +35,14 @@ html, body{
   padding-top: 148px;
   padding-bottom: 125px;
   min-width: 320px;
+}
+
+.share{
+  margin-bottom: 10px;
+  height: 48px;
+  .pluso-wrap a.pluso-more{
+    display: none;
+  }
 }
 
 section.carousel {
@@ -70,12 +83,23 @@ section.profiles{
   .tall{
     line-height: 2.7em;
   }
+  .block{
+    margin-bottom: 15px;
+  }
   .image{
     overflow: hidden;
     text-align: center;
-    img{
+    a{
+      display: block;
+      width: 100%;
       height: 190px;
+    }
+    img{
+      min-height: 100%;
+      min-width: 100%;
+      height: auto;
       width: auto;
+      max-width: 9999px;
     }
   }
   .description{
@@ -97,6 +121,9 @@ section.partners{
     border-top: 1px solid #dedcd3;
     border-bottom: 1px solid #dedcd3;
     text-align: center;
+    &:nth-child(3n) .box-inner{
+      border-right-width: 0;
+    }
     .box-inner{
       height: 150px;
       margin: 15px 0;
@@ -117,7 +144,7 @@ section.partners{
 }
 
 .formular{
-  background: #dfdbcc;
+  background: #efefef;
   border-radius: 6px;
   legend{
     line-height: 1.4;
@@ -135,20 +162,22 @@ section.partners{
 }
 
 .footer {
-  background-color: #dfdbcc;
+  background-color: #efefef;
   text-align: center;
   padding: 25px;
-  font-size: 11px;
+  font-size: 12px;
 
   .links {
     display: block;
     clear: both;
+    margin: 0;
 
     li {
       list-style: none;
       display: inline-block;
       clear: none;
-      margin: 0 15px;
+      margin: 0 3px;
+      padding: 0;
     }
   }
 }
@@ -177,6 +206,48 @@ section.partners{
     .image{
       height: 224px;
     }
+  }
+  section.partners{
+    .box{
+      width: 25%;
+      &:nth-child(4n) .box-inner{
+        border-right-width: 0;
+      }
+      &:nth-child(3n) .box-inner{
+        border-right-width: 1px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  section.profiles{
+    .row-fluid{
+      .span3{
+        &:nth-child(4n+1){
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 768px){
+  section.profiles{
+    .row-fluid{
+      .span3{
+        &:nth-child(3n+1){
+          margin-left: 0;
+        }
+        width: 32.13859020310633%;
+        *width: 32.07885304659498%;
+        margin-left: 1.792114695%;
+        *margin-left: 1.88172043%;
+      }
+    }
+  }
+  .home section.profiles .row-fluid .span3:nth-child(4n) {
+    display: none;
   }
 }
 
@@ -213,6 +284,21 @@ section.partners{
       width: auto;
     }
   }
+  section.partners{
+    .box{
+      width: auto;
+      float: none;
+      .box-inner{
+        border-right-width: 0;
+      }
+      &:nth-child(4n) .box-inner{
+        border-right-width: 0;
+      }
+      &:nth-child(3n) .box-inner{
+        border-right-width: 0;
+      }
+    }
+  }
   footer{
     padding: 0 20px;
   }
@@ -235,9 +321,10 @@ section.partners{
 @media (min-width: 480px) and (max-width: 767px) {
   .profiles{
     .row-fluid{
-      .span4{
+      .span3{
         width: 48%;
-        margin: 0 1%;
+        margin-left: 1%;
+        margin-right: 1%;
         float: left;
       }
     }
@@ -245,6 +332,13 @@ section.partners{
 }
 
 @media (max-width: 480px) {
+  .profiles{
+    .block{
+      .image a{
+        height: 300px;
+      }
+    }
+  }
   .carousel .info{
     h1{
       font-size: 22px;
