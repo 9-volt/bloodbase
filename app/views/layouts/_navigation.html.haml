@@ -4,6 +4,11 @@
       %a.brand{href: "/"}
         %i.icon-section.icon-doneazasange
         Donez Sânge
+      .navbar-buttons
+        %a.btn.btn-navbar.collapsed{:data => {:toggle => "collapse", :target => ".nav-collapse"}}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
       %ul.nav.nav-collapse.icons-section
         %li
           %a{href: "http://www.e-sanatate.md/News/Home"}
@@ -40,7 +45,7 @@
             %span.hidden-desktop Centrul PAS
   .navbar-inner-secondary
     .container
-      %ul.nav.nav-collapse
+      %ul.nav
         %li
           %a{href: cases_path}
             Vreau să donez sânge

@@ -14,6 +14,13 @@
 .menu .navbar-inner .navbar-buttons {
     float: right;
 }
+.menu .btn-navbar{
+  margin-top: 23px;
+  background: #f04642;
+}
+.menu .btn-navbar:hover{
+  background: #f04642;
+}
 .menu .icons-section li {
     color: #999;
     padding-top: 15px;
@@ -117,7 +124,7 @@
 }
 
 
-@media(min-width:768px)and (max-width:979px) {
+@media(min-width:768px) and (max-width:979px) {
   .menu .user .toggler, .menu .language .toggler {
     padding: 7px 10px!important;
     background-position: 0!important;
