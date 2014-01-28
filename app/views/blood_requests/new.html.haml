@@ -44,9 +44,22 @@
           Numărul de minim persoane care trebuie să doneze
 
     .control-group
+      %label.control-label Fotografia persoanei
+      .controls
+        = f.file_field :photo, :class => 'input-xlarge'
+
+    %legend
+      Date de contact
+
+    .control-group
       %label.control-label Numele persoanei de contact
       .controls
         = f.text_field :issuer_name, :class => 'input-xlarge'
+
+    .control-group
+      %label.control-label Gradul de rudenie
+      .controls
+        = f.select :kin, ['Părinte', 'Fiu/Fiică', 'Frate/Soră', 'Bunic/Străbunic', 'Nepot/Strănepot', 'Unchi/Mătușă', 'Văr', 'Nepot (de pe frați)', 'Soț/Soție', 'Altele']
 
     .control-group
       %label.control-label Telefon de contact
@@ -60,10 +73,6 @@
         %p.help-block
           Email-ul persoanei de contact
 
-    .control-group
-      %label.control-label Fotografia persoanei
-      .controls
-        = f.file_field :photo, :class => 'input-xlarge'
 
   .form-actions
     = f.submit 'Creeaza cererea', :class => 'btn btn-primary'
