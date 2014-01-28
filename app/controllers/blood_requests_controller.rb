@@ -20,12 +20,12 @@ class BloodRequestsController < ApplicationController
        'IMSP Institutul de Ftiziopneumologie "Chirii Draganiuc"',
        'IMSP Spitalul Clinic de Psihiatrie',
        'Centrul Republican de Reabilitare pentru Copii',
-       'IMSP Spitalul Clinic Municipal nr.l',
+       'IMSP Spitalul Clinic Municipal nr.1',
        'IMSP Spitalul Clinic Municipal "Sfîntul Arhanghel Mihail"',
        'IMSP Spitalul Clinic Municipal Sfînta Treime"',
        'IMSP Spitalul Clinic Municipal nr.4',
        'IMSP Spitalul Clinic Municipal pentru Copii "V. Ignatenco"',
-       'IMSP Spitalul Clinic Municipal pentru Copii nr. 1',
+       'IMSP Spitalul Clinic Municipal pentru Copii nr.1',
        'IMSP Spitalul Clinic Municipal Boli Contagioase de Copii',
        'Spitalul Clinic Municipal de Ftiziopneumologie',
        'IMSP Maternitatea nr.2'
@@ -37,74 +37,41 @@ class BloodRequestsController < ApplicationController
       'Orhei' =>
       ['IMSP Spitalul de Psihiatrie și Ftiziopneumologie Orhei',
        'IMSP Spitalul raional Orhei'],
-      'Anenii-Noi' =>
-      ['IMSP Spitalul raional Anenii-Noi'],
-      'Basarabeasca' =>
-      ['IMSP Spitalul raional Basarabeasca'],
-      'Briceni' =>
-      ['IMSP Spitalul raional Briceni'],
-      'Cahul' =>
-      ['IMSP Spitalul raional Cahul'],
-      'Cantemir' =>
-      ['IMSP Spitalul raional Cantemir'],
-      'Călărași' =>
-      ['IMSP Spitalul raional Călărași'],
-      'Căușeni' =>
-      ['IMSP Spitalul raional Căușeni'],
-      'Ceadîr-Lunga' =>
-      ['IMSP Spitalul raional Ceadîr-Lunga'],
-      'Cimișlia' =>
-      ['IMSP Spitalul raional Cimișlia'],
-      'Comrat' =>
-      ['IMSP Spitalul raional Comrat'],
-      'Criuleni' =>
-      ['IMSP Spitalul raional Criuleni'],
-      'Dondușeni' =>
-      ['IMSP Spitalul raional Dondușeni'],
-      'Drochia' =>
-      ['IMSP Spitalul raional Drochia'],
-      'Edineț' =>
-      ['IMSP Spitalul raional Edineț'],
-      'Fălești' =>
-      ['IMSP Spitalul raional Fălești'],
-      'Florești' =>
-      ['IMSP Spitalul raional Florești'],
-      'Glodeni' =>
-      ['IMSP Spitalul raional Glodeni'],
-      'Hîncești' =>
-      ['IMSP Spitalul raional Hîncești'],
-      'Hîncești' =>
-      ['IMSP Spitalul raional Hîncești'],
-      'Ialoveni' =>
-      ['IMSP Spitalul raional Ialoveni'],
-      'Leova' =>
-      ['IMSP Spitalul raional Leova'],
-      'Nisporeni' =>
-      ['IMSP Spitalul raional Nisporeni'],
-      'Ocnița' =>
-      ['IMSP Spitalul raional Ocnița'],
-      'Rîșcani' =>
-      ['IMSP Spitalul raional Rîșcani'],
-      'Rezina' =>
-      ['IMSP Spitalul raional Rezina'],
-      'Sîngerei' =>
-      ['IMSP Spitalul raional Sîngerei'],
-      'Soroca' =>
-      ['IMSP Spitalul raional Soroca'],
-      'Strășeni' =>
-      ['IMSP Spitalul raional Strășeni'],
-      'Șoldănești' =>
-      ['IMSP Spitalul raional Șoldănești'],
-      'Ștefan-Vodă' =>
-      ['IMSP Spitalul raional Ștefan-Vodă'],
-      'Taraclia' =>
-      ['IMSP Spitalul raional Taraclia'],
-      'Telenești' =>
-      ['IMSP Spitalul raional Telenești'],
-      'Ungheni' =>
-      ['IMSP Spitalul raional Ungheni'],
-      'Vulcănești' =>
-      ['IMSP Spitalul raional Vulcănești']
+      'Alte orașe' =>
+      ['IMSP Spitalul raional Anenii-Noi',
+      'IMSP Spitalul raional Basarabeasca',
+      'IMSP Spitalul raional Briceni',
+      'IMSP Spitalul raional Cahul',
+      'IMSP Spitalul raional Cantemir',
+      'IMSP Spitalul raional Călărași',
+      'IMSP Spitalul raional Căușeni',
+      'IMSP Spitalul raional Ceadîr-Lunga',
+      'IMSP Spitalul raional Cimișlia',
+      'IMSP Spitalul raional Comrat',
+      'IMSP Spitalul raional Criuleni',
+      'IMSP Spitalul raional Dondușeni',
+      'IMSP Spitalul raional Drochia',
+      'IMSP Spitalul raional Edineț',
+      'IMSP Spitalul raional Fălești',
+      'IMSP Spitalul raional Florești',
+      'IMSP Spitalul raional Glodeni',
+      'IMSP Spitalul raional Hîncești',
+      'IMSP Spitalul raional Hîncești',
+      'IMSP Spitalul raional Ialoveni',
+      'IMSP Spitalul raional Leova',
+      'IMSP Spitalul raional Nisporeni',
+      'IMSP Spitalul raional Ocnița',
+      'IMSP Spitalul raional Rîșcani',
+      'IMSP Spitalul raional Rezina',
+      'IMSP Spitalul raional Sîngerei',
+      'IMSP Spitalul raional Soroca',
+      'IMSP Spitalul raional Strășeni',
+      'IMSP Spitalul raional Șoldănești',
+      'IMSP Spitalul raional Ștefan-Vodă',
+      'IMSP Spitalul raional Taraclia',
+      'IMSP Spitalul raional Telenești',
+      'IMSP Spitalul raional Ungheni',
+      'IMSP Spitalul raional Vulcănești']
     }
   end
 
