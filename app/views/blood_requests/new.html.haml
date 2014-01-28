@@ -12,7 +12,12 @@
     .control-group
       %label.control-label Spitalul
       .controls
-        = f.text_field :hospital, :class => 'input-xlarge'
+        %select{:name => 'hospital'}
+          - @hospitals_groups.each do |city, hospitals|
+            %optgroup{:label => city}
+              - hospitals.each do |hospital|
+                %option{:value => hospital}
+                  = hospital
         %p.help-block
           Numele spitaului în care persoana este spitalizată
 
