@@ -43,6 +43,11 @@
           Numărul minim de donatori
 
     .control-group
+      %label.control-label Data colectării:
+      .controls.date
+        = f.date_select :collection_date, :order => [:day, :month, :year], :start_year => 1.year.ago.year, :end_year => Time.now.year
+
+    .control-group
       %label.control-label Fotografia persoanei:
       .controls
         = f.file_field :photo, :class => 'input-xlarge'
