@@ -33,6 +33,12 @@
     background-color: #f0584c;
   }
 
+  /* remove on action buttons change */
+  .info > div {
+    display: inline-block;
+  }
+
+
 = content_for :head do
   %meta{:property => "og:image", :content => @blood_request.photo.url}
   %meta{:property => "og:title", :content => "Donează sânge pentru #{@blood_request.person_name}"}
@@ -50,11 +56,6 @@
 
     .share
       .pluso{:data => {:options => "medium,square,line,horizontal,nocounter,sepcounter=1,theme=14", :services => "vkontakte,odnoklassniki,facebook,twitter,google"}}
-
-    - if @blood_request.visible
-      = button_to "Dezaproba cerere", disapprove_admin_blood_request_path(@blood_request.id), :class => "btn btn-primary btn-large action"
-    - else
-      = button_to "Accepta cerere", approve_admin_blood_request_path(@blood_request.id), :class => "btn btn-primary btn-large action"
 .row
   .span11.well
     %form.form-horizontal
@@ -74,4 +75,10 @@
         .control-group
           %label.control-label Acțiuni:
           .info
-            = link_to "Distruge", admin_blood_request_path(@blood_request), :method => :delete, :class => "btn btn-primary btn-large action",  :confirm => "Distrugem?"
+            - if @blood_request.visible
+              = button_to "Scoate din publicație", disapprove_admin_blood_request_path(@blood_request.id), :class => "btn btn-warning action"
+            - else
+              = button_to "Publică", approve_admin_blood_request_path(@blood_request.id), :class => "btn btn-success action"
+            = link_to "Editează", '#', :class => "btn btn-info action"
+            = link_to "Arhivează", '#', :class => "btn btn-warning action"
+            = link_to "Șterge", admin_blood_request_path(@blood_request), :method => :delete, :class => "btn btn-danger action",  :confirm => "Ștergem?"
