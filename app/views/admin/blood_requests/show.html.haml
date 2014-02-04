@@ -83,5 +83,5 @@
               = link_to "Scoate din arhiva", unarchive_admin_blood_request_path(@blood_request), :method => :post, :class => "btn btn-warning action"
             - else
               = link_to "Arhivează", archive_admin_blood_request_path(@blood_request), :method => :post, :class => "btn btn-warning action"
-            = link_to "Editează", '#', :class => "btn btn-info action"
+            = link_to "Editează", edit_admin_blood_request_path(@blood_request), :class => "btn btn-info action"
             = link_to "Șterge", admin_blood_request_path(@blood_request), :method => :delete, :class => "btn btn-danger action",  :confirm => "Ștergem?"

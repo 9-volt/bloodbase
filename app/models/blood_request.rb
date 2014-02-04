@@ -9,7 +9,7 @@ class BloodRequest < ActiveRecord::Base
 
   default_scope { where(visible: true, archived: false) }
   scope :archived,   -> { where(archived: true) }
-  scope :approved,   -> { where(visible: true) }
+  scope :approved,   -> { where(visible: true, archived: false) }
   scope :unapproved, -> { where(visible: false) }
 
   def photo_url

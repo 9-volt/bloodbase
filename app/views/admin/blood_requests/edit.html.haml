@@ -1,0 +1,81 @@
+= form_for(@blood_request, :url => admin_blood_request_path, :html => {:class => 'form-horizontal formular'}) do |f|
+  %fieldset
+    %legend
+      Editează cerere
+    .control-group
+      %label.control-label Numele pacientului:
+      .controls
+        = f.text_field :person_name, :class => 'input-xlarge'
+        %p.help-block Numele complet al persoanei care are nevoie de sânge
+
+    .control-group
+      %label.control-label Spitalul:
+      .controls
+        %select{:name => 'hospital'}
+          - @hospitals_groups.each do |city, hospitals|
+            %optgroup{:label => city}
+              - hospitals.each do |hospital|
+                %option{:value => hospital}
+                  = hospital
+        %p.help-block
+          Numele spitalului în care se află pacientul
+
+    .control-group
+      %label.control-label Secţia:
+      .controls
+        = f.text_field :section, :class => 'input-xlarge'
+        %p.help-block
+          Secția în care se află pacientul
+
+    .control-group
+      %label.control-label Descrierea cazului:
+      .controls
+        = f.text_area :description, :class => 'input-xlarge'
+        %p.help-block
+          Starea pacientului și de ce are nevoie de donatori
+
+    .control-group
+      %label.control-label Nr. de donatori:
+      .controls
+        = f.number_field :persons_required, :class => 'input-small'
+        %p.help-block
+          Numărul minim de donatori
+
+    .control-group
+      %label.control-label Data colectării:
+      .controls.date
+        = f.date_select :collection_date, :order => [:day, :month, :year], :start_year => 1.year.ago.year, :end_year => Time.now.year
+
+    .control-group
+      %label.control-label Fotografia persoanei:
+      .controls
+        = f.file_field :photo, :class => 'input-xlarge'
+
+    %legend
+      Date de contact:
+
+    .control-group
+      %label.control-label Numele persoanei de contact:
+      .controls
+        = f.text_field :issuer_name, :class => 'input-xlarge'
+
+    .control-group
+      %label.control-label Gradul de rudenie:
+      .controls
+        = f.select :kin, ['Părinte', 'Fiu/Fiică', 'Frate/Soră', 'Bunic/Străbunic', 'Nepot/Strănepot', 'Unchi/Mătușă', 'Văr', 'Nepot (de pe frați)', 'Soț/Soție', 'Altele']
+
+    .control-group
+      %label.control-label Telefon de contact:
+      .controls
+        = f.text_field :contact_number, :class => 'input-xlarge'
+
+    .control-group
+      %label.control-label Email:
+      .controls
+        = f.text_field :email, :class => 'input-xlarge'
+        %p.help-block
+          Email-ul persoanei de contact
+
+
+  .form-actions
+    = f.submit 'Salvează', :class => 'btn btn-primary'
