@@ -1,5 +1,5 @@
 class Admin::BaseController < ApplicationController
-  before_filter :check_admin!
+  before_filter :authenticate_user!
   layout "layouts/admin/application"
 
 end
