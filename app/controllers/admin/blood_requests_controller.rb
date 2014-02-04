@@ -22,8 +22,21 @@ class Admin::BloodRequestsController < Admin::BaseController
     redirect_to admin_blood_request_path(@blood_request)
   end
 
+  def archive
+    @blood_request = BloodRequest.unscoped.find_by(:id => params[:id])
+    @blood_request.archive!
+
+    redirect_to admin_blood_request_path(@blood_request)
+  end
+
+  def unarchive
+    @blood_request = BloodRequest.unscoped.find_by(:id => params[:id])
+    @blood_request.unarchive!
+
+    redirect_to admin_blood_request_path(@blood_request)
+  end
+
   def destroy
-    pp 'hui'
     @blood_request = BloodRequest.unscoped.find_by(:id => params[:id])
     @blood_request.destroy!
 

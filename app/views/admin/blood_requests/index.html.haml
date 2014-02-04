@@ -11,7 +11,7 @@
       = render 'case_box', :br => br
 
 %h3 Cereri arhivate
-/ %section.profiles
-/   .row-fluid
-/     - @blood_requests.archived.each do |br|
-/       = render 'case_box', :br => br
+%section.profiles
+  .row-fluid
+    - @blood_requests.archived.each do |br|
+      = render 'case_box', :br => br

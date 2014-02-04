@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203183613) do
+ActiveRecord::Schema.define(version: 20140204001012) do
 
   create_table "blood_requests", force: true do |t|
     t.string   "person_name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140203183613) do
     t.string   "contact_number"
     t.string   "kin"
     t.date     "collection_date"
+    t.boolean  "archived",           default: false
   end
 
   create_table "donations", force: true do |t|

@@ -76,9 +76,12 @@
           %label.control-label Acțiuni:
           .info
             - if @blood_request.visible
-              = button_to "Scoate din publicație", disapprove_admin_blood_request_path(@blood_request.id), :class => "btn btn-warning action"
+              = link_to "Scoate din publicație", disapprove_admin_blood_request_path(@blood_request), :method => :post, :class => "btn btn-warning action"
             - else
-              = button_to "Publică", approve_admin_blood_request_path(@blood_request.id), :class => "btn btn-success action"
+              = link_to "Publică", approve_admin_blood_request_path(@blood_request), :method => :post, :class => "btn btn-success action"
+            - if @blood_request.archived
+              = link_to "Scoate din arhiva", unarchive_admin_blood_request_path(@blood_request), :method => :post, :class => "btn btn-warning action"
+            - else
+              = link_to "Arhivează", archive_admin_blood_request_path(@blood_request), :method => :post, :class => "btn btn-warning action"
             = link_to "Editează", '#', :class => "btn btn-info action"
-            = link_to "Arhivează", '#', :class => "btn btn-warning action"
             = link_to "Șterge", admin_blood_request_path(@blood_request), :method => :delete, :class => "btn btn-danger action",  :confirm => "Ștergem?"
