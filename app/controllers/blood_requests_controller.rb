@@ -14,6 +14,7 @@ class BloodRequestsController < ApplicationController
 
     if @blood_request.save
       @blood_request.shortlink.save
+      AdminNotifierMailer.notify_moderators(@blood_request, request.base_url).deliver
       redirect_to @blood_request.link
     else
       flash.now[:error] = @blood_request.errors.full_messages.join('<br />')
