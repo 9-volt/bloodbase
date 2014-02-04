@@ -1,0 +1,13 @@
+O noua cerere asteapta publicarea.
+
+Rezumatul cererii:
+Numele pacientului: <%= @blood_request.person_name %>
+Descrierea cazului: <%= @blood_request.description %>
+
+Date de contact:
+Email: <%= @blood_request.email %>
+Persoana de contact: <%= @blood_request.issuer_name %>
+Telefon: <%= @blood_request.contact_number %>
+
+Accesati pagina moderatorului pentru publicarea cererii:
+<%= URI.join(@host_uri, "/admin").to_s %>

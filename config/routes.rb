@@ -8,8 +8,7 @@ Donez::Application.routes.draw do
     resources :users
     resources :blood_requests do
       member do
-        post :approve
-        post :disapprove
+        post :approve, :disapprove, :archive, :unarchive
       end
     end
   end

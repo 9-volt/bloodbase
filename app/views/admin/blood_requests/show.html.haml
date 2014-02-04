@@ -19,10 +19,6 @@
     border-radius: 6px;
   }
 
-  .addthis_toolbox {
-    margin-left: 80px;
-  }
-
   .progress {
     margin: 0;
     background: grey;
@@ -33,20 +29,22 @@
     margin-left: 170px;
   }
 
-  .share {
-    margin-bottom: 20px;
-  }
-
   .progress-danger .bar {
     background-color: #f0584c;
   }
+
+  /* remove on action buttons change */
+  .info > div {
+    display: inline-block;
+  }
+
 
 = content_for :head do
   %meta{:property => "og:image", :content => @blood_request.photo.url}
   %meta{:property => "og:title", :content => "Donează sânge pentru #{@blood_request.person_name}"}
   %meta{:property => "og:description", :content => @blood_request.description}
 
-.row(style="margin-top: 30px")
+.row
   .span6.well.photo
     = attachment_image_tag @blood_request
   .span5.well.cprogress
@@ -57,17 +55,7 @@
     %h3 #{@blood_request.donations.count} din #{@blood_request.persons_required} donatori găsiţi
 
     .share
-      .addthis_toolbox.addthis_default_style.addthis_32x32_style
-        %a.addthis_button_facebook
-        %a.addthis_button_odnoklassniki_ru
-        %a.addthis_button_vk
-        %a.addthis_button_twitter
-        %a.addthis_button_google_plusone_share
-
-    - if @blood_request.visible
-      = button_to "Dezaproba cerere", disapprove_admin_blood_request_path(@blood_request.id), :class => "btn btn-primary btn-large action"
-    - else
-      = button_to "Accepta cerere", approve_admin_blood_request_path(@blood_request.id), :class => "btn btn-primary btn-large action"
+      .pluso{:data => {:options => "medium,square,line,horizontal,nocounter,sepcounter=1,theme=14", :services => "vkontakte,odnoklassniki,facebook,twitter,google"}}
 .row
   .span11.well
     %form.form-horizontal
@@ -87,6 +75,13 @@
         .control-group
           %label.control-label Acțiuni:
           .info
-            = link_to "Distruge", admin_blood_request_path(@blood_request), :method => :delete, :class => "btn btn-primary btn-large action",  :confirm => "Distrugem?"
-
-%script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-508e563741b6132f")
+            - if @blood_request.visible
+              = link_to "Scoate din publicație", disapprove_admin_blood_request_path(@blood_request), :method => :post, :class => "btn btn-warning action"
+            - else
+              = link_to "Publică", approve_admin_blood_request_path(@blood_request), :method => :post, :class => "btn btn-success action"
+            - if @blood_request.archived
+              = link_to "Scoate din arhiva", unarchive_admin_blood_request_path(@blood_request), :method => :post, :class => "btn btn-warning action"
+            - else
+              = link_to "Arhivează", archive_admin_blood_request_path(@blood_request), :method => :post, :class => "btn btn-warning action"
+            = link_to "Editează", edit_admin_blood_request_path(@blood_request), :class => "btn btn-info action"
+            = link_to "Șterge", admin_blood_request_path(@blood_request), :method => :delete, :class => "btn btn-danger action",  :confirm => "Ștergem?"

@@ -1,0 +1,310 @@
+.menu .navbar-inner {
+    border: 0;
+}
+.menu .navbar-inner .brand {
+    font-size: 24px;
+    color: #fff;
+    line-height: 40px;
+    display: inline-block;
+    clear: none;
+    height: 40px;
+    margin: 15px 15px 15px 0;
+    padding: 0;
+}
+.menu .navbar-inner .navbar-buttons {
+    float: right;
+}
+.menu .btn-navbar{
+  margin-top: 23px;
+  background: #f04642;
+}
+.menu .btn-navbar:hover{
+  background: #f04642;
+}
+.menu .icons-section li {
+    color: #999;
+    padding-top: 15px;
+}
+.menu .icons-section li a {
+    padding: 0;
+    margin: 0;
+}
+.menu .icons-section li .icon-section {
+    -moz-background-size: auto 40px;
+    -o-background-size: auto 40px;
+    -webkit-background-size: auto 40px;
+    background-size: auto 40px;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+/* Icons */
+
+.icon-section {
+  background-image: url("icons-section.png");
+  background-attachment: scroll;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  -moz-background-size: auto 40px;
+  -o-background-size: auto 40px;
+  -webkit-background-size: auto 40px;
+  background-size: auto 40px;
+  border-radius: 10px;
+  text-align: left;
+  line-height: 40px;
+  float: left;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  margin-right: 15px;
+}
+.icon-section.icon-inverse {
+  background-image: url("icons-section-inverse.png");
+}
+.icon-section.icon-inverse:hover:not(.icon-forum):not(.icon-isan):not(.icon-sanoteca):not(.icon-imed):not(.icon-imec):not(.icon-sondaje) {
+  background-image: url(icons-section.png);
+}
+.icon-section.icon-sanostiri {
+  background-position: 0 0;
+}
+.icon-section.icon-forum {
+  background-position: -40px 0;
+}
+.icon-section.icon-sanatatetv {
+  background-position: -80px 0;
+}
+.icon-section.icon-infotb {
+  background-position: -120px 0;
+}
+.icon-section.icon-sanoclub {
+  background-position: -160px 0;
+}
+.icon-section.icon-isan {
+  background-position: -200px 0;
+}
+.icon-section.icon-sanoteca {
+  background-position: -240px 0;
+}
+.icon-section.icon-imed {
+  background-position: -280px 0;
+}
+.icon-section.icon-spitalemd {
+  background-position: -320px 0;
+}
+.icon-section.icon-imec {
+  background-position: -360px 0;
+}
+.icon-section.icon-sondaje {
+  background-position: -400px 0;
+}
+.icon-section.icon-pas {
+  background-position: -440px 0;
+}
+.icon-section.icon-doneazasange {
+  background-position: -480px 0;
+}
+
+/* Navbar inner secondary */
+.menu .navbar-inner-secondary{
+  background: #f04642;
+  height: 31px;
+}
+.menu .navbar-inner-secondary .nav>li{
+  line-height: 31px;
+  padding-right: 38px;
+  padding-left: 2px;
+}
+.menu .navbar-inner-secondary .nav>li>a{
+  padding: 0;
+  line-height: 31px;
+}
+
+
+@media(min-width:768px) and (max-width:979px) {
+  .menu .user .toggler, .menu .language .toggler {
+    padding: 7px 10px!important;
+    background-position: 0!important;
+    float: right;
+    margin: 20px 5px 0;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    background-color: #242526;
+    background-image: -moz-linear-gradient(top, #2f2f32, #141414);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2f2f32), to(#141414));
+    background-image: -webkit-linear-gradient(top, #2f2f32, #141414);
+    background-image: -o-linear-gradient(top, #2f2f32, #141414);
+    background-image: linear-gradient(to bottom, #2f2f32, #141414);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f2f32', endColorstr='#ff141414', GradientType=0);
+    border-color: #141414 #141414 #000;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+    *background-color: #141414;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .075);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .075);
+  }
+  .menu .user .toggler:hover, .menu .language .toggler:hover, .menu .user .toggler:focus, .menu .language .toggler:focus, .menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active, .menu .user .toggler.disabled, .menu .language .toggler.disabled, .menu .user .toggler[disabled], .menu .language .toggler[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+  }
+  .menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active {
+    background-color: #000 \9;
+  }
+  .menu .user .toggler:hover, .menu .language .toggler:hover, .menu .user .toggler:focus, .menu .language .toggler:focus, .menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active, .menu .user .toggler.disabled, .menu .language .toggler.disabled, .menu .user .toggler[disabled], .menu .language .toggler[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+  }
+  .menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active {
+    background-color: #000 \9;
+  }
+  .menu .user .toggler:hover, .menu .language .toggler:hover, .menu .user .toggler:focus, .menu .language .toggler:focus {
+    background-position: 0 -15px!important;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    background-color: #242526;
+    background-image: -moz-linear-gradient(top, #2f2f32, #141414);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2f2f32), to(#141414));
+    background-image: -webkit-linear-gradient(top, #2f2f32, #141414);
+    background-image: -o-linear-gradient(top, #2f2f32, #141414);
+    background-image: linear-gradient(to bottom, #2f2f32, #141414);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f2f32', endColorstr='#ff141414', GradientType=0);
+    border-color: #141414 #141414 #000;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+    *background-color: #141414;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  }
+  .menu .user .toggler:hover:hover, .menu .language .toggler:hover:hover, .menu .user .toggler:focus:hover, .menu .language .toggler:focus:hover, .menu .user .toggler:hover:focus, .menu .language .toggler:hover:focus, .menu .user .toggler:focus:focus, .menu .language .toggler:focus:focus, .menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active, .menu .user .toggler:hover.disabled, .menu .language .toggler:hover.disabled, .menu .user .toggler:focus.disabled, .menu .language .toggler:focus.disabled, .menu .user .toggler:hover[disabled], .menu .language .toggler:hover[disabled], .menu .user .toggler:focus[disabled], .menu .language .toggler:focus[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+  }
+  .menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active {
+    background-color: #000 \9;
+  }
+  .menu .user .toggler:hover:hover, .menu .language .toggler:hover:hover, .menu .user .toggler:focus:hover, .menu .language .toggler:focus:hover, .menu .user .toggler:hover:focus, .menu .language .toggler:hover:focus, .menu .user .toggler:focus:focus, .menu .language .toggler:focus:focus, .menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active, .menu .user .toggler:hover.disabled, .menu .language .toggler:hover.disabled, .menu .user .toggler:focus.disabled, .menu .language .toggler:focus.disabled, .menu .user .toggler:hover[disabled], .menu .language .toggler:hover[disabled], .menu .user .toggler:focus[disabled], .menu .language .toggler:focus[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+  }
+  .menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active {
+    background-color: #000 \9;
+  }
+  .menu .icons-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .menu .icons-section li {
+    display: block;
+    clear: both;
+  }
+  .menu .icons-section li a {
+    display: block;
+    clear: both;
+  }
+  .menu .icons-section li span {
+    float: left;
+    display: inline-block;
+    line-height: 40px;
+  }
+}
+@media(max-width:767px) {
+  .menu .user .toggler, .menu .language .toggler {
+    padding: 7px 10px!important;
+    background-position: 0!important;
+    float: right;
+    margin: 20px 5px 0;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    background-color: #242526;
+    background-image: -moz-linear-gradient(top, #2f2f32, #141414);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2f2f32), to(#141414));
+    background-image: -webkit-linear-gradient(top, #2f2f32, #141414);
+    background-image: -o-linear-gradient(top, #2f2f32, #141414);
+    background-image: linear-gradient(to bottom, #2f2f32, #141414);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f2f32', endColorstr='#ff141414', GradientType=0);
+    border-color: #141414 #141414 #000;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+    *background-color: #141414;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .075);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .075);
+  }
+  .menu .user .toggler:hover, .menu .language .toggler:hover, .menu .user .toggler:focus, .menu .language .toggler:focus, .menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active, .menu .user .toggler.disabled, .menu .language .toggler.disabled, .menu .user .toggler[disabled], .menu .language .toggler[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+  }
+  .menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active {
+    background-color: #000 \9;
+  }
+  .menu .user .toggler:hover, .menu .language .toggler:hover, .menu .user .toggler:focus, .menu .language .toggler:focus, .menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active, .menu .user .toggler.disabled, .menu .language .toggler.disabled, .menu .user .toggler[disabled], .menu .language .toggler[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+  }
+  .menu .user .toggler:active, .menu .language .toggler:active, .menu .user .toggler.active, .menu .language .toggler.active {
+    background-color: #000 \9;
+  }
+  .menu .user .toggler:hover, .menu .language .toggler:hover, .menu .user .toggler:focus, .menu .language .toggler:focus {
+    background-position: 0 -15px!important;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    background-color: #242526;
+    background-image: -moz-linear-gradient(top, #2f2f32, #141414);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2f2f32), to(#141414));
+    background-image: -webkit-linear-gradient(top, #2f2f32, #141414);
+    background-image: -o-linear-gradient(top, #2f2f32, #141414);
+    background-image: linear-gradient(to bottom, #2f2f32, #141414);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f2f32', endColorstr='#ff141414', GradientType=0);
+    border-color: #141414 #141414 #000;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+    *background-color: #141414;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  }
+  .menu .user .toggler:hover:hover, .menu .language .toggler:hover:hover, .menu .user .toggler:focus:hover, .menu .language .toggler:focus:hover, .menu .user .toggler:hover:focus, .menu .language .toggler:hover:focus, .menu .user .toggler:focus:focus, .menu .language .toggler:focus:focus, .menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active, .menu .user .toggler:hover.disabled, .menu .language .toggler:hover.disabled, .menu .user .toggler:focus.disabled, .menu .language .toggler:focus.disabled, .menu .user .toggler:hover[disabled], .menu .language .toggler:hover[disabled], .menu .user .toggler:focus[disabled], .menu .language .toggler:focus[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+  }
+  .menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active {
+    background-color: #000 \9;
+  }
+  .menu .user .toggler:hover:hover, .menu .language .toggler:hover:hover, .menu .user .toggler:focus:hover, .menu .language .toggler:focus:hover, .menu .user .toggler:hover:focus, .menu .language .toggler:hover:focus, .menu .user .toggler:focus:focus, .menu .language .toggler:focus:focus, .menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active, .menu .user .toggler:hover.disabled, .menu .language .toggler:hover.disabled, .menu .user .toggler:focus.disabled, .menu .language .toggler:focus.disabled, .menu .user .toggler:hover[disabled], .menu .language .toggler:hover[disabled], .menu .user .toggler:focus[disabled], .menu .language .toggler:focus[disabled] {
+    color: #fff;
+    background-color: #141414;
+    *background-color: #080808;
+  }
+  .menu .user .toggler:hover:active, .menu .language .toggler:hover:active, .menu .user .toggler:focus:active, .menu .language .toggler:focus:active, .menu .user .toggler:hover.active, .menu .language .toggler:hover.active, .menu .user .toggler:focus.active, .menu .language .toggler:focus.active {
+    background-color: #000 \9;
+  }
+  .menu .icons-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .menu .icons-section li {
+    display: block;
+    clear: both;
+  }
+  .menu .icons-section li a {
+    display: block;
+    clear: both;
+  }
+  .menu .icons-section li span {
+    float: left;
+    display: inline-block;
+    line-height: 40px;
+  }
+}

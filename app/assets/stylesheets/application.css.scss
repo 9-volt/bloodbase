@@ -8,16 +8,22 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require 'bootstrap.min'
+ *= require 'bootstrap'
+ *= require 'bootstrap-responsive'
  *= require_tree .
  *= require_self
 */
 
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,latin-ext,cyrillic,cyrillic-ext");
 
 html, body{
   height: 100%;
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   min-width: 320px;
+}
+
+.well{
+  background: #efefef;
 }
 
 #main{
@@ -26,9 +32,17 @@ html, body{
 }
 
 #main > .container{
-  padding-top: 78px;
+  padding-top: 148px;
   padding-bottom: 125px;
   min-width: 320px;
+}
+
+.share{
+  margin-bottom: 10px;
+  height: 48px;
+  .pluso-wrap a.pluso-more{
+    display: none;
+  }
 }
 
 section.carousel {
@@ -47,15 +61,45 @@ section.carousel {
       max-width: 99999px;
     }
   }
+  .info{
+    h2{
+      letter-spacing: 0.02em;
+      padding-top: 2px;
+    }
+    .buttons{
+      a:last-child{
+        margin-left: 5px;
+      }
+    }
+  }
 }
 
 section.profiles{
+  .row{
+    .span4{
+      margin-bottom: 15px;
+    }
+  }
+  .tall{
+    line-height: 2.7em;
+  }
+  .block{
+    margin-bottom: 15px;
+  }
   .image{
     overflow: hidden;
     text-align: center;
-    img{
+    a{
+      display: block;
+      width: 100%;
       height: 190px;
+    }
+    img{
+      min-height: 100%;
+      min-width: 100%;
+      height: auto;
       width: auto;
+      // max-width: 9999px;
     }
   }
   .description{
@@ -64,49 +108,78 @@ section.profiles{
   }
 }
 
-#footer {
-  min-height: 125px;
-  margin: -125px 0 0;
-}
-
-#question td {
-  &:first-child a.btn{
-    background: #2C3E50;
+section.partners{
+  margin-bottom: 40px;
+  h3{
+    font-size: 18px;
+    font-weight: normal;
   }
-  &:nth-child(2) a.btn {
-    background: #f0584c;
+  .box{
+    float: left;
+    width: 33%;
+    margin: -1px 0 0;
+    border-top: 1px solid #dedcd3;
+    border-bottom: 1px solid #dedcd3;
+    text-align: center;
+    &:nth-child(3n) .box-inner{
+      border-right-width: 0;
+    }
+    .box-inner{
+      height: 150px;
+      margin: 15px 0;
+      border-right: 1px solid #dedcd3;
+      vertical-align: middle;
+      position: relative;
+      img{
+        max-height: 130px;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+      }
+    }
   }
 }
 
-#feedback {
-  height: 104px;
-  width: 104px;
-  position: fixed;
-  top: 40%;
-  left: 0;
-  z-index: 999;
-  transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+.formular{
+  background: #efefef;
+  border-radius: 6px;
+  legend{
+    line-height: 1.4;
+    padding: 15px 24px 0;
+    width: auto;
+    .subtext{
+      padding: 10px 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+  .form-actions{
+    background: transparent;
+  }
 }
 
-#feedback a {
-  display: block;
-  background: #f0584c;
-  height: 15px;
-  width: 70px;
-  padding: 8px 16px;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 17px;
-  font-weight: bold;
-  text-decoration: none;
-}
+.footer {
+  background-color: #efefef;
+  text-align: center;
+  padding: 25px;
+  font-size: 12px;
 
-#feedback a:hover {
-  background: #06c;
+  .links {
+    display: block;
+    clear: both;
+    margin: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      clear: none;
+      margin: 0 3px;
+      padding: 0;
+    }
+  }
 }
 
 @media (min-width: 980px) {
@@ -125,6 +198,56 @@ section.profiles{
         max-width: 99999px;
       }
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  section.carousel {
+    .image{
+      height: 224px;
+    }
+  }
+  section.partners{
+    .box{
+      width: 25%;
+      &:nth-child(4n) .box-inner{
+        border-right-width: 0;
+      }
+      &:nth-child(3n) .box-inner{
+        border-right-width: 1px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  section.profiles{
+    .row-fluid{
+      .span3{
+        &:nth-child(4n+1){
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 768px){
+  section.profiles{
+    .row-fluid{
+      .span3{
+        &:nth-child(3n+1){
+          margin-left: 0;
+        }
+        width: 32.13859020310633%;
+        *width: 32.07885304659498%;
+        margin-left: 1.792114695%;
+        *margin-left: 1.88172043%;
+      }
+    }
+  }
+  .home section.profiles .row-fluid .span3:nth-child(4n) {
+    display: none;
   }
 }
 
@@ -161,19 +284,18 @@ section.profiles{
       width: auto;
     }
   }
-  .infoblock{
-    .row-fluid{
-      .span4{
-        width: 31%;
-        margin: 0 1%;
-        float: left;
-        .image{
-          img{
-            max-width: 155px;
-            width: 100%;
-            height: auto;
-          }
-        }
+  section.partners{
+    .box{
+      width: auto;
+      float: none;
+      .box-inner{
+        border-right-width: 0;
+      }
+      &:nth-child(4n) .box-inner{
+        border-right-width: 0;
+      }
+      &:nth-child(3n) .box-inner{
+        border-right-width: 0;
       }
     }
   }
@@ -199,9 +321,10 @@ section.profiles{
 @media (min-width: 480px) and (max-width: 767px) {
   .profiles{
     .row-fluid{
-      .span4{
+      .span3{
         width: 48%;
-        margin: 0 1%;
+        margin-left: 1%;
+        margin-right: 1%;
         float: left;
       }
     }
@@ -209,24 +332,19 @@ section.profiles{
 }
 
 @media (max-width: 480px) {
+  .profiles{
+    .block{
+      .image a{
+        height: 300px;
+      }
+    }
+  }
   .carousel .info{
     h1{
       font-size: 22px;
     }
     h2{
       width: auto;
-    }
-  }
-  .infoblock{
-    .row-fluid{
-      .span4{
-        h2{
-          font-size: 14px;
-          margin-top: 5px;
-          line-height: 20px;
-          white-space: nowrap;
-        }
-      }
     }
   }
 }
@@ -241,24 +359,6 @@ section.profiles{
       padding-top: 0;
     }
   }
-}
-
-.footer {
-  background-color: #efefef;
-  text-align: center;
-  padding: 25px;
-}
-
-.footer .links {
-  display: block;
-  clear: both;
-}
-
-.footer .links li {
-  list-style: none;
-  display: inline-block;
-  clear: none;
-  margin: 0 15px;
 }
 
 #main .container {
@@ -279,8 +379,4 @@ section.profiles{
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b3c3f',endColorstr='#ff212121',GradientType=0);
   border-color: #252525;
-}
-
-.icon-section.icon-doneazasange {
-  background: url(/assets/logo_red.png)
 }

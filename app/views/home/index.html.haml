@@ -4,45 +4,51 @@
   }
 
 %section.carousel
-  .image= image_tag 'carousel.png'
+  .image= image_tag 'hero.jpg'
   .info
     %h1
-      Bine ai venit pe donezsange.eu -
+      Bine ai venit pe donezsange.eu
       %br>/
-      locul unde salvăm vieți împreună.
-    %h2 Aici poți afla ușor cum devii donator, te poți programa rapid pentru o donare și cel mai important poți cere ajutor.
+      Donează sânge astăzi! Salvează o viață!
+    %h2 Acest portal a fost conceput pentru a ușura comunicarea dintre potențialii donatori de sânge și persoanele (pacienții) care au nevoie de plasmă
     .buttons
-      %a.btn.btn-danger{:href => "#", :href => "#{questionnaire_path}?redirect=#{new_donation_path}"} Donează
-      %a.btn.btn-danger{:href => "#", :href => help_path} Caut donatori
+      %a.btn.btn-danger{:href => "#", :href => cases_path} Donează
+      %a.btn.btn-danger{:href => "#", :href => help_path} Caut donator
 
 %section.profiles
   .row
-    .span12
-      %h3 Persoane ce au nevoie de sânge
+    .span6
+      %h3 Ultimele cereri întroduse
+    .span6.text-right.tall= link_to 'Vezi toate cererile', cases_path
   .row-fluid
     - @blood_requests.each do |br|
       = render '/blood_requests/case_box', :br => br
 
-  .row
-    .span12.text-right= link_to 'Vezi toate cererile', cases_path
-
-%section.infoblock
+%section.partners
   .row
     .span12
-      %hr/
-  .row-fluid
-    .span4
-      .image
-        %a(href="#")= image_tag "blog.png"
-      %h2 Blog
-    .span4
-      .image
-        %a(href="#")= image_tag "contacteaza-ne.png"
-      %h2 Contactează-ne
-    .span4
-      .image
-        %a(href="#")= image_tag "despre-proiect.png"
-      %h2 Despre proiect
+      %h3 Parteneri
+  .row
+    .span12
+      .box
+        .box-inner
+          = link_to image_tag('partners/jurnaltv.png'), 'http://www.jurnaltv.md/'
+      .box
+        .box-inner
+          = link_to image_tag('partners/pas.png'), 'http://www.pas.md/'
+      .box
+        .box-inner
+          = link_to image_tag('partners/jurnaltv.png'), 'http://www.jurnaltv.md/'
+      .box
+        .box-inner
+          = link_to image_tag('partners/pas.png'), 'http://www.pas.md/'
+      .box
+        .box-inner
+          = link_to image_tag('partners/pas.png'), 'http://www.pas.md/'
+      .box
+        .box-inner
+          = link_to image_tag('partners/pas.png'), 'http://www.pas.md/'
+
 
 - if @show_welcome
   = render 'modal'

@@ -15,6 +15,9 @@ ShortHasher = Hashids.new('doneazasange', 6)
 
 module Donez
   class Application < Rails::Application
+    config.eager_load_paths += Dir["#{config.root}/lib/**/"]
+    config.autoload_paths   += Dir["#{config.root}/lib/**/"]
+
     config.assets.initialize_on_precompile=false
     # don't generate RSpec tests for views and helpers
     config.generators do |g|

@@ -1,8 +1,7 @@
-= form_for(@blood_request, :html => {:class => 'form-horizontal formular'}) do |f|
+= form_for(@blood_request, :url => admin_blood_request_path, :html => {:class => 'form-horizontal formular'}) do |f|
   %fieldset
     %legend
-      Aici poți completa cererea, dacă ai nevoie de donatori.
-      .subtext Îți recomandăm să descrii cazul cât mai clar, oferind informații suficiente pentru potențialii donatori. Cererea va fi redactată și plasată pe site în scurt timp.
+      Editează cerere
     .control-group
       %label.control-label Numele pacientului:
       .controls
@@ -79,4 +78,4 @@
 
 
   .form-actions
-    = f.submit 'Îndeplinește cererea', :class => 'btn btn-primary'
+    = f.submit 'Salvează', :class => 'btn btn-primary'

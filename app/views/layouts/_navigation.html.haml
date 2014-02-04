@@ -1,38 +1,57 @@
-.container-fluid
-  %a.brand{href: "/News/Home"}
-    %i.icon-section.icon-doneazasange
-    Donează Sânge
-  %ul.nav.nav-collapse.icons-section
-    %li
-      %a{href: "/News/Home"}
-        %i.icon-section.icon-sanostiri.icon-inverse
-        %span.hidden-desktop Sănătate Info
-    %li
-      %a{href: "/TV/Home"}
-        %i.icon-section.icon-sanatatetv.icon-inverse
-        %span.hidden-desktop Sănătate TV
-    %li
-      %a{href: "/SanoClub"}
-        %i.icon-section.icon-sanoclub.icon-inverse
-        %span.hidden-desktop SanoClub
-    %li
-      %i.icon-section.icon-isan.icon-inverse
-      %span.hidden-desktop iSaN
-    %li
-      %i.icon-section.icon-imed.icon-inverse
-      %span.hidden-desktop iMeD
-    %li
-      %i.icon-section.icon-imec.icon-inverse
-      %span.hidden-desktop iMeC
-    %li
-      %a{href: "http://tuberculoza.info/"}
-        %i.icon-section.icon-infotb.icon-inverse
-        %span.hidden-desktop Info TB
-    %li
-      %a{href: "/Spitale/Home"}
-        %i.icon-section.icon-spitalemd.icon-inverse
-        %span.hidden-desktop Spitale.MD
-    %li
-      %a{href: "http://pas.md/"}
-        %i.icon-section.icon-pas.icon-inverse
-        %span.hidden-desktop Centrul PAS
+.navbar.navbar-fixed-top.navbar-inverse.menu
+  .navbar-inner
+    .container
+      %a.brand{href: "/"}
+        %i.icon-section.icon-doneazasange
+        Donez Sânge
+      .navbar-buttons
+        %a.btn.btn-navbar.collapsed{:data => {:toggle => "collapse", :target => ".nav-collapse"}}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      %ul.nav.nav-collapse.icons-section
+        %li
+          %a{href: "http://www.e-sanatate.md/News/Home"}
+            %i.icon-section.icon-sanostiri.icon-inverse
+            %span.hidden-desktop Sănătate Info
+        %li
+          %a{href: "http://www.e-sanatate.md/TV/Home"}
+            %i.icon-section.icon-sanatatetv.icon-inverse
+            %span.hidden-desktop Sănătate TV
+        %li
+          %a{href: "http://www.e-sanatate.md/SanoClub"}
+            %i.icon-section.icon-sanoclub.icon-inverse
+            %span.hidden-desktop SanoClub
+        %li
+          %i.icon-section.icon-isan.icon-inverse
+          %span.hidden-desktop iSaN
+        %li
+          %i.icon-section.icon-imed.icon-inverse
+          %span.hidden-desktop iMeD
+        %li
+          %i.icon-section.icon-imec.icon-inverse
+          %span.hidden-desktop iMeC
+        %li
+          %a{href: "http://tuberculoza.info/"}
+            %i.icon-section.icon-infotb.icon-inverse
+            %span.hidden-desktop Info TB
+        %li
+          %a{href: "http://www.e-sanatate.md//Spitale/Home"}
+            %i.icon-section.icon-spitalemd.icon-inverse
+            %span.hidden-desktop Spitale.MD
+        %li
+          %a{href: "http://pas.md/"}
+            %i.icon-section.icon-pas.icon-inverse
+            %span.hidden-desktop Centrul PAS
+  .navbar-inner-secondary
+    .container
+      %ul.nav
+        %li
+          %a{href: cases_path}
+            Vezi toate cazurile
+        %li
+          %a{href: new_donation_path}
+            Vreau să donez sânge
+        %li
+          %a{href: help_path}
+            Am nevoie de donatori

@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe UsersController do
+describe Admin::UsersController do
 
   before (:each) do
-    @user = FactoryGirl.create(:user)
+    @user = FactoryGirl.create(:user, :staff => true)
     sign_in @user
   end
 

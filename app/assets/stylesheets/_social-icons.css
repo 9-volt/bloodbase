@@ -1,0 +1,47 @@
+.social-icons {
+    display: inline-block;
+    clear: none;
+    padding: 0;
+    margin: 0;
+}
+.social-icons li {
+    list-style: none;
+    float: left;
+    display: inline-block;
+    clear: none;
+    margin-right: 10px;
+}
+.social-icons li a {
+    background-image: url(social-icons.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    display: block;
+    clear: both;
+    width: 24px;
+    height: 24px;
+}
+.social-icons li a.fb {
+    background-position: 0 0;
+}
+.social-icons li a.gp {
+    background-position: -1000px 0;
+}
+.social-icons li a.ok {
+    background-position: -1000px 0;
+}
+.social-icons li a.tw {
+    background-position: -24px 0;
+}
+.social-icons li a.li {
+    background-position: -48px 0;
+}
+.social-icons li a.yt {
+    background-position: -72px 0;
+}
+.social-icons li a.rs {
+    background-position: -96px 0;
+}
+.social-icons li:last-child {
+    margin-right: 0;
+}

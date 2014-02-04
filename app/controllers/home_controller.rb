@@ -6,7 +6,7 @@ class HomeController < ApplicationController
       cookies[:welcome] = true
       @show_welcome = true
     end
-    @blood_requests = BloodRequest.last(3).reverse
+    @blood_requests = BloodRequest.last(4).reverse
   end
 
   def faq; end

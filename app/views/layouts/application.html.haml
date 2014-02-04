@@ -9,33 +9,12 @@
         = javascript_include_tag "application"
         = csrf_meta_tags
         = yield(:head)
+    %script{:src => "http://vkontakte.ru/js/api/share.js?9", :charset => "windows-1251"}
   %body{:class => "#{controller_name} #{action_name}"}
     #main{:role => "main"}
-      .navbar.navbar-fixed-top.navbar-inverse.menu
-        .navbar-inner
-          = render 'layouts/navigation'
+      = render 'layouts/navigation'
       .container
         = render 'layouts/messages'
         = yield
 
       = render 'layouts/footer'
-
-    #feedback
-      %a(href="#") feedback
-
-:javascript
-  (function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/XL3MadEFiDCvQV32JV7LBg.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()
-
-:javascript
-  UserVoice = window.UserVoice || [];
-
-  function showClassicWidget() {
-    UserVoice.push(['showLightbox', 'classic_widget', {
-      mode: 'feedback',
-      primary_color: '#cc6d00',
-      link_color: '#007dbf',
-      forum_id: 216561
-    }]);
-  }
-
-  $('#feedback a').click(function () { showClassicWidget(); })

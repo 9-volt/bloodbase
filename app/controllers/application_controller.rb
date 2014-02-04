@@ -6,12 +6,6 @@ class ApplicationController < ActionController::Base
 private
 
   def after_sign_in_path_for(resource)
-    '/'
-  end
-
-  def check_admin!
-    unless current_user && current_user.staff?
-      redirect_to '/'
-    end
+    '/admin'
   end
 end
