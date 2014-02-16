@@ -21,7 +21,7 @@ Donez::Application.routes.draw do
   end
 
   get '/help'    => "blood_requests#new"
-  #get '/ajutor'  => 'blood_requests#new'
+  get '/ajutor'  => 'blood_requests#new'
   get '/donate'  => 'donations#new'
   get '/doneaza' => 'donations#new'
   get '/cases'   => 'blood_requests#index'
