@@ -12,7 +12,7 @@ set :log_level,     :info
 set :format,        :pretty
 
 set :pty,           true
-set :use_sudo,      false
+set :use_sudo,      true
 set :user,          "donator"
 set :ssh_options, {
   user:          fetch(:user),
