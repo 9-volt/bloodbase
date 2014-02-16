@@ -21,14 +21,14 @@ set :ssh_options, {
 }
 
 namespace :deploy do
-  # %i(start stop restart).each do |command|
-  #   desc "#Start/Stop/Restart application"
-  #   task command do
-  #     on roles(:app), in: :sequence, wait: 5 do
-  #       execute "/etc/init.d/unicorn_#{fetch(:application)} #{command}"
-  #     end
-  #   end
-  # end
+  %i(start stop restart).each do |command|
+    desc "#Start/Stop/Restart application"
+    task command do
+      on roles(:app), in: :sequence, wait: 5 do
+        execute "/etc/init.d/unicorn_#{fetch(:application)} #{command}"
+      end
+    end
+  end
 
   desc "Make sure local git is in sync with remote."
   task :check_revision do
@@ -42,5 +42,5 @@ namespace :deploy do
   end
   before :deploy, "deploy:check_revision"
 
-  # after :publishing, :restart
+  after :publishing, :restart
 end
