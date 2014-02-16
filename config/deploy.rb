@@ -25,7 +25,7 @@ namespace :deploy do
     desc "#Start/Stop/Restart application"
     task command do
       on roles(:app), in: :sequence, wait: 5 do
-        execute "/etc/init.d/unicorn_#{fetch(:application)} #{command}"
+        execute "/etc/init.d/unicorn #{command}"
       end
     end
   end
