@@ -6,7 +6,7 @@ preload_app true
 worker_processes Integer(ENV["WEB_CONCURRENCY"] || 1)
 stderr_path "#{APP_ROOT}/log/unicorn.stderr.log"
 stdout_path "#{APP_ROOT}/log/unicorn.stdout.log"
-pid "#{APP_ROOT}/tmp/unicorn.pid"
+pid "#{APP_ROOT}/tmp/pids/unicorn.pid"
 
 before_fork do |server, worker|
   Signal.trap 'TERM' do
