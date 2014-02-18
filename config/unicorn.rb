@@ -3,10 +3,12 @@ APP_ROOT = File.expand_path '../', File.dirname(__FILE__)
 timeout 15
 preload_app true
 
+DEPLOY_PATH="/home/donator/doneaza"
+
 worker_processes Integer(ENV["WEB_CONCURRENCY"] || 1)
 stderr_path "#{APP_ROOT}/log/unicorn.stderr.log"
 stdout_path "#{APP_ROOT}/log/unicorn.stdout.log"
-pid "#{APP_ROOT}/tmp/pids/unicorn.pid"
+pid "#{DEPLOY_PATH}/shared/pids/unicorn.pid"
 
 before_fork do |server, worker|
   Signal.trap 'TERM' do
