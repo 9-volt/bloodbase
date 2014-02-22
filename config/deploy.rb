@@ -1,4 +1,5 @@
 lock "3.1.0"
+require 'capistrano/deploy_lock'
 
 set :application,   "doneaza"
 
