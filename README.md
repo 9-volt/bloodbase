@@ -19,9 +19,10 @@ To seed some test data run:
 `rake db:seed` in project directory
 
 Existing admin:
+```
 username: admin@9-vo.lt
 password: 123456
-
+```
 TODO
 ________________________
 1. Capistrano deploy script
