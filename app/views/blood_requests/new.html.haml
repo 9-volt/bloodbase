@@ -1,8 +1,13 @@
 = form_for(@blood_request, :html => {:class => 'form-horizontal formular'}) do |f|
   %fieldset
-    %legend
+    .legend
       Aici poți completa cererea, dacă ai nevoie de donatori.
       .subtext Îți recomandăm să descrii cazul cât mai clar, oferind informații suficiente pentru potențialii donatori. Cererea va fi redactată și plasată pe site în scurt timp.
+
+  %fieldset
+    .legend
+      Pacient
+
     .control-group
       %label.control-label Numele pacientului:
       .controls
@@ -52,7 +57,8 @@
       .controls
         = f.file_field :photo, :class => 'input-xlarge'
 
-    %legend
+  %fieldset
+    .legend
       Date de contact:
 
     .control-group

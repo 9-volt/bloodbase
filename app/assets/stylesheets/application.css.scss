@@ -151,12 +151,18 @@ section.partners{
 }
 
 .formular{
-  background: #efefef;
-  border-radius: 6px;
-  legend{
+  fieldset{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-radius: 6px;
+    background: #efefef;
+  }
+  legend, .legend{
+    display: block;
+    width: auto;
     line-height: 1.4;
     padding: 15px 24px 0;
-    width: auto;
+    font-size: 22.5px;
     .subtext{
       padding: 10px 0;
       font-size: 14px;
