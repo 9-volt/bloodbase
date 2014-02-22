@@ -20,6 +20,15 @@ set :ssh_options, {
   port:          4321
 }
 
+before "deploy:setup", "db:configure"
+
+namespace :db do
+  desc "copies the database config to the release folder"
+  task :configure do
+    execute "cp /home/donator/doneaza/shared/config/*.yml /home/donator/doneaza/current/config/"
+  end
+end
+
 namespace :deploy do
   %i(start stop restart).each do |command|
     desc "#Start/Stop/Restart application"
@@ -28,11 +37,6 @@ namespace :deploy do
         execute "/etc/init.d/unicorn_bloodbase #{command}"
       end
     end
-  end
-
-  desc "copies the database config to the release folder"
-  task :set_database_config do
-    execute "cp /home/donator/doneaza/shared/config/*.yml /home/donator/doneaza/current/config/"
   end
 
   desc "Make sure local git is in sync with remote."
@@ -45,8 +49,7 @@ namespace :deploy do
       end
     end
   end
-  before :deploy, "deploy:check_revision"
 
-  before :setup, :set_database_config
+  before :deploy, "deploy:check_revision"
   after :publishing,  :restart
 end
