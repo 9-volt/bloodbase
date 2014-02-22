@@ -17,14 +17,14 @@ gem 'paperclip', '~> 3.0'
 gem 'hashids'
 gem 'unicorn'
 gem 'capistrano',  '~> 3.1'
-gem 'mysql2'
+gem 'mysql'
 gem 'bootstrap-datepicker-rails'
 gem 'bootstrap-datetimepicker-rails'
 
 group :development do
   gem 'capistrano-rvm', require: false
   gem 'capistrano-rails', require: false
-  gem 'capistrano_deploy_lock', require: false
+  #gem 'capistrano_deploy_lock', require: false
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'html2haml'
