@@ -11,6 +11,7 @@ set :keep_releases, 2
 set :log_level,     :info
 set :format,        :pretty
 
+set :linked_files,  %w{ config/database.yml }
 set :pty,           true
 set :use_sudo,      false
 set :user,          "donator"
@@ -19,16 +20,6 @@ set :ssh_options, {
   forward_agent: true,
   port:          4321
 }
-
-
-namespace :db do
-  desc "copies the database config to the release folder"
-  task :configure do
-    execute "cp /home/donator/doneaza/shared/config/*.yml /home/donator/doneaza/current/config/"
-  end
-end
-
-after "deploy:update_code", "db:configure"
 
 namespace :deploy do
   %i(start stop restart).each do |command|
