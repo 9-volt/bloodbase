@@ -20,7 +20,6 @@ set :ssh_options, {
   port:          4321
 }
 
-before "deploy:setup", "db:configure"
 
 namespace :db do
   desc "copies the database config to the release folder"
@@ -28,6 +27,8 @@ namespace :db do
     execute "cp /home/donator/doneaza/shared/config/*.yml /home/donator/doneaza/current/config/"
   end
 end
+
+after "deploy:update_code", "db:configure"
 
 namespace :deploy do
   %i(start stop restart).each do |command|
