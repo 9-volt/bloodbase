@@ -30,6 +30,11 @@ namespace :deploy do
     end
   end
 
+  desc "copies the database config to the release folder"
+  task :set_database_config do
+    execute "cp /home/donator/doneaza/shared/config/*.yml /home/donator/doneaza/current/config/"
+  end
+
   desc "Make sure local git is in sync with remote."
   task :check_revision do
     on roles(:web) do
@@ -42,5 +47,6 @@ namespace :deploy do
   end
   before :deploy, "deploy:check_revision"
 
-  after :publishing, :restart
+  before :finalize_update, :set_database_config
+  after :publishing,  :restart
 end

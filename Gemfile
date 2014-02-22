@@ -17,6 +17,7 @@ gem 'paperclip', '~> 3.0'
 gem 'hashids'
 gem 'unicorn'
 gem 'capistrano',  '~> 3.1'
+gem 'mysql2'
 
 group :development do
   gem 'capistrano-rvm', require: false
