@@ -17,6 +17,8 @@ gem 'paperclip', '~> 3.0'
 gem 'hashids'
 gem 'unicorn'
 gem 'capistrano',  '~> 3.1'
+gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-datetimepicker-rails'
 
 group :development do
   gem 'capistrano-rvm', require: false

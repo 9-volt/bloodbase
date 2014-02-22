@@ -13,4 +13,30 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require bootstrap-datepicker
+//= require bootstrap-datetimepicker
+//= require locales/bootstrap-datetimepicker.ro
 //= require_tree .
+
+$(document).ready(function(){
+  $('.date_input[data-calendar="datetime"]').datetimepicker({
+    format: "dd/MM/yyyy - hh:mm"
+  , language: 'ro'
+  , pickSeconds: false
+  });
+
+  $('.date_input[data-calendar="date"]').datepicker({
+    language: "ro"
+  , orientation: "bottom right"
+  , autoclose: true
+  , todayHighlight: true
+  });
+
+  $('.date_input[data-calendar="year"]').datepicker({
+    language: "ro"
+  , orientation: "bottom right"
+  , autoclose: true
+  , todayHighlight: true
+  , startView: 2
+  });
+})

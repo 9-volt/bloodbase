@@ -33,8 +33,7 @@
     .control-group
       %label.control-label Data naşterii:
       .controls.date
-        = f.date_select :birthdate, :order => [:day, :month, :year],
-                        :default => 18.years.ago, :start_year => 65.years.ago.year
+        = f.text_field :birthdate, :size => 16, :class => 'date_input', :data => {:calendar => 'year'}
 
     .control-group
       %label.control-label Grupa de sânge:
@@ -57,8 +56,10 @@
     .control-group
       %label.control-label Data înregistrării:
       .controls.date
-        = f.datetime_select :donate_at, :default => 1.day.from_now,
-                            :order => [:day, :month, :year, :hour, :minute]
+        .input-append.date.date_input{:data => {:calendar => 'datetime'}}
+          = f.text_field :donate_at, :size => 16, :default => 1.day.from_now
+          %span.add-on
+            %i.icon-th
 
   .form-actions
     = f.submit 'Confirmă înregistrarea', :class => 'btn btn-primary'
