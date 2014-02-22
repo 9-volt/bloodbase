@@ -1,7 +1,7 @@
 # config/unicorn.rb
 APP_ROOT = File.expand_path '../', File.dirname(__FILE__)
 timeout 15
-preload_app true
+preload_app false
 
 DEPLOY_PATH="/home/donator/doneaza"
 
