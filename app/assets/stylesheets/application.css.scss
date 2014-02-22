@@ -170,7 +170,12 @@ section.partners{
   background-color: #efefef;
   text-align: center;
   padding: 25px;
-  font-size: 12px;
+  font-size: 13px;
+  color: #999;
+
+  a{
+    color: #212121;
+  }
 
   .links {
     display: block;
@@ -181,9 +186,18 @@ section.partners{
       list-style: none;
       display: inline-block;
       clear: none;
-      margin: 0 3px;
+      margin: 0 20px;
       padding: 0;
     }
+  }
+
+  .social-icons{
+    margin-top: 14px;
+  }
+
+  .copy{
+    margin-top: 23px;
+    font-size: 11px;
   }
 }
 
