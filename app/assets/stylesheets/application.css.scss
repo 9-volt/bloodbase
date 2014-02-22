@@ -20,6 +20,7 @@
 html, body{
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
   min-width: 320px;
 }
 
@@ -86,6 +87,9 @@ section.profiles{
   }
   .block{
     margin-bottom: 15px;
+    .description{
+      margin: 10px 22px 0;
+    }
   }
   .image{
     overflow: hidden;
