@@ -47,6 +47,6 @@ namespace :deploy do
   end
   before :deploy, "deploy:check_revision"
 
-  before :finalize_update, :set_database_config
+  before :setup, :set_database_config
   after :publishing,  :restart
 end
