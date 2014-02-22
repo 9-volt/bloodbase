@@ -13,7 +13,7 @@ set :log_level,     :info
 set :format,        :pretty
 
 set :linked_files,  %w{ config/database.yml }
-set :linked_folders, %w{ public/system }
+set :linked_dirs,   %w{ public/system }
 set :pty,           true
 set :use_sudo,      false
 set :user,          "donator"
