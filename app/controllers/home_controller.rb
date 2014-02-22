@@ -10,7 +10,6 @@ class HomeController < ApplicationController
   end
 
   def faq; end
-  def centre; end
 
   def terms
   end
