@@ -25,7 +25,7 @@ class BloodRequestsController < ApplicationController
 
   private
 
-    def br_params
-      params.require(:blood_request).permit!
-    end
+  def br_params
+    params.require(:blood_request).permit!
+  end
 end
