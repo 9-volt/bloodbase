@@ -7,4 +7,4 @@
   %ul.nav
     %li= link_to "Cereri", admin_blood_requests_path
     %li= link_to 'Utilizatori', admin_users_path
-    %li= link_to 'Ieșire', 'users/sign_out'
+    %li= link_to('Ieșire', destroy_user_session_path, :method => :delete)
