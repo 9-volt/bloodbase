@@ -2,9 +2,8 @@ Donez::Application.routes.draw do
   root :to => "home#index"
 
   namespace :admin do
-    root :to => 'dashboards#index'
+    root :to => 'blood_requests#index'
 
-    resource  :dashboard, :only => [:show]
     resources :users
     resources :blood_requests do
       member do

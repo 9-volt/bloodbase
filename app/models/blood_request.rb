@@ -26,6 +26,7 @@ class BloodRequest < ActiveRecord::Base
     a = donations.count
     b = persons_required
 
+    return 0   if a.zero?
     return 100 if a > b
     (a.to_f / b) * 100
   end
