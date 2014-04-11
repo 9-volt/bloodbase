@@ -7,8 +7,11 @@ Being in the project root, on your machine, execute `cap production deploy`
 
 ## Daemon controle
 `cap production puma:status` - check status
+
 `cap production puma:start` - start the daemon
+
 .. stop
+
 .. restart
 
 ## Seeds
