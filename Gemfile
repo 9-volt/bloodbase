@@ -21,10 +21,12 @@ gem 'capistrano',  '~> 3.1'
 gem 'mysql2'
 gem 'bootstrap-datepicker-rails'
 gem 'bootstrap-datetimepicker-rails'
+gem 'puma'
 
 group :development do
   gem 'capistrano-rvm', require: false
   gem 'capistrano-rails', require: false
+  gem 'capistrano3-puma'
   #gem 'capistrano_deploy_lock', require: false
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]

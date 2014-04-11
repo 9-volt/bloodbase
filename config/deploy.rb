@@ -23,27 +23,22 @@ set :ssh_options, {
   port:          4321
 }
 
-namespace :deploy do
-  %i(start stop restart).each do |command|
-    desc "#Start/Stop/Restart application"
-    task command do
-      on roles(:app), in: :sequence, wait: 5 do
-        execute "/etc/init.d/unicorn_bloodbase #{command}"
-      end
-    end
+desc "tail rails logs"
+task :logs do
+  on roles(:app) do
+    execute "tail -f #{shared_path}/log/#{fetch(:rails_env)}.log"
   end
+end
 
-  desc "Make sure local git is in sync with remote."
-  task :check_revision do
-    on roles(:web) do
-      unless `git rev-parse HEAD` == `git rev-parse origin/master`
-        puts "WARNING: HEAD is not the same as origin/master"
-        puts "Run `git push` to sync changes."
-        exit
-      end
-    end
+namespace :rails do
+  desc 'Access a remote rails console'
+  task console: ['deploy:set_rails_env'] do
+    app_server = roles(:app).first
+
+    command = []
+    command << "bundle exec"
+    command << "rails console #{fetch(:rails_env)}"
+
+    exec %Q(ssh #{app_server.user}@#{app_server.hostname} -p #{app_server.port || 22} -t "cd #{current_path} && #{command.join(' ')}")
   end
-
-  before :deploy, "deploy:check_revision"
-  after :publishing,  :restart
 end
