@@ -9,11 +9,12 @@ set :branch,        "master"
 set :deploy_to,     "/home/donator/#{fetch(:application)}"
 set :keep_releases, 2
 
+
 set :log_level,     :debug
 set :format,        :pretty
 
 set :linked_files,  %w{ config/database.yml }
-set :linked_dirs,   %w{ public/system }
+set :linked_dirs,   %w{ public/system log tmp/pids tmp/sockets}
 set :pty,           true
 set :use_sudo,      false
 set :user,          "donator"
