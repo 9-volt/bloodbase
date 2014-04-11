@@ -9,7 +9,7 @@ set :branch,        "master"
 set :deploy_to,     "/home/donator/#{fetch(:application)}"
 set :keep_releases, 2
 
-set :log_level,     :info
+set :log_level,     :debug
 set :format,        :pretty
 
 set :linked_files,  %w{ config/database.yml }
@@ -22,6 +22,8 @@ set :ssh_options, {
   forward_agent: true,
   port:          4321
 }
+
+set :puma_bind, "tcp://0.0.0.0:8080"
 
 desc "tail rails logs"
 task :logs do
