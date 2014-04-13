@@ -9,7 +9,7 @@ class CaseDonationsController < DonationsController
     @donation = @card.donations.new donation_params
     if @donation.save
       BloodMailer.case_submit_email(@card, @donation, request.base_url)
-                 .deliver
+                 .deliver unless Rails.env.development?
       redirect_to donation_path(@donation)
     else
       flash.now[:error] = @donation.errors.full_messages.join('<br />')
