@@ -34,24 +34,24 @@
   }
 
 = content_for :head do
-  %meta{:property => "og:image", :content => @blood_request.photo.url}
-  %meta{:property => "og:title", :content => "Donează sânge pentru #{@blood_request.person_name}"}
-  %meta{:property => "og:description", :content => @blood_request.description}
+  %meta{:property => "og:image", :content => @card.photo.url}
+  %meta{:property => "og:title", :content => "Donează sânge pentru #{@card.person_name}"}
+  %meta{:property => "og:description", :content => @card.description}
 
 .row
   .span6.well.photo
-    = attachment_image_tag @blood_request
+    = attachment_image_tag @card
   .span5.well.cprogress
-    %h5 Progresul cazului din #{@blood_request.created_at.strftime('%d %b %y')}
+    %h5 Progresul cazului din #{@card.created_at.strftime('%d %b %y')}
 
     .progress.progress-danger.active
-      .bar{:style => "width: #{@blood_request.percent_complete}%"}
-    %h3 #{@blood_request.donations.count} din #{@blood_request.persons_required} donatori găsiţi
+      .bar{:style => "width: #{@card.percent_complete}%"}
+    %h3 #{@card.donations.count} din #{@card.persons_required} donatori găsiţi
 
     .share
       .pluso{:data => {:options => "medium,square,line,horizontal,nocounter,sepcounter=1,theme=14", :services => "vkontakte,odnoklassniki,facebook,twitter,google"}}
 
-    %a.btn.btn-danger.action{:href => "#{new_blood_request_case_donation_path(@blood_request)}"} Donează Sânge
+    %a.btn.btn-danger.action{:href => "#{new_card_case_donation_path(@card)}"} Donează Sânge
 
 .row
   .span11.well
@@ -59,19 +59,19 @@
       %fieldset
         .control-group
           %label.control-label Numele pacientului:
-          .info= @blood_request.person_name
+          .info= @card.person_name
         .control-group
           %label.control-label Spitalul:
-          .info= @blood_request.hospital
+          .info= @card.hospital
         .control-group
           %label.control-label Secţia:
-          .info= @blood_request.section
+          .info= @card.section
         .control-group
           %label.control-label Descrierea cazului:
-          .info= @blood_request.description
+          .info= @card.description
         .control-group
           %label.control-label Numele persoanei de contact:
-          .info= @blood_request.issuer_name
+          .info= @card.issuer_name
         .control-group
           %label.control-label Telefon de contact:
-          .info= @blood_request.contact_number
+          .info= @card.contact_number

@@ -1,6 +1,6 @@
 class Donation < ActiveRecord::Base
   belongs_to :user
-  belongs_to :blood_request
+  belongs_to :card
 
   after_create :generate_code
 

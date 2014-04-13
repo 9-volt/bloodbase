@@ -1,10 +1,4 @@
 class BloodRequest < Card
-  has_attached_file :photo
-
-  has_one  :shortlink, :dependent => :destroy
-  has_many :donations, :dependent => :destroy
-  has_many :donors, :through => :donations, :source => :user
-
   validates_presence_of :person_name, :description, :email, :persons_required
 
   default_scope { where(visible: true, archived: false) }
@@ -14,6 +8,10 @@ class BloodRequest < Card
 
   def photo_url
     photo.url(photo.default_style, {:escape => false})
+  end
+
+  def subject
+    "Mai e nevoie de #{persons_required - donations.count} din #{persons_required}"
   end
 
   def summary

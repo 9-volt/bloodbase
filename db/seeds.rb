@@ -6,6 +6,12 @@ user = User.find_or_create_by_email :name => "Admin",
 puts "user: " << user.name << " created"
 puts "Seeding blood requests"
 
+Volunteer.find_or_create_by_email!(
+  :description      => "Fii sigur, fiecare din noi poate contribui la salvarea unei vieți omenești. Vino la un punct de donare și dăruiește viață!",
+  :email            => "volunteer@example.com",
+  :photo            => File.open("#{Rails.root}/public/images/volunteer.png"),
+  :visible          => true)
+
 BloodRequest.find_or_create_by_email!(
   :person_name      => "Maria Lucaci",
   :issuer_name      => "Cristina Lucaci",
