@@ -6,12 +6,50 @@ user = User.find_or_create_by_email :name => "Admin",
 puts "user: " << user.name << " created"
 puts "Seeding blood requests"
 
-Volunteer.find_or_create_by_email!(
+Volunteer.find_or_create_by_person_name!(
   :person_name      => "Volunteer",
   :description      => "Fii sigur, fiecare din noi poate contribui la salvarea unei vieți omenești. Vino la un punct de donare și dăruiește viață!",
-  :email            => "volunteer@example.com",
-  :photo            => File.open("#{Rails.root}/public/images/volunteer.png"),
-  :visible          => true)
+  :photo            => File.open("#{Rails.root}/public/images/volunteer.png"))
+
+Volunteer.find_or_create_by_person_name!(
+  :person_name      => "O(I)Rh+",
+  :description      => "Vino la centru și donează sânge de grupa I cu rezus pozitiv.",
+  :photo            => File.open("#{Rails.root}/public/images/O(I)Rh+.png"))
+
+Volunteer.find_or_create_by_person_name!(
+  :person_name      => "O(I)Rh-",
+  :description      => "Vino la centru și donează sânge de grupa I cu rezus negativ.",
+  :photo            => File.open("#{Rails.root}/public/images/O(I)Rh-.png"))
+
+Volunteer.find_or_create_by_person_name!(
+  :person_name      => "A(II)Rh+",
+  :description      => "Vino la centru și donează sânge de grupa II cu rezus pozitiv.",
+  :photo            => File.open("#{Rails.root}/public/images/A(II)Rh+.png"))
+
+Volunteer.find_or_create_by_person_name!(
+  :person_name      => "A(II)Rh-",
+  :description      => "Vino la centru și donează sânge de grupa II cu rezus negativ.",
+  :photo            => File.open("#{Rails.root}/public/images/A(II)Rh-.png"))
+
+Volunteer.find_or_create_by_person_name!(
+  :person_name      => "B(III)Rh+",
+  :description      => "Vino la centru și donează sânge de grupa III cu rezus pozitiv.",
+  :photo            => File.open("#{Rails.root}/public/images/B(III)Rh+.png"))
+
+Volunteer.find_or_create_by_person_name!(
+  :person_name      => "B(III)Rh-",
+  :description      => "Vino la centru și donează sânge de grupa III cu rezus negativ.",
+  :photo            => File.open("#{Rails.root}/public/images/B(III)Rh-.png"))
+
+Volunteer.find_or_create_by_person_name!(
+  :person_name      => "AB(IV)Rh+",
+  :description      => "Vino la centru și donează sânge de grupa IV cu rezus pozitiv.",
+  :photo            => File.open("#{Rails.root}/public/images/AB(IV)Rh+.png"))
+
+Volunteer.find_or_create_by_person_name!(
+  :person_name      => "AB(IV)Rh-",
+  :description      => "Vino la centru și donează sânge de grupa IV cu rezus negativ.",
+  :photo            => File.open("#{Rails.root}/public/images/AB(IV)Rh-.png"))
 
 BloodRequest.find_or_create_by_email!(
   :person_name      => "Maria Lucaci",

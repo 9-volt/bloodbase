@@ -8,6 +8,6 @@ class Volunteer < Card
   end
 
   def link
-    "/case/#{shortlink.code}"
+    "/volunteers?#{person_name}"
   end
 end
