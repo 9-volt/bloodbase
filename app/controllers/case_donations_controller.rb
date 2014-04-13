@@ -2,13 +2,13 @@ class CaseDonationsController < DonationsController
   before_filter :fetch_blood_request
 
   def new
-    @donation = @blood_request.donations.new
+    @donation = @card.donations.new
   end
 
   def create
-    @donation = @blood_request.donations.new donation_params
+    @donation = @card.donations.new donation_params
     if @donation.save
-      BloodMailer.case_submit_email(@blood_request, @donation, request.base_url)
+      BloodMailer.case_submit_email(@card, @donation, request.base_url)
                  .deliver
       redirect_to donation_path(@donation)
     else
@@ -20,7 +20,7 @@ class CaseDonationsController < DonationsController
 
   private
 
-    def fetch_blood_request
-      @blood_request = BloodRequest.find(params[:blood_request_id])
-    end
+  def fetch_blood_request
+    @card = Card.find(params[:card_id])
+  end
 end
