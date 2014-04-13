@@ -6,4 +6,8 @@ class Volunteer < Card
   def percent_complete
     0
   end
+
+  def link
+    "/case/#{shortlink.code}"
+  end
 end

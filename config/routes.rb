@@ -16,6 +16,7 @@ Donez::Application.routes.draw do
 
   resources :donations
   resources :blood_requests
+  resources :volunteers
 
   resources :cards do
     resources :case_donations

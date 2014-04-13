@@ -6,6 +6,7 @@ class HomeController < ApplicationController
       cookies[:welcome] = true
       @show_welcome = true
     end
+    @volunteer      = Volunteer.find_by(:person_name => "Volunteer")
     @blood_requests = BloodRequest.last(8).reverse
   end
 
