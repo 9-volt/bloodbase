@@ -15,7 +15,7 @@ Donez::Application.routes.draw do
   devise_for :users
 
   resources :donations
-  resources :blood_requests do
+  resources :cards do
     resources :case_donations
   end
 
