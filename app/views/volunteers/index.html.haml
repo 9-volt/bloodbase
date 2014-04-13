@@ -1,0 +1,4 @@
+%section.profiles
+  .row-fluid
+    - @volunteers.each do |br|
+      = render 'volunteer_case_box', :br => br

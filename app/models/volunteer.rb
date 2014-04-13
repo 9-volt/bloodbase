@@ -6,4 +6,8 @@ class Volunteer < Card
   def percent_complete
     0
   end
+
+  def link
+    "/volunteers?#{person_name}"
+  end
 end

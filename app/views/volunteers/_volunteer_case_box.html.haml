@@ -1,6 +1,7 @@
+- link = new_card_case_donation_path(:card_id => br.id, :blood_group => br.person_name)
 .span3.block
   .image
-    = link_to br.link do
+    = link_to link do
       = attachment_image_tag br
   .purpose
     .text= br.subject
@@ -8,4 +9,4 @@
       .bar.bar-danger{:style => "width: #{br.percent_complete}%;"}
   .description= br.description
   .calltoaction
-    %a.btn.btn-danger{:href => br.link} Donează
+    %a.btn.btn-danger{:href => link} Donează

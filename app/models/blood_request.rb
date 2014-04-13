@@ -6,10 +6,6 @@ class BloodRequest < Card
   scope :approved,   -> { where(visible: true, archived: false) }
   scope :unapproved, -> { where(visible: false, archived: false) }
 
-  def photo_url
-    photo.url(photo.default_style, {:escape => false})
-  end
-
   def subject
     "Mai e nevoie de #{persons_required - donations.count} din #{persons_required}"
   end
@@ -27,10 +23,6 @@ class BloodRequest < Card
     return 0   if a.zero?
     return 100 if a > b
     (a.to_f / b) * 100
-  end
-
-  def shortlink
-    super || create_shortlink
   end
 
   def link

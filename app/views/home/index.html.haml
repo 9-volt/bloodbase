@@ -21,6 +21,8 @@
       %h3 Ultimele cereri întroduse
     .span6.text-right.tall= link_to 'Vezi toate cererile', cases_path
   .row-fluid
+    - if @volunteer
+      = render '/blood_requests/case_box', :br => @volunteer
     - @blood_requests.each do |br|
       = render '/blood_requests/case_box', :br => br
 
