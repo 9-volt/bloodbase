@@ -1,4 +1,4 @@
-class BloodRequest < ActiveRecord::Base
+class BloodRequest < Card
   has_attached_file :photo
 
   has_one  :shortlink, :dependent => :destroy

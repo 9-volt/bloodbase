@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204001012) do
+ActiveRecord::Schema.define(version: 20140413181908) do
 
-  create_table "blood_requests", force: true do |t|
+  create_table "cards", force: true do |t|
     t.string   "person_name"
     t.string   "email"
     t.datetime "created_at"
@@ -27,11 +27,12 @@ ActiveRecord::Schema.define(version: 20140204001012) do
     t.string   "section"
     t.integer  "persons_required"
     t.string   "issuer_name"
-    t.boolean  "visible",            default: false, null: false
+    t.boolean  "visible",            default: false,          null: false
     t.string   "contact_number"
     t.string   "kin"
     t.date     "collection_date"
     t.boolean  "archived",           default: false
+    t.string   "type",               default: "BloodRequest"
   end
 
   create_table "donations", force: true do |t|
