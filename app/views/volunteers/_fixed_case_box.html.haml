@@ -1,0 +1,11 @@
+.span3.block
+  .image
+    = link_to br.link do
+      = attachment_image_tag br
+  .purpose
+    .text= br.subject
+    .progress
+      .bar.bar-danger{:style => "width: #{br.percent_complete}%;"}
+  .description= br.description
+  .calltoaction
+    %a.btn.btn-danger{:href => br.link} Donează
