@@ -1,0 +1,52 @@
+:css
+  .cprogress {
+    height: 220px;
+    text-align: center;
+  }
+
+  button.action {
+    width: 100%;
+  }
+
+  .photo {
+    text-align: center;
+    padding: 0;
+  }
+
+  .photo img {
+    height: 256px;
+    width: auto;
+    border-radius: 6px;
+  }
+
+  .progress {
+    margin: 0;
+    background: grey;
+  }
+
+  .info {
+    padding: 5px;
+    margin-left: 170px;
+  }
+
+  .progress-danger .bar {
+    background-color: #f0584c;
+  }
+
+  /* remove on action buttons change */
+  .info > div {
+    display: inline-block;
+  }
+
+.row
+  .span6.well.photo
+    = attachment_image_tag @volunteer
+  .span5.well.cprogress
+    %h5 Progresul cazului din #{@volunteer.created_at.strftime('%d %b %y')}
+
+    .progress.progress-danger.active
+      .bar{:style => "width: #{@volunteer.percent_complete}%"}
+    %h3 #{@volunteer.donated} din #{@volunteer.persons_required} donatori găsiţi
+
+    .share
+      .pluso{:data => {:options => "medium,square,line,horizontal,nocounter,sepcounter=1,theme=14", :services => "vkontakte,odnoklassniki,facebook,twitter,google"}}

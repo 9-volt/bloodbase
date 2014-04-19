@@ -1,0 +1,5 @@
+%h3 Volunteer cards
+%section.profiles
+  .row-fluid
+    - @volunteers.each do |br|
+      = render 'case_box', :br => br

@@ -5,6 +5,7 @@ Donez::Application.routes.draw do
     root :to => 'blood_requests#index'
 
     resources :users
+    resources :volunteers
     resources :blood_requests do
       member do
         post :approve, :disapprove, :archive, :unarchive

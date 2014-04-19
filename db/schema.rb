@@ -11,35 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140413190920) do
+ActiveRecord::Schema.define(version: 20130727135301) do
 
   create_table "cards", force: true do |t|
     t.string   "person_name"
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "hospital"
+    t.string   "section"
+    t.string   "issuer_name"
+    t.string   "contact_number"
+    t.string   "kin"
+    t.string   "type",               default: "BloodRequest"
+    t.string   "short_description"
+    t.integer  "persons_required",   default: 0,              null: false
+    t.integer  "donated",            default: 0
+    t.text     "description"
+    t.date     "collection_date"
+    t.boolean  "archived",           default: false
+    t.boolean  "visible",            default: false,          null: false
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
-    t.text     "description"
-    t.string   "hospital"
-    t.string   "section"
-    t.integer  "persons_required"
-    t.string   "issuer_name"
-    t.boolean  "visible",            default: false,          null: false
-    t.string   "contact_number"
-    t.string   "kin"
-    t.date     "collection_date"
-    t.boolean  "archived",           default: false
-    t.string   "type",               default: "BloodRequest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "donations", force: true do |t|
     t.integer  "card_id"
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "full_name"
     t.string   "gender"
     t.datetime "birthdate"
@@ -48,8 +48,10 @@ ActiveRecord::Schema.define(version: 20140413190920) do
     t.string   "phone"
     t.string   "email"
     t.string   "id_number"
-    t.datetime "donate_at"
     t.string   "code"
+    t.datetime "donate_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "shortlinks", force: true do |t|
@@ -60,6 +62,8 @@ ActiveRecord::Schema.define(version: 20140413190920) do
   end
 
   create_table "users", force: true do |t|
+    t.string   "name"
+    t.boolean  "staff",                  default: false, null: false
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
@@ -72,8 +76,6 @@ ActiveRecord::Schema.define(version: 20140413190920) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-    t.boolean  "staff",                  default: false, null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

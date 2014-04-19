@@ -1,0 +1,27 @@
+= form_for(@volunteer, :url => admin_volunteer_path, :html => {:class => 'form-horizontal formular'}) do |f|
+  %fieldset
+    %legend
+      Editează
+
+    .control-group
+      %label.control-label Descrierea scurta:
+      .controls
+        = f.text_area :short_description, :class => 'input-xlarge'
+
+    .control-group
+      %label.control-label Descrierea:
+      .controls
+        = f.text_area :description, :class => 'input-xlarge'
+
+    .control-group
+      %label.control-label Nr. necesar de donatori:
+      .controls
+        = f.number_field :persons_required, :class => 'input-small'
+
+    .control-group
+      %label.control-label Au donat:
+      .controls
+        = f.number_field :donated, :class => 'input-small'
+
+  .form-actions
+    = f.submit 'Salvează', :class => 'btn btn-primary'
