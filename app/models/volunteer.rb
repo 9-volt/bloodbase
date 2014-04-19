@@ -1,6 +1,8 @@
 class Volunteer < Card
   def subject
-    "Dăruiește viață, salvează un suflet.\nMai e nevoie de #{persons_required - donated} din #{persons_required}"
+    str = "Dăruiește viață, salvează un suflet."
+    str << "\nMai e nevoie de #{persons_required - donated} din #{persons_required}" unless person_name == "Volunteer"
+    str
   end
 
   def percent_complete
